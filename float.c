@@ -6,7 +6,7 @@
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 18:05:34 by djoye             #+#    #+#             */
-/*   Updated: 2019/10/16 11:01:27 by djoye            ###   ########.fr       */
+/*   Updated: 2019/10/16 13:00:16 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ char			*ft_itoa_base(long long dig, int base)
 	if (!(s = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	s[i--] = '\0';
-	if (nb < 0)
-		s[0] = '-';
+	s[i] = nb < 0 ? '-' : '0';
 	nb = nb < 0 ? -nb : nb;
 	x = base <= 10 ? '0' : 'A' - 10;
 	while (nb && base > 1 && base <= 32)
@@ -66,9 +65,18 @@ long double		ft_float(long double nb, int acc)
 int				main(void)
 {
 	long double i;
+	int			acc;
+	unsigned long long u;
+	long long	l;
 
-	i = 1234567890123.12345678901234567890;
-	ft_float(i, 15);
-	printf("\n%0.15Lf\n", i);
+	acc = 15;
+	i = -3000000000;
+	u = i;
+	l = i;
+	ft_float(i, acc);
+	printf("\n%0.*Lf\n", acc, i);
+	printf("\n%llu", u);
+	printf("\n%lli", l);
+	printf("\n%lli", u - l);
 	return (0);
 }
