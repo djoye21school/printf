@@ -22,7 +22,7 @@ int		ft_ft(t_flags *pow)
 
 int		main()
 {
-	float a;
+	long double a;
 	int *r;
 	char *s = {"Hello"};
 	long int b;
@@ -34,9 +34,10 @@ int		main()
 	int q;
 	char g;
 
-	g = 'l';
+	a = 56.123456789012345678901234567890;
+	/*g = 'l';
 	printf("%C\n", g);
-	a = 56.53;
+	a = 56.6669;
 	b = 4294967296;
 	//t = 255;
 	*r = 2;
@@ -44,7 +45,7 @@ int		main()
 	p = 23;
 	d = 429496;
 	//char v = 23535;
-	q = -1;
+	q = -1;*/
 	
 	t_flags pow;
 	//(ft_ft(&pow) == 0) ? (pow.minus = 0) : ((pow.minus = 2), (b++));
@@ -54,9 +55,9 @@ int		main()
 	printf("000000000000000\n");
 	write(1, &b, 1);
 	printf("\n");
-	printf("%F\n", a);
-	printf("------float-------\n");
-	printf("%-458f  2345\n", a);
+	printf("%.24Lf\n", a);
+	/*printf("------float-------\n");
+	//printf("%-458f  2345\n", a);
 	printf("-----int------\n");
 	printf("%4d\n", -234);
 	printf("------------------------\n");
@@ -69,6 +70,6 @@ int		main()
 	printf("%+0010d\n", z);
 	printf("%.3d\n teyu", 948474 );
 	printf("%0*x\n", 8, 15 );
-	printf("%u\n", q);
+	printf("%u\n", q);*/
 	return (0);
 }
