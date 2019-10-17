@@ -43,18 +43,12 @@ int		ft_flags(t_flags *yep, char **str);
 char	*ft_strchr(const char *s, int c);
 
 size_t		ft_assoc(int rate, va_list *ap, t_flags *yep);
-
 int		ft_kolvo_dig(uintmax_t nbr, int base);
-char	*ft_base_pos(unsigned long nbr, int base, int flag);
 int		ft_atoi(char **str, int *nbr);
-void	ft_putnbr(int nb);
 
-//char	*ft_base_neg(long long nbr, int base, int flag);
+char	*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
+int		ft_float(long double nb, int acc);
 
-typedef struct	s_list
-{
-
-}		t_buf;
 
 
 #endif

@@ -51,7 +51,7 @@ int				ft_float(long double nb, int acc)
 	integer = (unsigned long long int)nb;
 	nb = nb - integer;
 	num = ft_itoa_base(integer, 10, 'A', sgn);
-	while (*num)
+	while (*num)int				ft_float(long double nb, int acc)
 		write(1, num++, 1);
 	write(1, ".", 1);
 	while (i-- && (nb = nb * 10) > 0)
