@@ -12,6 +12,24 @@
 
 #include "ft_printf.h"
 
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return (char *)(&s[i]);
+		i++;
+	}
+	if (s[i] == (char)c)
+		return (char *)(&s[i]);
+	return (NULL);
+}
+
 void	ft_flags(t_flags *yep, char **str)
 {
 	const char *b = "+-0 #";

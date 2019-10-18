@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "ft_printf.h"
 
 char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn)
 {

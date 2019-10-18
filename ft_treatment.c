@@ -12,23 +12,6 @@
 
 #include "ft_printf.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return (char *)(&s[i]);
-		i++;
-	}
-	if (s[i] == (char)c)
-		return (char *)(&s[i]);
-	return (NULL);
-}
 
 size_t		ft_treatment(va_list *ap, char **format)
 {
