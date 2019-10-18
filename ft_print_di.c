@@ -1,47 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_func.c                                          :+:      :+:    :+:   */
+/*   ft_print_di.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 10:17:36 by sdoughnu          #+#    #+#             */
-/*   Updated: 2019/10/09 10:17:41 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/10/17 18:01:23 by sdoughnu          #+#    #+#             */
+/*   Updated: 2019/10/17 18:13:19 by sdoughnu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_atoi(char **str, int *nbr)
+int		ft_print_di(va_list *ap, t_flags *yep, long long int res)
 {
-	long int tmp;
-
-	tmp = 0;
-	if (**str == '\0')
-		return (0);
-	while (**str >= '0' && **str <= '9')
-	{
-		tmp = (tmp * 10) + (**str - '0');
-		*str++;
-	}
-	*nbr = tmp;
+	ft_itoa_base(res);
 	return (0);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	int i;
-	int count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return (char *)(&s[i]);
-		i++;
-	}
-	if (s[i] == (char)c)
-		return (char *)(&s[i]);
-	return (NULL);
 }

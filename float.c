@@ -51,7 +51,7 @@ int				ft_float(long double nb, int acc)
 	integer = (unsigned long long int)nb;
 	nb = nb - integer;
 	num = ft_itoa_base(integer, 10, 'A', sgn);
-	while (*num)int				ft_float(long double nb, int acc)
+	while (*num)
 		write(1, num++, 1);
 	write(1, ".", 1);
 	while (i-- && (nb = nb * 10) > 0)
@@ -69,7 +69,7 @@ int				ft_float(long double nb, int acc)
 	return (0);
 }
 
-int				main(void)
+/*int				main(void)
 {
 	long double			ld;
 	int					acc;
@@ -96,3 +96,4 @@ int				main(void)
 //	printf("\n%lli", u - l);
 	return (0);
 }
+ */

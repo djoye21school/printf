@@ -18,7 +18,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 # include <wchar.h>
-# include <string.h>
+#include <string.h>
+#include <stddef.h>
 
 typedef	struct	t_list
 {
@@ -32,22 +33,28 @@ typedef	struct	t_list
 	char	type;
 }				t_flags;
 
-int		ft_printf(char *format, ...);
-int		ft_parsestr(const char *format, va_list *ap);
-void	ft_putstrl(char *str, int len);
-size_t	ft_treatment(va_list *ap, char **format);
 
+int		ft_print_di(va_list *ap, t_flags *yep, long long int res);
 
-char	*ft_parse(t_flags *yep, int *wid, va_list *ap, char *str);
-int		ft_flags(t_flags *yep, char **str);
-char	*ft_strchr(const char *s, int c);
-
+size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep);
+size_t		ft_ex_o(int rate, va_list *ap, t_flags *yep);
+size_t		ft_ex_hex(int rate, va_list *ap, t_flags *yep);
 size_t		ft_assoc(int rate, va_list *ap, t_flags *yep);
-int		ft_kolvo_dig(uintmax_t nbr, int base);
-int		ft_atoi(char **str, int *nbr);
 
-char	*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
-int		ft_float(long double nb, int acc);
+int			ft_atoi(char **str, int *nbr);
+char		*ft_strchr(const char *s, int c);
+
+void		ft_flags(t_flags *yep, char **str);
+void		ft_width(int *wd, char **str, va_list *ap);
+void		ft_long(int *rate, char **str);
+char		*ft_parse(t_flags *yep, int *rate, va_list *ap, char *str);
+
+char		*ft_strchr(const char *s, int c);
+size_t		ft_treatment(va_list *ap, char **format);
+
+void		ft_putstrl(char *str, int len);
+int			ft_parsestr(const char *format, va_list *ap);
+int			ft_printf(char *format, ...);
 
 
 

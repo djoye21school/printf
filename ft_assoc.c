@@ -15,15 +15,15 @@
 size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep)
 {
 	long long int	res;
-	if (mod == 0)
+	if (rate == 0)
 		res = va_arg(*ap, int);
-	if (mod == 1)
+	if (rate == 1)
 		res = va_arg(*ap, long int);
-	if (mod == 2)
+	if (rate == 2)
 		res = va_arg(*ap, long long int);
-	if (mod == 3)
+	if (rate == 3)
 		res = (short int)va_arg(*ap, int);
-	if (mod == 4)
+	if (rate == 4)
 		res = (signed char)va_arg(*ap, int);
 	return (res);
 }
@@ -31,15 +31,15 @@ size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep)
 size_t		ft_ex_o(int rate, va_list *ap, t_flags *yep)
 {
 	unsigned long long int	res;
-	if (mod == 0)
+	if (rate == 0)
 		res = va_arg(*ap, unsigned int);
-	if (mod == 1)
+	if (rate == 1)
 		res = va_arg(*ap, unsigned long int);
-	if (mod == 2)
+	if (rate == 2)
 		res = va_arg(*ap, unsigned long long int);
-	if (mod == 3)
+	if (rate == 3)
 		res = (unsigned short int)va_arg(*ap, unsigned int);
-	if (mod == 4)
+	if (rate == 4)
 		res = (unsigned char)va_arg(*ap, unsigned int);
 	return (res);
 }
@@ -47,27 +47,32 @@ size_t		ft_ex_o(int rate, va_list *ap, t_flags *yep)
 size_t		ft_ex_hex(int rate, va_list *ap, t_flags *yep)
 {
 	unsigned long long int	res;
-	if (mod == 0)
+	if (rate == 0)
 		res = (unsigned int)va_arg(*ap, unsigned int);
-	if (mod == 1)
+	if (rate == 1)
 		res = (unsigned long int)va_arg(*ap, unsigned long int);
-	if (mod == 2)
+	if (rate == 2)
 		res = (unsigned long long int)va_arg(*ap, unsigned long long int);
-	if (mod == 3)
+	if (rate == 3)
 		res = (unsigned short int)va_arg(*ap, unsigned long long int);
-	if (mod == 4)
+	if (rate == 4)
 		res = (unsigned char)va_arg(*ap, unsigned long long int);
 	return (res);
 }
 
-size_t		ft_ex_u(int rate, va_list *ap, t_flags *yep)
+/*size_t		ft_ex_u(int rate, va_list *ap, t_flags *yep)
 {
-}
+}*/
 
 size_t		ft_assoc(int rate, va_list *ap, t_flags *yep)
 {
+	long long int res;
 	if (yep->type == 'd' || yep->type == 'i')
-		ft_ex_di(rate, ap, yep);
-	if (yep->type == 'o')
-		ft_ex_o(rate, ap, yep);
+	{
+		res = ft_ex_di(rate, ap, yep);
+		ft_print_di(ap, yep, res);
+	}
+	//if (yep->type == 'o')
+	//	ft_ex_o(rate, ap, yep);
+	return (0);
 }

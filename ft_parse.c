@@ -34,13 +34,13 @@ void	ft_flags(t_flags *yep, char **str)
 void	ft_width(int *wd, char **str, va_list *ap)
 {
 	if (**str == '\0')
-		return (0);
+		return ;
 	if (**str == '*')
 	{
 		*wd = va_arg(*ap, int);
 		*str++;
 	}
-	ft_atoi(str, wd);
+	*wd = ft_atoi(str, wd);
 }
 
 void	ft_long(int *rate, char **str)
