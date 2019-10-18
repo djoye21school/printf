@@ -14,7 +14,6 @@
 
 size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep)
 {
-	printf("1");
 	long long int	res;
 	if (rate == 0)
 		res = va_arg(*ap, int);
@@ -26,7 +25,6 @@ size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep)
 		res = (short int)va_arg(*ap, int);
 	if (rate == 4)
 		res = (signed char)va_arg(*ap, int);
-	printf("\n%lld\n", res);
 	return (ft_print_di(ap, yep, res));
 }
 
