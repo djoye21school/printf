@@ -52,7 +52,7 @@ size_t		ft_putstr(const char *s)
 
 	i = 0;
 	if (s == NULL)
-		return ;
+		return (0);
 	while (s[i] != 0)
 	{
 		write(1, &s[i], 1);
