@@ -12,24 +12,6 @@
 
 #include "ft_printf.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return (char *)(&s[i]);
-		i++;
-	}
-	if (s[i] == (char)c)
-		return (char *)(&s[i]);
-	return (NULL);
-}
-
 void	ft_flags(t_flags *yep, char **str)
 {
 	const char *b = "+-0 #";
@@ -45,7 +27,7 @@ void	ft_flags(t_flags *yep, char **str)
 			yep->zero = 1;
 		else if (**str == '#')
 			yep->hash = 1;
-		*str++;
+		*str += 1;
 	}
 }
 
@@ -56,7 +38,7 @@ void	ft_width(int *wd, char **str, va_list *ap)
 	if (**str == '*')
 	{
 		*wd = va_arg(*ap, int);
-		*str++;
+		*str += 1;
 	}
 	*wd = ft_atoi(str, wd);
 }
@@ -66,27 +48,27 @@ void	ft_long(int *rate, char **str)
 	if (**str == 'l')
 	{
 		*rate = 1;
-		*str++;
+		*str += 1;
 		if (**str == 'l')
 		{
 			*rate = 2;
-			*str++;
+			*str += 1;
 		}
 	}
 	else if (**str == 'h')
 	{
 		*rate = 3;
-		*str++;
+		*str += 1;
 		if (**str == 'h')
 		{
 			*rate = 4;
-			*str++;
+			*str += 1;
 		}
 	}
 	else if (**str == 'L')
 	{
 		*rate = 5;
-		*str++;
+		*str += 1;
 	}
 }
 

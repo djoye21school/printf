@@ -34,6 +34,10 @@ typedef	struct	t_list
 }				t_flags;
 
 
+char		*ft_itoa_base(int dig, int base);
+char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
+int				ft_float(long double nb, int acc);
+
 int		ft_print_di(va_list *ap, t_flags *yep, long long int res);
 
 size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep);

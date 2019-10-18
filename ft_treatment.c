@@ -12,7 +12,6 @@
 
 #include "ft_printf.h"
 
-
 size_t		ft_treatment(va_list *ap, char **format)
 {
 	t_flags	yep;
