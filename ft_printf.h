@@ -17,7 +17,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-# include <wchar.h>
+#include <wchar.h>
 #include <string.h>
 #include <stddef.h>
 
@@ -34,7 +34,7 @@ typedef	struct	t_list
 }				t_flags;
 
 
-char		*ft_itoa_base(int dig, int base);
+size_t			ft_putstr(const char *s);
 char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 

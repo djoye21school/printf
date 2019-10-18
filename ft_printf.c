@@ -40,7 +40,7 @@ int     ft_parsestr(const char *format, va_list *ap)
         	go++;
         	size++;
 		}
-        if (*go == '%')
+        else if (*go == '%')
         {
         	ft_putstrl(str, go - str);
         	size = size + ft_treatment(ap, &go);
@@ -66,7 +66,7 @@ int		ft_printf(char *format, ...)
 int		main()
 {
 	int a;
-	a = 123;
-	ft_printf("%d hello", a);
+	a = 2233;
+	ft_printf("hello %d", a);
 	return (0);
 }

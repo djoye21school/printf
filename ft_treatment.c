@@ -24,7 +24,8 @@ size_t		ft_treatment(va_list *ap, char **format)
 	yep.zero = 0;
 	yep.width = 0;
 	yep.prcn = 0;
-	yep.type = "0";
+	yep.type = '0';
+	printf("w");
 	if (**format == '%')
 	{
 		(*format)++;

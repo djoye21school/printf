@@ -14,6 +14,7 @@
 
 size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep)
 {
+	printf("1");
 	long long int	res;
 	if (rate == 0)
 		res = va_arg(*ap, int);
@@ -25,7 +26,8 @@ size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep)
 		res = (short int)va_arg(*ap, int);
 	if (rate == 4)
 		res = (signed char)va_arg(*ap, int);
-	return (res);
+	printf("\n%lld\n", res);
+	return (ft_print_di(ap, yep, res));
 }
 
 size_t		ft_ex_o(int rate, va_list *ap, t_flags *yep)
@@ -60,17 +62,13 @@ size_t		ft_ex_hex(int rate, va_list *ap, t_flags *yep)
 	return (res);
 }
 
-/*size_t		ft_ex_u(int rate, va_list *ap, t_flags *yep)
-{
-}*/
 
 size_t		ft_assoc(int rate, va_list *ap, t_flags *yep)
 {
-	long long int res;
+	size_t res;
 	if (yep->type == 'd' || yep->type == 'i')
 	{
 		res = ft_ex_di(rate, ap, yep);
-		ft_print_di(ap, yep, res);
 	}
 	//if (yep->type == 'o')
 	//	ft_ex_o(rate, ap, yep);

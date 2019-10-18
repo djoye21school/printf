@@ -27,7 +27,7 @@ void	ft_flags(t_flags *yep, char **str)
 			yep->zero = 1;
 		else if (**str == '#')
 			yep->hash = 1;
-		*str += 1;
+		(**str)++;
 	}
 }
 

@@ -22,7 +22,7 @@ int		ft_atoi(char **str, int *nbr)
 	while (**str >= '0' && **str <= '9')
 	{
 		tmp = (tmp * 10) + (**str - '0');
-		*str++;
+		(*str)++;
 	}
 	*nbr = tmp;
 	return (0);
@@ -44,4 +44,19 @@ char	*ft_strchr(const char *s, int c)
 	if (s[i] == (char)c)
 		return (char *)(&s[i]);
 	return (NULL);
+}
+
+size_t		ft_putstr(const char *s)
+{
+	size_t i;
+
+	i = 0;
+	if (s == NULL)
+		return ;
+	while (s[i] != 0)
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
 }

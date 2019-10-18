@@ -48,10 +48,11 @@ int		main()
 	q = -1;*/
 	
 	t_flags pow;
+	printf("%#xd\n", 2345678);
 	//(ft_ft(&pow) == 0) ? (pow.minus = 0) : ((pow.minus = 2), (b++));
 	//printf("%d\n", pow.minus);
 	printf("------------DUO-----------\n");
-	printf("%+d\n", 423243);
+	printf("%#x\n", 423243);
 	printf("000000000000000\n");
 	write(1, &b, 1);
 	printf("\n");
