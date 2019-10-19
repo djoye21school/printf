@@ -23,7 +23,8 @@ size_t		ft_treatment(va_list *ap, char **format)
 	yep.hash = 0;
 	yep.zero = 0;
 	yep.width = 0;
-	yep.prcn = 0;
+	yep.prcn = -1;
+	yep.len = 0;
 	yep.type = '0';
 	if (**format == '%')
 	{

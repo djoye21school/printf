@@ -48,8 +48,8 @@ int		main()
 	q = -1;*/
 	
 	t_flags pow;
-	char rt = 'a';
-	printf("%dc\n", rt);
+	int rt = 12;
+	printf("%23***d\n", 4, 200, 2234, rt);
 	printf("%o", 97);
 	//(ft_ft(&pow) == 0) ? (pow.minus = 0) : ((pow.minus = 2), (b++));
 	//printf("%d\n", pow.minus);
