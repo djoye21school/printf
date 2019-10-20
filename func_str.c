@@ -20,7 +20,7 @@ int		ft_atoi(const char *str)
 
     sign = 1;
     nbr = 0;
-    while (*str == ' ' || *str == '\n' || *str == '\t' || *str = '\v' ||
+    while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v' ||
             *str == '\f' || *str == '\r')
         str++;
     if (str[i] == '+' || str[i] == '-')

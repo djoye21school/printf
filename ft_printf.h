@@ -21,18 +21,18 @@
 #include <string.h>
 #include <stddef.h>
 
-typedef	struct	t_list
+typedef	struct          t_list
 {
-	int		plus;
-	int		min;
-	int		space;
-	int		hash;
-	int		zero;
-	long long width;
-	int		prcn;
-	char	type;
-	int		len;
-}				t_flags;
+	int		            plus;
+	int		            min;
+	int		            space;
+	int		            hash;
+    int		            zero;
+	long long           width;
+	unsigned long long  prcn;
+	char	            type;
+	int 		        len;
+}				        t_flags;
 
 
 size_t          ft_putstr(const char *s);
@@ -41,19 +41,19 @@ int				ft_float(long double nb, int acc);
 
 int		ft_print_di(va_list *ap, t_flags *yep, long long int res);
 
-size_t		ft_ex_di(int rate, va_list *ap, t_flags *yep);
-size_t		ft_ex_o(int rate, va_list *ap, t_flags *yep);
-size_t		ft_ex_hex(int rate, va_list *ap, t_flags *yep);
-size_t		ft_assoc(int rate, va_list *ap, t_flags *yep);
+size_t		ft_ex_di(va_list *ap, t_flags *yep);
+size_t		ft_ex_o(va_list *ap, t_flags *yep);
+size_t		ft_ex_hex(va_list *ap, t_flags *yep);
+size_t		ft_assoc(va_list *ap, t_flags *yep);
 
-int			    ft_atoi(char **str, int *nbr);
 char		    *ft_strchr(const char *s, int c);
 
+static void     ft_long(t_flags *yep, char **str);
 int             ft_atoi(const char *str);
-static void     ft_precis(t_flags *yep, char **str, va_list *ap);
+static int     ft_precis(t_flags *yep, char **str, va_list *ap);
 static void     ft_width(t_flags *yep, char **str, va_list *ap);
 static void     ft_flags(t_flags *yep, char **str);
-char		    *ft_parse(t_flags *yep, int *rate, va_list *ap, char *str);
+int	            ft_parse(t_flags *yep, va_list *ap, char *str);
 
 char		*ft_strchr(const char *s, int c);
 size_t		ft_treatment(va_list *ap, char **format);

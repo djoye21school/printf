@@ -15,7 +15,7 @@
 size_t		ft_treatment(va_list *ap, char **format)
 {
 	t_flags	yep;
-	int		rate;
+	int     check;
 
 	yep.plus = 0;
 	yep.min = 0;
@@ -23,7 +23,7 @@ size_t		ft_treatment(va_list *ap, char **format)
 	yep.hash = 0;
 	yep.zero = 0;
 	yep.width = 0;
-	yep.prcn = -1;
+	yep.prcn = 0;
 	yep.len = 0;
 	yep.type = '0';
 	if (**format == '%')
@@ -31,9 +31,9 @@ size_t		ft_treatment(va_list *ap, char **format)
 		(*format)++;
 		if (**format != '\0')
 		{
-			rate = 0;
-			*format = ft_parse(&yep, &rate, ap, *format);
-			return (ft_assoc(rate, ap, &yep));
+			if ((ft_parse(&yep, ap, *format)) == -1)
+			    return (-1);
+			return (ft_assoc(ap, &yep));
 		}
 	}
 	return (0);

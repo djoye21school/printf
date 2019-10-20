@@ -26,7 +26,7 @@ static void     ft_flags(t_flags *yep, char **str)
     }
     if (yep->space == 1 && yep->plus == 1) // в приоритете +, ставится знак
         yep->space = 0;
-    if (yep->zero == 1 && yep->minus == 1) // в приоритете -, выравнивается по правому краю
+    if (yep->zero == 1 && yep->min == 1) // в приоритете -, выравнивается по правому краю
         yep->zero = 0;
 }
 
@@ -50,24 +50,70 @@ static void     ft_width(t_flags *yep, char **str, va_list *ap)
     }
 }
 
-static void     ft_precis(t_flags *yep, char **str, va_list *ap)
+static int     ft_precis(t_flags *yep, char **str, va_list *ap)
 {
-    //если точность -***, то точность не учитывается
-    // учитывается последний * при %23***d ...
-    if
+    if (**str && (**str >= '0' && **str <= '9'))
+        yep->prcn = ft_atoi(*str);
+    else if (**str == '*')
+    {
+        yep->prcn = (unsigned long long)va_arg(*ap, unsigned long long);
+        *str += 1;
+    }
+    else if (**str == '-')
+        yep->prcn = -1;
+    else if (**str == '\0')
+        return (-1);
+    else
+        yep->prcn = 0;
+    while (**str && **str >= '0' && **str <= '9')
+        *str += 1;
+    return (1);
 }
 
-char	*ft_parse(t_flags *yep, int *rate, va_list *ap, char *str)
+static void     ft_long(t_flags *yep, char **str)
+{
+    if (**str == 'l')
+    {
+        yep->len = 1;
+        *str += 1;
+    }
+    else if (**str == 'h')
+    {
+        yep->len = 3;
+        *str += 1;
+    }
+    else if (**str == 'L')
+    {
+        yep->len = 5;
+        *str += 1;
+    }
+    if (**str == 'l' && yep->len == 1)
+    {
+        yep->len = 2;
+        *str += 1;
+    }
+    if (**str == 'h' && yep->len == 3)
+    {
+        yep->len = 4;
+        *str += 1;
+    }
+}
+
+int	        ft_parse(t_flags *yep, va_list *ap, char *str)
 {
 	ft_flags(yep, &str);
 	ft_width(yep, &str, ap);
-	if (**str == '*' || (**str >= '0' && **str <= '9'))
+	if (**str == '*' || ((**str) >= '0' && (**str) <= '9'))
         ft_width(yep, &str, ap);
 	if (*str == '.')
 	{
-		ft_precis(yep, &str, ap);
+	    str += 1;
+		if ((ft_precis(yep, &str, ap)) == -1)
+		    return (-1);
 	}
-	ft_long(rate, &str);
+	ft_long(yep, &str);
+    while (**str && **str >= '0' && **str <= '9')
+        *str += 1;
 	yep->type = *str;
-	return (str);
+	return (1);
 }
