@@ -110,6 +110,7 @@ int	        ft_parse(t_flags *yep, va_list *ap, char *str)
 	    str += 1;
 		if ((ft_precis(yep, &str, ap)) == -1)
 		    return (-1);
+		printf("\n--%lld--\n", yep->prcn);
 	}
 	ft_long(yep, &str);
     while (*str && *str >= '0' && *str <= '9')

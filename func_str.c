@@ -23,15 +23,16 @@ int		ft_atoi(const char *str)
     while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v' ||
             *str == '\f' || *str == '\r')
         str++;
-    if (str[i] == '+' || str[i] == '-')
+    if (*str == '+' || *str == '-')
     {
-        if (str[i] == '-')
+        if (*str == '-')
             sign = -1;
+        str += 1;
     }
-    while (str[i] >= '0' && str[i] <= '9')
+    while (*str >= '0' && *str <= '9')
     {
-        nbr = (nbr * 10) + (str[i] - '0');
-        i++;
+        nbr = (nbr * 10) + (*str- '0');
+        str += 1;
     }
 
     return ((long int)nbr * sign);
