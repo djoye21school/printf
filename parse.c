@@ -45,7 +45,7 @@ static void     ft_width(t_flags *yep, char **str, va_list *ap)
     else
     {
         yep->width = ft_atoi(*str);
-        while (**str && **str >= 'a' && **str <= 'z')
+        while (**str && **str >= '0' && **str <= '9')
             (*str)++;
     }
 }
@@ -103,7 +103,7 @@ int	        ft_parse(t_flags *yep, va_list *ap, char *str)
 {
 	ft_flags(yep, &str);
 	ft_width(yep, &str, ap);
-	if (**str == '*' || ((**str) >= '0' && (**str) <= '9'))
+	if (*str == '*' || (*str >= '0' && *str <= '9'))
         ft_width(yep, &str, ap);
 	if (*str == '.')
 	{
@@ -112,7 +112,7 @@ int	        ft_parse(t_flags *yep, va_list *ap, char *str)
 		    return (-1);
 	}
 	ft_long(yep, &str);
-    while (**str && **str >= '0' && **str <= '9')
+    while (*str && *str >= '0' && *str <= '9')
         *str += 1;
 	yep->type = *str;
 	return (1);

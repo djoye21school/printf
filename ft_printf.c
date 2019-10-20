@@ -44,7 +44,7 @@ int     ft_parsestr(const char *format, va_list *ap)
         {
         	ft_putstrl(str, go - str);
         	size = size + ft_treatment(ap, &go);
-        	str = go;
+        	//str = go;
 		}
     }
     ft_putstrl(str, go - str);
@@ -67,6 +67,6 @@ int		main()
 {
 	int a;
 	a = 2233;
-	ft_printf("hello %-ld", a);
+	ft_printf("hello %-23.76ld", a);
 	return (0);
 }

@@ -25,6 +25,7 @@ size_t		ft_ex_di(va_list *ap, t_flags *yep)
 		res = (short int)va_arg(*ap, int);
 	if (yep->len == 4)
 		res = (signed char)va_arg(*ap, int);
+	printf("\n0000\n");
 	return (ft_print_di(ap, yep, res));
 }
 

@@ -21,6 +21,8 @@
 #include <string.h>
 #include <stddef.h>
 
+#include <stdio.h>
+
 typedef	struct          t_list
 {
 	int		            plus;
