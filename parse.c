@@ -61,9 +61,10 @@ char	*ft_parse(t_flags *yep, int *rate, va_list *ap, char *str)
 {
 	ft_flags(yep, &str);
 	ft_width(yep, &str, ap);
+	if (**str == '*' || (**str >= '0' && **str <= '9'))
+        ft_width(yep, &str, ap);
 	if (*str == '.')
 	{
-		str++;
 		ft_precis(yep, &str, ap);
 	}
 	ft_long(rate, &str);

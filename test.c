@@ -49,7 +49,7 @@ int		main()
 	
 	t_flags pow;
 	int rt = 12;
-	printf("%23***d\n", 4, 200, 2234, rt);
+	printf("%0230.20d\n", 23, rt);
 	printf("%o", 97);
 	//(ft_ft(&pow) == 0) ? (pow.minus = 0) : ((pow.minus = 2), (b++));
 	//printf("%d\n", pow.minus);

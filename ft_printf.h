@@ -46,14 +46,14 @@ size_t		ft_ex_o(int rate, va_list *ap, t_flags *yep);
 size_t		ft_ex_hex(int rate, va_list *ap, t_flags *yep);
 size_t		ft_assoc(int rate, va_list *ap, t_flags *yep);
 
-int			ft_atoi(char **str, int *nbr);
-char		*ft_strchr(const char *s, int c);
+int			    ft_atoi(char **str, int *nbr);
+char		    *ft_strchr(const char *s, int c);
 
-
+int             ft_atoi(const char *str);
 static void     ft_precis(t_flags *yep, char **str, va_list *ap);
 static void     ft_width(t_flags *yep, char **str, va_list *ap);
 static void     ft_flags(t_flags *yep, char **str);
-char		*ft_parse(t_flags *yep, int *rate, va_list *ap, char *str);
+char		    *ft_parse(t_flags *yep, int *rate, va_list *ap, char *str);
 
 char		*ft_strchr(const char *s, int c);
 size_t		ft_treatment(va_list *ap, char **format);
