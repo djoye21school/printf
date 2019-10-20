@@ -14,9 +14,10 @@
 
 int		ft_print_di(va_list *ap, t_flags *yep, long long int res)
 {
-	printf("\nn%d\n", yep->plus);
+	printf("\n%d\n", yep->plus);
 	printf("\n%d\n", yep->len);
-
+    printf("\n%lld\n", yep->prcn);
 	printf("\n%d\n", yep->min);
+    printf("\n%lld\n", yep->width);
 	return (ft_putstr(ft_itoa_base(res, 10, 'a', 1)));
 }
