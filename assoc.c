@@ -64,7 +64,7 @@ size_t		ft_ex_hex(va_list *ap, t_flags *yep)
 size_t		ft_assoc(va_list *ap, t_flags *yep)
 {
 	size_t res;
-	if (yep->type == 'd' || yep->type == 'i')
+	if (*(yep->type ) == 'd' || *(yep->type) == 'i')
 		res = ft_ex_di(ap, yep);
 	//if (yep->type == 'o')
 	//	ft_ex_o(rate, ap, yep);

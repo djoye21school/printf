@@ -29,6 +29,7 @@ int     ft_parsestr(const char *format, va_list *ap)
 	char *str;
 	char *go;
     size_t size;
+    t_flags yep;
 
     size = 0;
     go = (char *)format;
@@ -43,8 +44,8 @@ int     ft_parsestr(const char *format, va_list *ap)
         else if (*go == '%')
         {
         	ft_putstrl(str, go - str);
-        	size = size + ft_treatment(ap, &go);
-        	printf("\n--%s---\n", go);
+        	size = size + ft_treatment(ap, &go, &yep);
+        	go++;
         	str = go;
 		}
     }
@@ -68,6 +69,6 @@ int		main()
 {
 	int a;
 	a = 2233;
-	ft_printf("hello %-139837.76ld", a);
+	ft_printf("hello %-139837.76ld my friend", a);
 	return (0);
 }

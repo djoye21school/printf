@@ -32,7 +32,7 @@ typedef	struct          t_list
     int		            zero;
 	long long           width;
 	unsigned long long  prcn;
-	char	            type;
+	char	            *type;
 	int 		        len;
 }				        t_flags;
 
@@ -58,7 +58,7 @@ static void     ft_flags(t_flags *yep, char **str);
 int	            ft_parse(t_flags *yep, va_list *ap, char *str);
 
 char		*ft_strchr(const char *s, int c);
-size_t		ft_treatment(va_list *ap, char **format);
+size_t		ft_treatment(va_list *ap, char **format, t_flags *yep);
 
 void		ft_putstrl(char *str, int len);
 int			ft_parsestr(const char *format, va_list *ap);

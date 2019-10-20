@@ -34,7 +34,7 @@ int		main()
 	int q;
 	char g;
 
-	a = 56.123456789012345678901234567890;
+	a = 56.34;
 	/*g = 'l';
 	printf("%C\n", g);
 	a = 56.6669;
@@ -48,9 +48,9 @@ int		main()
 	q = -1;*/
 
 	int rt = 12;
-	printf("%d\n", printf("%.*289d\n", 20, 75));
+	//printf("%d\n", printf("%.*289d\n", 20, 75));
 	printf("----------------\n");
-	printf("%d", 97);
+	printf("%f", a);
 	//(ft_ft(&pow) == 0) ? (pow.minus = 0) : ((pow.minus = 2), (b++));
 	//printf("%d\n", pow.minus);
 	printf("\n------------DUO-----------\n");

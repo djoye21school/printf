@@ -12,28 +12,28 @@
 
 #include "ft_printf.h"
 
-size_t		ft_treatment(va_list *ap, char **format)
+size_t		ft_treatment(va_list *ap, char **format, t_flags *yep)
 {
-	t_flags	yep;
 	int     check;
 
-	yep.plus = 0;
-	yep.min = 0;
-	yep.space = 0;
-	yep.hash = 0;
-	yep.zero = 0;
-	yep.width = 0;
-	yep.prcn = 0;
-	yep.len = 0;
-	yep.type = '0';
+	yep->plus = 0;
+	yep->min = 0;
+	yep->space = 0;
+	yep->hash = 0;
+	yep->zero = 0;
+	yep->width = 0;
+	yep->prcn = 0;
+	yep->len = 0;
+	yep->type = NULL;
 	if (**format == '%')
 	{
 		(*format)++;
 		if (**format != '\0')
 		{
-			if ((ft_parse(&yep, ap, *format)) == -1)
+			if ((ft_parse(yep, ap, *format)) == -1)
 			    return (-1);
-			return (ft_assoc(ap, &yep));
+			*format = yep->type;
+			return (ft_assoc(ap, yep));
 		}
 	}
 	return (0);
