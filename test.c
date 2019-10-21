@@ -50,8 +50,8 @@ int		main()
 	int rt = 12;
 	//printf("%d\n", printf("%.*289d\n", 20, 75));
 	printf("----------------\n");
-	char as = 56;
-	printf("%d\n", printf("% .-32d\n", as));
+	int as = 56;
+	printf("%d\n", printf("%100-34d\n", as));
 	//(ft_ft(&pow) == 0) ? (pow.minus = 0) : ((pow.minus = 2), (b++));
 	//printf("%d\n", pow.minus);
 	printf("\n------------DUO-----------\n");

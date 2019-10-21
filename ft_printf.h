@@ -32,7 +32,6 @@ typedef	struct          t_list
     int		            zero;
 	long long           width;
 	unsigned long long  prcn;
-	int                 prcn_sign;
 	char	            *type;
 	int 		        len;
 }				        t_flags;
@@ -43,7 +42,7 @@ char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 
 
-int     ft_prcn_wid(t_flags *yep, char *s, int len);
+int     ft_no_prcn(t_flags *yep, char *s, int len);
 int     ft_arg_di(t_flags *yep, char *s, int len);
 char    *ft_di2(t_flags *yep, va_list *ap);
 int		ft_di(t_flags *yep, va_list *ap);

@@ -22,8 +22,7 @@ size_t		ft_treatment(va_list *ap, char **format, t_flags *yep)
 	yep->hash = 0;
 	yep->zero = 0;
 	yep->width = 0;
-	yep->prcn = 0;
-	yep->prcn_sign = 0;
+	yep->prcn = -1;
 	yep->len = 0;
 	yep->type = NULL;
 	if (**format == '%')

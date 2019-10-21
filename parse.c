@@ -60,20 +60,7 @@ static int     ft_precis(t_flags *yep, char **str, va_list *ap)
         *str += 1;
     }
     else if (**str == '-')
-    {
-        (*str)++;
-        if (**str == '*')
-        {
-            yep->prcn = (unsigned long long)va_arg(*ap, unsigned long long);
-            yep->prcn_sign = -1;
-            (*str)++;
-        }
-        else if (**str && (**str >= '0' && **str <= '9'))
-        {
-            yep->prcn = ft_atoi(*str);
-            yep->prcn_sign = -1;
-        }
-    }
+        yep->prcn = -1;
     else if (**str == '\0')
         return (-1);
     else
