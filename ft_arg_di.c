@@ -25,7 +25,24 @@ int     ft_no_prcn(t_flags *yep, char *s, int len)
         flag = " ";
     else
         yep->space = 0;
-    if (yep->zero == 0 && yep->min == 0 && yep->width > len)
+    if (yep->zero == 1 && yep->min == 0 && yep->width > len)
+        // привести по ширине дополнив нулями и вывести с флагами
+    if (yep->min == 1 && yep->width > len)
+        // приравнять к левому краю и дополнив ширину вывести
+    if (yep->min == 0 && yep->zero == 0)
+        // просто вывести с флагами
+    return (res);
+}
+
+int     ft_align(t_flags *yep, char *s, int len)
+{
+    int res;
+    return (res);
+}
+
+int     ft_no_align(t_flags *yep, char *s, int len)
+{
+    int res;
     return (res);
 }
 
@@ -33,11 +50,11 @@ int     ft_arg_di(t_flags *yep, char *s, int len)
 {
     int res;
 
-    if (yep->prcn  0)
+    if (yep->prcn < 0)
         res = ft_no_prcn(yep, s, len);
     else if (yep->min == 1)
         res = ft_align(yep, s, len);
     else if (yep->min == 0)
-        ft_align(yep, s, len);
+        ft_no_align(yep, s, len);
     return (res);
 }

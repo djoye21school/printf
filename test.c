@@ -51,7 +51,7 @@ int		main()
 	//printf("%d\n", printf("%.*289d\n", 20, 75));
 	printf("----------------\n");
 	int as = 56;
-	printf("%d\n", printf("%100-34d\n", as));
+	printf("%d\n", printf("%+ 100d\n", as));
 	//(ft_ft(&pow) == 0) ? (pow.minus = 0) : ((pow.minus = 2), (b++));
 	//printf("%d\n", pow.minus);
 	printf("\n------------DUO-----------\n");
