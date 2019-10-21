@@ -83,18 +83,18 @@ CMakeFiles/printf.dir/float.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/float.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/printf/float.c -o CMakeFiles/printf.dir/float.c.s
 
-CMakeFiles/printf.dir/ft_print_di.c.o: CMakeFiles/printf.dir/flags.make
-CMakeFiles/printf.dir/ft_print_di.c.o: ../ft_print_di.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/printf.dir/ft_print_di.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/ft_print_di.c.o   -c /Users/sdoughnu/Desktop/printf/ft_print_di.c
+CMakeFiles/printf.dir/print_di.c.o: CMakeFiles/printf.dir/flags.make
+CMakeFiles/printf.dir/print_di.c.o: ../print_di.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/printf.dir/print_di.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/print_di.c.o   -c /Users/sdoughnu/Desktop/printf/print_di.c
 
-CMakeFiles/printf.dir/ft_print_di.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf.dir/ft_print_di.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/printf/ft_print_di.c > CMakeFiles/printf.dir/ft_print_di.c.i
+CMakeFiles/printf.dir/print_di.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf.dir/print_di.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/printf/print_di.c > CMakeFiles/printf.dir/print_di.c.i
 
-CMakeFiles/printf.dir/ft_print_di.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/ft_print_di.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/printf/ft_print_di.c -o CMakeFiles/printf.dir/ft_print_di.c.s
+CMakeFiles/printf.dir/print_di.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/print_di.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/printf/print_di.c -o CMakeFiles/printf.dir/print_di.c.s
 
 CMakeFiles/printf.dir/ft_printf.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/ft_printf.c.o: ../ft_printf.c
@@ -152,7 +152,7 @@ CMakeFiles/printf.dir/treatment.c.s: cmake_force
 printf_OBJECTS = \
 "CMakeFiles/printf.dir/assoc.c.o" \
 "CMakeFiles/printf.dir/float.c.o" \
-"CMakeFiles/printf.dir/ft_print_di.c.o" \
+"CMakeFiles/printf.dir/print_di.c.o" \
 "CMakeFiles/printf.dir/ft_printf.c.o" \
 "CMakeFiles/printf.dir/func_str.c.o" \
 "CMakeFiles/printf.dir/parse.c.o" \
@@ -163,7 +163,7 @@ printf_EXTERNAL_OBJECTS =
 
 printf: CMakeFiles/printf.dir/assoc.c.o
 printf: CMakeFiles/printf.dir/float.c.o
-printf: CMakeFiles/printf.dir/ft_print_di.c.o
+printf: CMakeFiles/printf.dir/print_di.c.o
 printf: CMakeFiles/printf.dir/ft_printf.c.o
 printf: CMakeFiles/printf.dir/func_str.c.o
 printf: CMakeFiles/printf.dir/parse.c.o

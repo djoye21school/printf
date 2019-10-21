@@ -8,7 +8,7 @@ include_directories(.)
 add_executable(printf
         assoc.c
         float.c
-        ft_print_di.c
+        print_di.c
         ft_printf.c
         ft_printf.h
         func_str.c

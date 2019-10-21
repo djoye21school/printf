@@ -88,9 +88,6 @@
 		<Unit filename="/Users/sdoughnu/Desktop/printf/float.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_print_di.c">
-			<Option target="printf"/>
-		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_printf.c">
 			<Option target="printf"/>
 		</Unit>
@@ -101,6 +98,9 @@
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/parse.c">
+			<Option target="printf"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/print_di.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/treatment.c">

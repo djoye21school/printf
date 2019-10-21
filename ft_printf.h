@@ -41,7 +41,8 @@ size_t          ft_putstr(const char *s);
 char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 
-int		ft_print_di(va_list *ap, t_flags *yep, long long int res);
+static void     ft_di2(t_flags *yep, va_list *ap, char *s);
+int		ft_di(t_flags *yep, va_list *ap);
 
 size_t		ft_ex_di(va_list *ap, t_flags *yep);
 size_t		ft_ex_o(va_list *ap, t_flags *yep);

@@ -12,63 +12,30 @@
 
 #include "ft_printf.h"
 
-size_t		ft_ex_di(va_list *ap, t_flags *yep)
-{
-	long long int	res;
-	if (yep->len == 0)
-		res = va_arg(*ap, int);
-	if (yep->len == 1)
-		res = va_arg(*ap, long int);
-	if (yep->len == 2)
-		res = va_arg(*ap, long long int);
-	if (yep->len == 3)
-		res = (short int)va_arg(*ap, int);
-	if (yep->len == 4)
-		res = (signed char)va_arg(*ap, int);
-	return (ft_print_di(ap, yep, res));
-}
-
-/*size_t		ft_ex_o(va_list *ap, t_flags *yep)
-{
-	unsigned long long int	res;
-	if (yep->len == 0)
-		res = va_arg(*ap, unsigned int);
-	if (ryep->len == 1)
-		res = va_arg(*ap, unsigned long int);
-	if (yep->len == 2)
-		res = va_arg(*ap, unsigned long long int);
-	if (yep->len == 3)
-		res = (unsigned short int)va_arg(*ap, unsigned int);
-	if (yep->len == 4)
-		res = (unsigned char)va_arg(*ap, unsigned int);
-	return (res);
-}
-
-size_t		ft_ex_hex(va_list *ap, t_flags *yep)
-{
-	unsigned long long int	res;
-	if (yep->len == 0)
-		res = (unsigned int)va_arg(*ap, unsigned int);
-	if (yep->len == 1)
-		res = (unsigned long int)va_arg(*ap, unsigned long int   );
-	if (yep->len == 2)
-		res = (unsigned long long int)va_arg(*ap, unsigned long long int);
-	if (yep->len == 3)
-		res = (unsigned short int)va_arg(*ap, unsigned long long int);
-	if (yep->len == 4)
-		res = (unsigned char)va_arg(*ap, unsigned long long int);
-	return (res);
-}
-*/
-
 size_t		ft_assoc(va_list *ap, t_flags *yep)
 {
 	size_t res;
 
 	res = 0;
 	if (*(yep->type ) == 'd' || *(yep->type) == 'i')
-		res = ft_ex_di(ap, yep);
-	//if (yep->type == 'o')
-	//	ft_ex_o(rate, ap, yep);
-	return (res);
+		res = ft_di(yep, ap);
+	/*else if (*(yep->type) == 'o')
+	    res = ft_o(yep, ap);
+	else if (*(yep->type) == 'u')
+	    res = ft_u(yep, ap);
+	else if (*(yep->type) == 'x' || *(yep->type) == 'X')
+	    res = ft_x(yep, ap);
+	else if (*(yep->type) == 'c')
+	    res = ft_c(yep, (char)va_arg(*ap, int);
+	else if (*(yep->type) == 's')
+	    res = ft_s(yep, (char *)va_arg(*ap, char *));
+	else if (*(yep->type) == 'p')
+	    res = ft_p(yep, va_arg(*ap, void *));
+	else if (*(yep->type) == 'f')
+	    res = ft_f(yep, ap);
+	else if (*(yep->type) == '%')
+	    res = ft_prc(yep, ap);
+	else
+	    ft_c(yep, ap);
+	*/return (res);
 }

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/assoc.c.o"
   "CMakeFiles/printf.dir/float.c.o"
-  "CMakeFiles/printf.dir/ft_print_di.c.o"
+  "CMakeFiles/printf.dir/print_di.c.o"
   "CMakeFiles/printf.dir/ft_printf.c.o"
   "CMakeFiles/printf.dir/func_str.c.o"
   "CMakeFiles/printf.dir/parse.c.o"
