@@ -69,6 +69,6 @@ int		main()
 {
 	int a;
 	a = 2233;
-	ft_printf("hell\to %-139837.76#d my fr\niend %ld %lld", a, 67, 28722);
+	ft_printf("hello %-139837.-76#d my friend %.*ld %.-*hhd", a, 100, 67, 33, 28722);
 	return (0);
 }

@@ -32,6 +32,7 @@ typedef	struct          t_list
     int		            zero;
 	long long           width;
 	unsigned long long  prcn;
+	int                 prcn_sign;
 	char	            *type;
 	int 		        len;
 }				        t_flags;
@@ -41,24 +42,20 @@ size_t          ft_putstr(const char *s);
 char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 
-static void     ft_di2(t_flags *yep, va_list *ap, char *s);
+char    *ft_di2(t_flags *yep, va_list *ap);
 int		ft_di(t_flags *yep, va_list *ap);
 
-size_t		ft_ex_di(va_list *ap, t_flags *yep);
-size_t		ft_ex_o(va_list *ap, t_flags *yep);
-size_t		ft_ex_hex(va_list *ap, t_flags *yep);
 size_t		ft_assoc(va_list *ap, t_flags *yep);
 
 char		    *ft_strchr(const char *s, int c);
 
 static void     ft_long(t_flags *yep, char **str);
-int             ft_atoi(const char *str);
+long int             ft_atoi(const char *str);
 static int     ft_precis(t_flags *yep, char **str, va_list *ap);
 static void     ft_width(t_flags *yep, char **str, va_list *ap);
 static void     ft_flags(t_flags *yep, char **str);
 int	            ft_parse(t_flags *yep, va_list *ap, char *str);
 
-char		*ft_strchr(const char *s, int c);
 size_t		ft_treatment(va_list *ap, char **format, t_flags *yep);
 
 void		ft_putstrl(char *str, int len);

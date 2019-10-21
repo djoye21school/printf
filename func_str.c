@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int		ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
     int i;
     int sign;

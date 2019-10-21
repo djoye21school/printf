@@ -12,11 +12,12 @@
 
 #include "ft_printf.h"
 
-static void     ft_di2(t_flags *yep, va_list *ap, char *s)
+char     *ft_di2(t_flags *yep, va_list *ap)
 {
     int sign;
     short sh;
     char c;
+    char *s;
 
     if (yep->len == 3)
     {
@@ -28,6 +29,7 @@ static void     ft_di2(t_flags *yep, va_list *ap, char *s)
         c = (char)va_arg(*ap, int);
         s = ft_itoa_base(c, 10, 'a', sign = (c > 0) ? 1 : -1);
     }
+    return (s);
 }
 
 int		ft_di(t_flags *yep, va_list *ap)
@@ -54,6 +56,7 @@ int		ft_di(t_flags *yep, va_list *ap)
         s = ft_itoa_base(ll, 10, 'a', sign = (ll > 0) ? 1 : -1);
     }
     else
-        ft_di2(yep, ap, s);
+        s = ft_di2(yep, ap);
+    printf("\n-- %lld -- %d\n", yep->prcn, yep->prcn_sign);
     return (ft_putstr(s));
 }
