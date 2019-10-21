@@ -50,7 +50,7 @@ size_t		ft_ex_hex(va_list *ap, t_flags *yep)
 	if (yep->len == 0)
 		res = (unsigned int)va_arg(*ap, unsigned int);
 	if (yep->len == 1)
-		res = (unsigned long int)va_arg(*ap, unsigned long int);
+		res = (unsigned long int)va_arg(*ap, unsigned long int   );
 	if (yep->len == 2)
 		res = (unsigned long long int)va_arg(*ap, unsigned long long int);
 	if (yep->len == 3)
@@ -64,9 +64,11 @@ size_t		ft_ex_hex(va_list *ap, t_flags *yep)
 size_t		ft_assoc(va_list *ap, t_flags *yep)
 {
 	size_t res;
+
+	res = 0;
 	if (*(yep->type ) == 'd' || *(yep->type) == 'i')
 		res = ft_ex_di(ap, yep);
 	//if (yep->type == 'o')
 	//	ft_ex_o(rate, ap, yep);
-	return (0);
+	return (res);
 }
