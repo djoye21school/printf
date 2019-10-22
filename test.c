@@ -47,14 +47,17 @@ int		main()
 	//char v = 23535;
 	q = -1;*/
 
-	char *yui;
+	int tyu;
+	printf("%d\n", printf("hello %-34d\n", tyu));
+	printf("\n------------------------------------------\n");
+	/*char *yui;
 	char *tt;
 	tt = ft_strnew(20);
 	tt = ft_strdup(s);
 	yui = tt;
 	free(tt);
 	printf("%s\n", yui);
-	printf("---------------------------------\n");
+	*/printf("---------------------------------\n");
 	int rt = 12;
 	//printf("%d\n", printf("%.*289d\n", 20, 75));
 	printf("----------------\n");

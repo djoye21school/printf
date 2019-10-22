@@ -123,60 +123,6 @@ printf/fast:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/build
 .PHONY : printf/fast
 
-addpre.o: addpre.c.o
-
-.PHONY : addpre.o
-
-# target to build an object file
-addpre.c.o:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addpre.c.o
-.PHONY : addpre.c.o
-
-addpre.i: addpre.c.i
-
-.PHONY : addpre.i
-
-# target to preprocess a source file
-addpre.c.i:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addpre.c.i
-.PHONY : addpre.c.i
-
-addpre.s: addpre.c.s
-
-.PHONY : addpre.s
-
-# target to generate assembly for a file
-addpre.c.s:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addpre.c.s
-.PHONY : addpre.c.s
-
-addsuff.o: addsuff.c.o
-
-.PHONY : addsuff.o
-
-# target to build an object file
-addsuff.c.o:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addsuff.c.o
-.PHONY : addsuff.c.o
-
-addsuff.i: addsuff.c.i
-
-.PHONY : addsuff.i
-
-# target to preprocess a source file
-addsuff.c.i:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addsuff.c.i
-.PHONY : addsuff.c.i
-
-addsuff.s: addsuff.c.s
-
-.PHONY : addsuff.s
-
-# target to generate assembly for a file
-addsuff.c.s:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addsuff.c.s
-.PHONY : addsuff.c.s
-
 assoc.o: assoc.c.o
 
 .PHONY : assoc.o
@@ -285,33 +231,6 @@ ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
-ft_strdel.o: ft_strdel.c.o
-
-.PHONY : ft_strdel.o
-
-# target to build an object file
-ft_strdel.c.o:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdel.c.o
-.PHONY : ft_strdel.c.o
-
-ft_strdel.i: ft_strdel.c.i
-
-.PHONY : ft_strdel.i
-
-# target to preprocess a source file
-ft_strdel.c.i:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdel.c.i
-.PHONY : ft_strdel.c.i
-
-ft_strdel.s: ft_strdel.c.s
-
-.PHONY : ft_strdel.s
-
-# target to generate assembly for a file
-ft_strdel.c.s:
-	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdel.c.s
-.PHONY : ft_strdel.c.s
-
 ft_strdup.o: ft_strdup.c.o
 
 .PHONY : ft_strdup.o
@@ -338,6 +257,33 @@ ft_strdup.s: ft_strdup.c.s
 ft_strdup.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdup.c.s
 .PHONY : ft_strdup.c.s
+
+ft_strjoin.o: ft_strjoin.c.o
+
+.PHONY : ft_strjoin.o
+
+# target to build an object file
+ft_strjoin.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strjoin.c.o
+.PHONY : ft_strjoin.c.o
+
+ft_strjoin.i: ft_strjoin.c.i
+
+.PHONY : ft_strjoin.i
+
+# target to preprocess a source file
+ft_strjoin.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strjoin.c.i
+.PHONY : ft_strjoin.c.i
+
+ft_strjoin.s: ft_strjoin.c.s
+
+.PHONY : ft_strjoin.s
+
+# target to generate assembly for a file
+ft_strjoin.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strjoin.c.s
+.PHONY : ft_strjoin.c.s
 
 ft_strnew.o: ft_strnew.c.o
 
@@ -447,6 +393,33 @@ print_di.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_di.c.s
 .PHONY : print_di.c.s
 
+print_p.o: print_p.c.o
+
+.PHONY : print_p.o
+
+# target to build an object file
+print_p.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_p.c.o
+.PHONY : print_p.c.o
+
+print_p.i: print_p.c.i
+
+.PHONY : print_p.i
+
+# target to preprocess a source file
+print_p.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_p.c.i
+.PHONY : print_p.c.i
+
+print_p.s: print_p.c.s
+
+.PHONY : print_p.s
+
+# target to generate assembly for a file
+print_p.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_p.c.s
+.PHONY : print_p.c.s
+
 treatment.o: treatment.c.o
 
 .PHONY : treatment.o
@@ -483,12 +456,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... printf"
-	@echo "... addpre.o"
-	@echo "... addpre.i"
-	@echo "... addpre.s"
-	@echo "... addsuff.o"
-	@echo "... addsuff.i"
-	@echo "... addsuff.s"
 	@echo "... assoc.o"
 	@echo "... assoc.i"
 	@echo "... assoc.s"
@@ -501,12 +468,12 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
-	@echo "... ft_strdel.o"
-	@echo "... ft_strdel.i"
-	@echo "... ft_strdel.s"
 	@echo "... ft_strdup.o"
 	@echo "... ft_strdup.i"
 	@echo "... ft_strdup.s"
+	@echo "... ft_strjoin.o"
+	@echo "... ft_strjoin.i"
+	@echo "... ft_strjoin.s"
 	@echo "... ft_strnew.o"
 	@echo "... ft_strnew.i"
 	@echo "... ft_strnew.s"
@@ -519,6 +486,9 @@ help:
 	@echo "... print_di.o"
 	@echo "... print_di.i"
 	@echo "... print_di.s"
+	@echo "... print_p.o"
+	@echo "... print_p.i"
+	@echo "... print_p.s"
 	@echo "... treatment.o"
 	@echo "... treatment.i"
 	@echo "... treatment.s"

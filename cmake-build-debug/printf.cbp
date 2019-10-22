@@ -82,12 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/sdoughnu/Desktop/printf/addpre.c">
-			<Option target="printf"/>
-		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/printf/addsuff.c">
-			<Option target="printf"/>
-		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/assoc.c">
 			<Option target="printf"/>
 		</Unit>
@@ -103,10 +97,10 @@
 		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_printf.h">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strdel.c">
+		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strdup.c">
 			<Option target="printf"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strdup.c">
+		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strjoin.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strnew.c">
@@ -119,6 +113,9 @@
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/print_di.c">
+			<Option target="printf"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/print_p.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/treatment.c">

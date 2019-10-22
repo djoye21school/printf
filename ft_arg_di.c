@@ -12,64 +12,58 @@
 
 #include "ft_printf.h"
 
-static int      ft_neg(char *s)
+static int      ft_neg(t_flags *yep)
 {
     char *buf;
 
-    if (*s != '-')
+    if (*(yep->s) != '-')
         return (0);
-    s++;
-    if (!(s = ft_strdup(s)))
+    buf = yep->s;
+    (yep->s)++;
+    if (!(yep->s = ft_strdup(yep->s)))
         return (-2);
+    free(buf);
     return (1);
 }
 
-static char     *ft_prcn(t_flags *yep, char *s, int sign)
+static void     ft_prcn(t_flags *yep, int sign)
 {
     int len;
-    char *buf;
 
-    len = ft_strlen(s);
+    len = ft_strlen(yep->s);
     if (yep->prcn > len)
     {
         while (len < yep->prcn)
         {
-            buf = ft_addpre("0", s);
+            yep->s = ft_strjoin("0", yep->s);
             len++;
         }
-        return (buf);
-    }
-    else
-    {
-        buf = s;
-        //free(s);
-        return (buf);
     }
 }
 
-static void    ft_addflag(char *s, t_flags *yep, int sign)
+static void    ft_addflag(t_flags *yep, int sign)
 {
     if (sign == 0)
     {
         if (yep->space == 1 && yep->plus == 0)
-            s = ft_addpre(" ", s);
-        else if (yep-> plus == 0)
-            s = ft_addpre("+", s);
+            yep->s = ft_strjoin(" ", yep->s);
+        else if (yep-> plus == 1)
+            yep->s = ft_strjoin("+", yep->s);
     }
     else
-        s = ft_addpre("-", s);
+        yep->s = ft_strjoin("-", yep->s);
 }
 
-static  void    ft_width_di(char *s, int sign, t_flags *yep)
+static  void    ft_width_di(int sign, t_flags *yep)
 {
     int len;
 
-    len = ft_strlen(s);
+    len = ft_strlen(yep->s);
     if (yep->width > len)
     {
         while (yep->min == 1 && yep->width > len)
         {
-            s = ft_addsuff(" ", s);
+            yep->s = ft_strjoin(yep->s, " ");
             len++;
         }
         if (yep->zero == 1 && yep->min != 1 && (yep->plus == 1 || sign == 1
@@ -77,31 +71,31 @@ static  void    ft_width_di(char *s, int sign, t_flags *yep)
             len++;
         while (yep->zero == 1 && len < yep->width && yep->prcn < 0)
         {
-            s = ft_addpre("0", s);
+            yep->s = ft_strjoin("0", yep->s);
             len++;
         }
         while (len < yep->width)
         {
-            s = ft_addpre(" ", s);
+            yep->s = ft_strjoin(" ", yep->s);
             len++;
         }
     }
 }
 
-size_t             ft_arg_di(t_flags *yep, char *s)
+size_t             ft_arg_di(t_flags *yep)
 {
     size_t  res;
     int     sign;
-    char *buf;
 
-    if ((sign = ft_neg(s)) == -2)
+    res = 0;
+    if ((sign = ft_neg(yep)) == -2)
         return (-2);
-    buf = ft_prcn(yep, s, sign);
+    ft_prcn(yep, sign);
     if (yep->zero != 1 || yep->min == 1 || yep->prcn > 0)
-        ft_addflag(buf, yep, sign);
-    ft_width_di(buf, sign, yep);
+        ft_addflag(yep, sign);
+    ft_width_di(sign, yep);
     if (yep->zero == 1 && yep->min != 1 && yep->prcn < 0)
-        ft_addflag(buf, yep, sign);
-    res = ft_putstr(buf);
+        ft_addflag(yep, sign);
+    res = ft_putstr(yep->s);
     return (res);
 }

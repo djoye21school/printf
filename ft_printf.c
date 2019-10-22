@@ -68,7 +68,8 @@ int		ft_printf(char *format, ...)
 int		main()
 {
 	int a;
-	a = 2233;
-	ft_printf("hello %100d", a);
+	a = 32767;
+	//ft_printf("hello %100d", a);
+	printf("%d\n",ft_printf("hello %-34d\n", a));
 	return (0);
 }
