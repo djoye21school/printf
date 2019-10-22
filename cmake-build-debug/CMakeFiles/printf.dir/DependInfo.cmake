@@ -4,9 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/sdoughnu/Desktop/printf/addpre.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/addpre.c.o"
+  "/Users/sdoughnu/Desktop/printf/addsuff.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/addsuff.c.o"
   "/Users/sdoughnu/Desktop/printf/assoc.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/assoc.c.o"
   "/Users/sdoughnu/Desktop/printf/float.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/float.c.o"
+  "/Users/sdoughnu/Desktop/printf/ft_arg_di.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_arg_di.c.o"
   "/Users/sdoughnu/Desktop/printf/ft_printf.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_printf.c.o"
+  "/Users/sdoughnu/Desktop/printf/ft_strnew.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_strnew.c.o"
   "/Users/sdoughnu/Desktop/printf/func_str.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/func_str.c.o"
   "/Users/sdoughnu/Desktop/printf/parse.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/parse.c.o"
   "/Users/sdoughnu/Desktop/printf/print_di.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/print_di.c.o"

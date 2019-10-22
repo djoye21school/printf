@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_pruntf.h"
+#include "ft_printf.h"
 
 char	*ft_strnew(size_t size)
 {

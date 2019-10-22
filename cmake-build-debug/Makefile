@@ -123,6 +123,60 @@ printf/fast:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/build
 .PHONY : printf/fast
 
+addpre.o: addpre.c.o
+
+.PHONY : addpre.o
+
+# target to build an object file
+addpre.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addpre.c.o
+.PHONY : addpre.c.o
+
+addpre.i: addpre.c.i
+
+.PHONY : addpre.i
+
+# target to preprocess a source file
+addpre.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addpre.c.i
+.PHONY : addpre.c.i
+
+addpre.s: addpre.c.s
+
+.PHONY : addpre.s
+
+# target to generate assembly for a file
+addpre.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addpre.c.s
+.PHONY : addpre.c.s
+
+addsuff.o: addsuff.c.o
+
+.PHONY : addsuff.o
+
+# target to build an object file
+addsuff.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addsuff.c.o
+.PHONY : addsuff.c.o
+
+addsuff.i: addsuff.c.i
+
+.PHONY : addsuff.i
+
+# target to preprocess a source file
+addsuff.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addsuff.c.i
+.PHONY : addsuff.c.i
+
+addsuff.s: addsuff.c.s
+
+.PHONY : addsuff.s
+
+# target to generate assembly for a file
+addsuff.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/addsuff.c.s
+.PHONY : addsuff.c.s
+
 assoc.o: assoc.c.o
 
 .PHONY : assoc.o
@@ -177,6 +231,33 @@ float.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/float.c.s
 .PHONY : float.c.s
 
+ft_arg_di.o: ft_arg_di.c.o
+
+.PHONY : ft_arg_di.o
+
+# target to build an object file
+ft_arg_di.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_di.c.o
+.PHONY : ft_arg_di.c.o
+
+ft_arg_di.i: ft_arg_di.c.i
+
+.PHONY : ft_arg_di.i
+
+# target to preprocess a source file
+ft_arg_di.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_di.c.i
+.PHONY : ft_arg_di.c.i
+
+ft_arg_di.s: ft_arg_di.c.s
+
+.PHONY : ft_arg_di.s
+
+# target to generate assembly for a file
+ft_arg_di.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_di.c.s
+.PHONY : ft_arg_di.c.s
+
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -203,6 +284,33 @@ ft_printf.s: ft_printf.c.s
 ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
+
+ft_strnew.o: ft_strnew.c.o
+
+.PHONY : ft_strnew.o
+
+# target to build an object file
+ft_strnew.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strnew.c.o
+.PHONY : ft_strnew.c.o
+
+ft_strnew.i: ft_strnew.c.i
+
+.PHONY : ft_strnew.i
+
+# target to preprocess a source file
+ft_strnew.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strnew.c.i
+.PHONY : ft_strnew.c.i
+
+ft_strnew.s: ft_strnew.c.s
+
+.PHONY : ft_strnew.s
+
+# target to generate assembly for a file
+ft_strnew.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strnew.c.s
+.PHONY : ft_strnew.c.s
 
 func_str.o: func_str.c.o
 
@@ -321,15 +429,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... printf"
+	@echo "... addpre.o"
+	@echo "... addpre.i"
+	@echo "... addpre.s"
+	@echo "... addsuff.o"
+	@echo "... addsuff.i"
+	@echo "... addsuff.s"
 	@echo "... assoc.o"
 	@echo "... assoc.i"
 	@echo "... assoc.s"
 	@echo "... float.o"
 	@echo "... float.i"
 	@echo "... float.s"
+	@echo "... ft_arg_di.o"
+	@echo "... ft_arg_di.i"
+	@echo "... ft_arg_di.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_strnew.o"
+	@echo "... ft_strnew.i"
+	@echo "... ft_strnew.s"
 	@echo "... func_str.o"
 	@echo "... func_str.i"
 	@echo "... func_str.s"

@@ -24,7 +24,7 @@ static int      ft_neg(char *s)
     return (1);
 }
 
-static void     ft_precis(t_flags *yep, char *s, int sign)
+static void     ft_prcn(t_flags *yep, char *s, int sign)
 {
     int len;
 
@@ -51,7 +51,7 @@ static void     ft_addflag(char *s, t_flags *yep, int sign)
         s = ft_addpre("-", s);
 }
 
-static  void    ft_width(char *s, int sign)
+static  void    ft_width_di(char *s, int sign, t_flags *yep)
 {
     int len;
 
@@ -84,10 +84,10 @@ size_t             ft_arg_di(t_flags *yep, char *s)
     int     sign;
 
     sign = ft_neg(s);
-    ft_precis(yep, s, sign)
+    ft_prcn(yep, s, sign)
     if (yep->zero != 1 || yep->min == 1 || yep->prcn > 0)
         ft_addflag(s, yep, sign);
-    ft_width(s, sign);
+    ft_width_di(s, sign, yep);
     if (yep->zero == 1 && yep->min != 1 && yep->prcn < 0)
         ft_addflag(s, yep, sign);
     res = ft_putstr(s);

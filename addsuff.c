@@ -19,7 +19,7 @@ char    *ft_addsuff(char *suff, char *str)
     int len;
     i = -1;
 
-    len = ft_strlen(pre) + ft_strlen(str);
+    len = ft_strlen(suff) + ft_strlen(str);
     if (!(ft_strnew(len)))
         return (NULL);
     while (str[++i])
