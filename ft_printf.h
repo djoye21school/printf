@@ -36,32 +36,33 @@ typedef	struct          t_list
 	int 		        len;
 }				        t_flags;
 
-
-size_t          ft_putstr(const char *s);
+size_t			ft_strlen(const char *str);
+size_t			ft_putstr(const char *s);
 char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 
 
-int     ft_no_prcn(t_flags *yep, char *s, int len);
-int     ft_arg_di(t_flags *yep, char *s, int len);
-char    *ft_di2(t_flags *yep, va_list *ap);
-int		ft_di(t_flags *yep, va_list *ap);
+static int      ft_neg(char *s);
+static void     ft_precis(t_flags *yep, char *s, int sign);
+static void     ft_addflag(char *s, t_flags *yep, int sign);
+static  void    ft_width(char *s, int sign);
+size_t			ft_arg_di(t_flags *yep, char *s);
+char			*ft_di2(t_flags *yep, va_list *ap);
+int				ft_di(t_flags *yep, va_list *ap);
 
-size_t		ft_assoc(va_list *ap, t_flags *yep);
+size_t			ft_assoc(va_list *ap, t_flags *yep);
 
-char		    *ft_strchr(const char *s, int c);
+static void		ft_long(t_flags *yep, char **str);
+long int		ft_atoi(const char *str);
+static int		ft_precis(t_flags *yep, char **str, va_list *ap);
+static void		ft_width(t_flags *yep, char **str, va_list *ap);
+static void		ft_flags(t_flags *yep, char **str);
+int				ft_parse(t_flags *yep, va_list *ap, char *str);
 
-static void     ft_long(t_flags *yep, char **str);
-long int             ft_atoi(const char *str);
-static int     ft_precis(t_flags *yep, char **str, va_list *ap);
-static void     ft_width(t_flags *yep, char **str, va_list *ap);
-static void     ft_flags(t_flags *yep, char **str);
-int	            ft_parse(t_flags *yep, va_list *ap, char *str);
+size_t			ft_treatment(va_list *ap, char **format, t_flags *yep);
 
-size_t		ft_treatment(va_list *ap, char **format, t_flags *yep);
-
-void		ft_putstrl(char *str, int len);
-int			ft_parsestr(const char *format, va_list *ap);
-int			ft_printf(char *format, ...);
+void			ft_putstrl(char *str, int len);
+int				ft_parsestr(const char *format, va_list *ap);
+int				ft_printf(char *format, ...);
 
 #endif

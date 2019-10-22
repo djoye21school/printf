@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_func.c                                          :+:      :+:    :+:   */
+/*   func_str.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 10:17:36 by sdoughnu          #+#    #+#             */
-/*   Updated: 2019/10/09 10:17:41 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/10/22 12:07:02 by sdoughnu          #+#    #+#             */
+/*   Updated: 2019/10/22 12:07:07 by sdoughnu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,6 @@ long int	ft_atoi(const char *str)
     return ((long int)nbr * sign);
 }
 
-
-char	*ft_strchr(const char *s, int c)
-{
-	int i;
-	int count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (s[i] == (char)c)
-			return (char *)(&s[i]);
-		i++;
-	}
-	if (s[i] == (char)c)
-		return (char *)(&s[i]);
-	return (NULL);
-}
-
 size_t		ft_putstr(const char *s)
 {
 	size_t i;
@@ -70,4 +51,14 @@ size_t		ft_putstr(const char *s)
 		i++;
 	}
 	return (i);
+}
+
+size_t		ft_strlen(const char *str)
+{
+    size_t i;
+
+    i = 0;
+    while (str[i] != '\0')
+        i++;
+    return (i);
 }

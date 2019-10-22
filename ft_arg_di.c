@@ -12,49 +12,84 @@
 
 #include "ft_printf.h"
 
-int     ft_no_prcn(t_flags *yep, char *s, int len)
+static int      ft_neg(char *s)
 {
-    int res;
-    char flag;
-    if (yep->plus == 1 && *s != '-')
+    char *buf;
+
+    if (*s != '-')
+        return (0);
+    s++;
+    if (!(s = ft_strdup(s)))
+        return (NULL);
+    return (1);
+}
+
+static void     ft_precis(t_flags *yep, char *s, int sign)
+{
+    int len;
+
+    if (yep->prcn > (len = ft_strlen(s)))
     {
-        len++;
-        flag = "+";
+        while (len < yep->prcn)
+        {
+            s = ft_addpre("0", s);
+            len++;
+        }
     }
-    if (yep->space == 1 && *s != '-' && yep->plus == 0)
-        flag = " ";
+}
+
+static void     ft_addflag(char *s, t_flags *yep, int sign)
+{
+    if (sign == 0)
+    {
+        if (yep->space == 1 && yep->plus == 0)
+            s = ft_addpre(" ", s);
+        else if (yep-> plus == 0)
+            s = ft_addpre("+", s);
+    }
     else
-        yep->space = 0;
-    if (yep->zero == 1 && yep->min == 0 && yep->width > len)
-        // привести по ширине дополнив нулями и вывести с флагами
-    if (yep->min == 1 && yep->width > len)
-        // приравнять к левому краю и дополнив ширину вывести
-    if (yep->min == 0 && yep->zero == 0)
-        // просто вывести с флагами
-    return (res);
+        s = ft_addpre("-", s);
 }
 
-int     ft_align(t_flags *yep, char *s, int len)
+static  void    ft_width(char *s, int sign)
 {
-    int res;
-    return (res);
+    int len;
+
+    if (yep->width > (len = ft_strlen(s)))
+    {
+        while (yep->min == 1 && yep->width > len)
+        {
+            s = ft_addsuff(" ", s);
+            len++;
+        }
+        if (yep->zero == 1 && yep->min != 1 && (yep->plus == 1 || sign == 1
+        || yep->space == 1) && yep->prcn < 0)
+            len++;
+        while (yep->zero == 1 && len < yep->width && yep->prcn < 0)
+        {
+            s = ft_addpre("0", s);
+            len++;
+        }
+        while (len < yep->width)
+        {
+            s = ft_addpre(" ", s);
+            len++:
+        }
+    }
 }
 
-int     ft_no_align(t_flags *yep, char *s, int len)
+size_t             ft_arg_di(t_flags *yep, char *s)
 {
-    int res;
-    return (res);
-}
+    size_t  res;
+    int     sign;
 
-int     ft_arg_di(t_flags *yep, char *s, int len)
-{
-    int res;
-
-    if (yep->prcn < 0)
-        res = ft_no_prcn(yep, s, len);
-    else if (yep->min == 1)
-        res = ft_align(yep, s, len);
-    else if (yep->min == 0)
-        ft_no_align(yep, s, len);
+    sign = ft_neg(s);
+    ft_precis(yep, s, sign)
+    if (yep->zero != 1 || yep->min == 1 || yep->prcn > 0)
+        ft_addflag(s, yep, sign);
+    ft_width(s, sign);
+    if (yep->zero == 1 && yep->min != 1 && yep->prcn < 0)
+        ft_addflag(s, yep, sign);
+    res = ft_putstr(s);
     return (res);
 }

@@ -57,6 +57,6 @@ int		ft_di(t_flags *yep, va_list *ap)
     }
     else
         s = ft_di2(yep, ap);
-    //ft_arg_di(yep, s, ft_strlen(s));
-    return (ft_putstr(s));
+    ft_arg_di(yep, s);
+    return (ft_arg_di(yep, s));
 }
