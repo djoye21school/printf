@@ -19,6 +19,12 @@ CMakeFiles/printf.dir/ft_arg_di.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/printf.dir/ft_printf.c.o: ../ft_printf.h
 
+CMakeFiles/printf.dir/ft_strdel.c.o: ../ft_printf.h
+CMakeFiles/printf.dir/ft_strdel.c.o: ../ft_strdel.c
+
+CMakeFiles/printf.dir/ft_strdup.c.o: ../ft_printf.h
+CMakeFiles/printf.dir/ft_strdup.c.o: ../ft_strdup.c
+
 CMakeFiles/printf.dir/ft_strnew.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/ft_strnew.c.o: ../ft_strnew.c
 

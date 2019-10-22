@@ -20,25 +20,34 @@ static int      ft_neg(char *s)
         return (0);
     s++;
     if (!(s = ft_strdup(s)))
-        return (NULL);
+        return (-2);
     return (1);
 }
 
-static void     ft_prcn(t_flags *yep, char *s, int sign)
+static char     *ft_prcn(t_flags *yep, char *s, int sign)
 {
     int len;
+    char *buf;
 
-    if (yep->prcn > (len = ft_strlen(s)))
+    len = ft_strlen(s);
+    if (yep->prcn > len)
     {
         while (len < yep->prcn)
         {
-            s = ft_addpre("0", s);
+            buf = ft_addpre("0", s);
             len++;
         }
+        return (buf);
+    }
+    else
+    {
+        buf = s;
+        //free(s);
+        return (buf);
     }
 }
 
-static void     ft_addflag(char *s, t_flags *yep, int sign)
+static void    ft_addflag(char *s, t_flags *yep, int sign)
 {
     if (sign == 0)
     {
@@ -55,7 +64,8 @@ static  void    ft_width_di(char *s, int sign, t_flags *yep)
 {
     int len;
 
-    if (yep->width > (len = ft_strlen(s)))
+    len = ft_strlen(s);
+    if (yep->width > len)
     {
         while (yep->min == 1 && yep->width > len)
         {
@@ -73,7 +83,7 @@ static  void    ft_width_di(char *s, int sign, t_flags *yep)
         while (len < yep->width)
         {
             s = ft_addpre(" ", s);
-            len++:
+            len++;
         }
     }
 }
@@ -82,14 +92,16 @@ size_t             ft_arg_di(t_flags *yep, char *s)
 {
     size_t  res;
     int     sign;
+    char *buf;
 
-    sign = ft_neg(s);
-    ft_prcn(yep, s, sign)
+    if ((sign = ft_neg(s)) == -2)
+        return (-2);
+    buf = ft_prcn(yep, s, sign);
     if (yep->zero != 1 || yep->min == 1 || yep->prcn > 0)
-        ft_addflag(s, yep, sign);
-    ft_width_di(s, sign, yep);
+        ft_addflag(buf, yep, sign);
+    ft_width_di(buf, sign, yep);
     if (yep->zero == 1 && yep->min != 1 && yep->prcn < 0)
-        ft_addflag(s, yep, sign);
-    res = ft_putstr(s);
+        ft_addflag(buf, yep, sign);
+    res = ft_putstr(buf);
     return (res);
 }

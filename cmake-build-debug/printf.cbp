@@ -103,6 +103,12 @@
 		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_printf.h">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strdel.c">
+			<Option target="printf"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strdup.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_strnew.c">
 			<Option target="printf"/>
 		</Unit>

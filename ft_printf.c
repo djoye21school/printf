@@ -69,6 +69,6 @@ int		main()
 {
 	int a;
 	a = 2233;
-	ft_printf("hello %d", a);
+	ft_printf("hello %100d", a);
 	return (0);
 }

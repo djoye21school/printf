@@ -20,7 +20,7 @@ char    *ft_addpre(char *pre, char *str)
     i = -1;
 
     len = ft_strlen(pre) + ft_strlen(str);
-    if (!(ft_strnew(len)))
+    if (!(res = ft_strnew(len)))
         return (NULL);
     while (pre[++i])
         res[i] = pre[i];

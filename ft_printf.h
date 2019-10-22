@@ -31,11 +31,14 @@ typedef	struct          t_list
 	int		            hash;
     int		            zero;
 	long long           width;
-	unsigned long long  prcn;
+	long long           prcn;
 	char	            *type;
 	int 		        len;
 }				        t_flags;
 
+
+void	ft_strdel(char **as);
+char	*ft_strdup(const char *s1);
 char	*ft_strnew(size_t size);
 size_t			ft_strlen(const char *str);
 size_t			ft_putstr(const char *s);
@@ -44,7 +47,7 @@ int				ft_float(long double nb, int acc);
 
 
 static int      ft_neg(char *s);
-static void     ft_prcn(t_flags *yep, char *s, int sign);
+static char     *ft_prcn(t_flags *yep, char *s, int sign);
 static void     ft_addflag(char *s, t_flags *yep, int sign);
 static  void    ft_width_di(char *s, int sign, t_flags *yep);
 size_t			ft_arg_di(t_flags *yep, char *s);

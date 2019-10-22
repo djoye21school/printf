@@ -64,7 +64,7 @@ static int     ft_precis(t_flags *yep, char **str, va_list *ap)
     else if (**str == '\0')
         return (-1);
     else
-        yep->prcn = 0;
+        yep->prcn = -1;
     while (**str && **str >= '0' && **str <= '9')
         *str += 1;
     return (1);

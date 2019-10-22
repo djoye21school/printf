@@ -285,6 +285,60 @@ ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
+ft_strdel.o: ft_strdel.c.o
+
+.PHONY : ft_strdel.o
+
+# target to build an object file
+ft_strdel.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdel.c.o
+.PHONY : ft_strdel.c.o
+
+ft_strdel.i: ft_strdel.c.i
+
+.PHONY : ft_strdel.i
+
+# target to preprocess a source file
+ft_strdel.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdel.c.i
+.PHONY : ft_strdel.c.i
+
+ft_strdel.s: ft_strdel.c.s
+
+.PHONY : ft_strdel.s
+
+# target to generate assembly for a file
+ft_strdel.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdel.c.s
+.PHONY : ft_strdel.c.s
+
+ft_strdup.o: ft_strdup.c.o
+
+.PHONY : ft_strdup.o
+
+# target to build an object file
+ft_strdup.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdup.c.o
+.PHONY : ft_strdup.c.o
+
+ft_strdup.i: ft_strdup.c.i
+
+.PHONY : ft_strdup.i
+
+# target to preprocess a source file
+ft_strdup.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdup.c.i
+.PHONY : ft_strdup.c.i
+
+ft_strdup.s: ft_strdup.c.s
+
+.PHONY : ft_strdup.s
+
+# target to generate assembly for a file
+ft_strdup.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_strdup.c.s
+.PHONY : ft_strdup.c.s
+
 ft_strnew.o: ft_strnew.c.o
 
 .PHONY : ft_strnew.o
@@ -447,6 +501,12 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_strdel.o"
+	@echo "... ft_strdel.i"
+	@echo "... ft_strdel.s"
+	@echo "... ft_strdup.o"
+	@echo "... ft_strdup.i"
+	@echo "... ft_strdup.s"
 	@echo "... ft_strnew.o"
 	@echo "... ft_strnew.i"
 	@echo "... ft_strnew.s"

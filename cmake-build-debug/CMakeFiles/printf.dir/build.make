@@ -161,9 +161,35 @@ CMakeFiles/printf.dir/ft_arg_di.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/ft_arg_di.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/printf/ft_arg_di.c -o CMakeFiles/printf.dir/ft_arg_di.c.s
 
+CMakeFiles/printf.dir/ft_strdel.c.o: CMakeFiles/printf.dir/flags.make
+CMakeFiles/printf.dir/ft_strdel.c.o: ../ft_strdel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/printf.dir/ft_strdel.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/ft_strdel.c.o   -c /Users/sdoughnu/Desktop/printf/ft_strdel.c
+
+CMakeFiles/printf.dir/ft_strdel.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf.dir/ft_strdel.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/printf/ft_strdel.c > CMakeFiles/printf.dir/ft_strdel.c.i
+
+CMakeFiles/printf.dir/ft_strdel.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/ft_strdel.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/printf/ft_strdel.c -o CMakeFiles/printf.dir/ft_strdel.c.s
+
+CMakeFiles/printf.dir/ft_strdup.c.o: CMakeFiles/printf.dir/flags.make
+CMakeFiles/printf.dir/ft_strdup.c.o: ../ft_strdup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/printf.dir/ft_strdup.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/ft_strdup.c.o   -c /Users/sdoughnu/Desktop/printf/ft_strdup.c
+
+CMakeFiles/printf.dir/ft_strdup.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf.dir/ft_strdup.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/printf/ft_strdup.c > CMakeFiles/printf.dir/ft_strdup.c.i
+
+CMakeFiles/printf.dir/ft_strdup.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf.dir/ft_strdup.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/printf/ft_strdup.c -o CMakeFiles/printf.dir/ft_strdup.c.s
+
 CMakeFiles/printf.dir/parse.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/parse.c.o: ../parse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/printf.dir/parse.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/printf.dir/parse.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/parse.c.o   -c /Users/sdoughnu/Desktop/printf/parse.c
 
 CMakeFiles/printf.dir/parse.c.i: cmake_force
@@ -176,7 +202,7 @@ CMakeFiles/printf.dir/parse.c.s: cmake_force
 
 CMakeFiles/printf.dir/ft_strnew.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/ft_strnew.c.o: ../ft_strnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/printf.dir/ft_strnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/printf.dir/ft_strnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/ft_strnew.c.o   -c /Users/sdoughnu/Desktop/printf/ft_strnew.c
 
 CMakeFiles/printf.dir/ft_strnew.c.i: cmake_force
@@ -189,7 +215,7 @@ CMakeFiles/printf.dir/ft_strnew.c.s: cmake_force
 
 CMakeFiles/printf.dir/treatment.c.o: CMakeFiles/printf.dir/flags.make
 CMakeFiles/printf.dir/treatment.c.o: ../treatment.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/printf.dir/treatment.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/printf.dir/treatment.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf.dir/treatment.c.o   -c /Users/sdoughnu/Desktop/printf/treatment.c
 
 CMakeFiles/printf.dir/treatment.c.i: cmake_force
@@ -210,6 +236,8 @@ printf_OBJECTS = \
 "CMakeFiles/printf.dir/ft_printf.c.o" \
 "CMakeFiles/printf.dir/func_str.c.o" \
 "CMakeFiles/printf.dir/ft_arg_di.c.o" \
+"CMakeFiles/printf.dir/ft_strdel.c.o" \
+"CMakeFiles/printf.dir/ft_strdup.c.o" \
 "CMakeFiles/printf.dir/parse.c.o" \
 "CMakeFiles/printf.dir/ft_strnew.c.o" \
 "CMakeFiles/printf.dir/treatment.c.o"
@@ -225,12 +253,14 @@ printf: CMakeFiles/printf.dir/print_di.c.o
 printf: CMakeFiles/printf.dir/ft_printf.c.o
 printf: CMakeFiles/printf.dir/func_str.c.o
 printf: CMakeFiles/printf.dir/ft_arg_di.c.o
+printf: CMakeFiles/printf.dir/ft_strdel.c.o
+printf: CMakeFiles/printf.dir/ft_strdup.c.o
 printf: CMakeFiles/printf.dir/parse.c.o
 printf: CMakeFiles/printf.dir/ft_strnew.c.o
 printf: CMakeFiles/printf.dir/treatment.c.o
 printf: CMakeFiles/printf.dir/build.make
 printf: CMakeFiles/printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

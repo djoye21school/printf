@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/ft_printf.c.o"
   "CMakeFiles/printf.dir/func_str.c.o"
   "CMakeFiles/printf.dir/ft_arg_di.c.o"
+  "CMakeFiles/printf.dir/ft_strdel.c.o"
+  "CMakeFiles/printf.dir/ft_strdup.c.o"
   "CMakeFiles/printf.dir/parse.c.o"
   "CMakeFiles/printf.dir/ft_strnew.c.o"
   "CMakeFiles/printf.dir/treatment.c.o"

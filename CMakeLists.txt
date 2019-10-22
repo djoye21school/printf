@@ -15,6 +15,8 @@ add_executable(printf
         ft_printf.h
         func_str.c
         ft_arg_di.c
+        ft_strdel.c
+        ft_strdup.c
         parse.c
         ft_strnew.c
         treatment.c)
