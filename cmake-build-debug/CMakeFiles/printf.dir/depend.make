@@ -43,6 +43,7 @@ CMakeFiles/printf.dir/print_di.c.o: ../print_di.c
 CMakeFiles/printf.dir/print_o.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/print_o.c.o: ../print_o.c
 
+CMakeFiles/printf.dir/print_p.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/print_p.c.o: ../print_p.c
 
 CMakeFiles/printf.dir/print_u.c.o: ../ft_printf.h

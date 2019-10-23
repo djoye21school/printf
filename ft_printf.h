@@ -45,6 +45,9 @@ size_t			ft_putstr(const char *s);
 char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 
+static void     ft_width_p(t_flags *yep);
+static void     ft_prcn_p(t_flags *yep);
+size_t          ft_p(t_flags *yep, void *tmp);
 
 static void     ft_width_u(t_flags *yep);
 static void     ft_prcn_u(t_flags *yep);

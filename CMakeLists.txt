@@ -10,6 +10,7 @@ add_executable(printf
         ft_arg_o.c
         print_Xx.c
         print_o.c
+        print_p.c
         assoc.c
         float.c
         ft_arg_di.c
@@ -22,5 +23,4 @@ add_executable(printf
         parse.c
         print_di.c
         print_u.c
-        print_p.c
         treatment.c)
