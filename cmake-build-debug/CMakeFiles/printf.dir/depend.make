@@ -7,6 +7,9 @@ CMakeFiles/printf.dir/assoc.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/float.c.o: ../float.c
 CMakeFiles/printf.dir/float.c.o: ../ft_printf.h
 
+CMakeFiles/printf.dir/ft_arg_Xx.c.o: ../ft_arg_Xx.c
+CMakeFiles/printf.dir/ft_arg_Xx.c.o: ../ft_printf.h
+
 CMakeFiles/printf.dir/ft_arg_di.c.o: ../ft_arg_di.c
 CMakeFiles/printf.dir/ft_arg_di.c.o: ../ft_printf.h
 
@@ -27,6 +30,9 @@ CMakeFiles/printf.dir/func_str.c.o: ../func_str.c
 
 CMakeFiles/printf.dir/parse.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/parse.c.o: ../parse.c
+
+CMakeFiles/printf.dir/print_Xx.c.o: ../ft_printf.h
+CMakeFiles/printf.dir/print_Xx.c.o: ../print_Xx.c
 
 CMakeFiles/printf.dir/print_di.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/print_di.c.o: ../print_di.c

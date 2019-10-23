@@ -30,19 +30,19 @@ static void    ft_di2(t_flags *yep, va_list *ap)
     }
 }
 
-int		ft_di(t_flags *yep, va_list *ap)
+size_t		ft_di(t_flags *yep, va_list *ap)
 {
     int sign;
     int i;
     long l;
     long long ll;
 
-    if (yep->len == 0)
+    if (yep->len == 0 && *(yep->type) != 'D' && *(yep->type) != 'I')
     {
         i = (int)va_arg(*ap, int);
         yep->s = ft_itoa_base(i, 10, 'a', sign = (i > 0) ? 1 : -1);
     }
-    else if (yep->len == 1)
+    else if (yep->len == 1 || *(yep->type) == 'D' || *(yep->type) == 'I')
     {
         l = (long)va_arg(*ap, long);
         yep->s = ft_itoa_base(l, 10, 'a', sign = (l > 0) ? 1 : -1);

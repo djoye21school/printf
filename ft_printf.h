@@ -46,13 +46,20 @@ char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 
 
+static void     ft_hash(t_flags *yep, int flag, int num, int updown);
+static void     ft_width_x(t_flags *yep, int num, int updown);
+static void     ft_prcn_x(t_flags *yep, int updown);
+size_t      ft_arg_x(t_flags *yep, int flag);
+static void ft_x2(t_flags *yep, va_list *ap, int flag);
+size_t      ft_x(t_flags *yep, va_list *ap);
+
 static int      ft_neg(t_flags *yep);
 static void     ft_prcn(t_flags *yep, int sign);
 static void     ft_addflag(t_flags *yep, int sign);
 static  void    ft_width_di(int sign, t_flags *yep);
 size_t			ft_arg_di(t_flags *yep);
 static void			ft_di2(t_flags *yep, va_list *ap);
-int				ft_di(t_flags *yep, va_list *ap);
+size_t			ft_di(t_flags *yep, va_list *ap);
 
 size_t			ft_assoc(va_list *ap, t_flags *yep);
 

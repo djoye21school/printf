@@ -66,7 +66,7 @@ static  void    ft_width_di(int sign, t_flags *yep)
             yep->s = ft_strjoin(yep->s, " ");
             len++;
         }
-        if (yep->zero == 1 && yep->min != 1 && (yep->plus == 1 || sign == 1
+        if (yep->zero == 1 && yep->min == 0 && (yep->plus == 1 || sign == 1
         || yep->space == 1) && yep->prcn < 0)
             len++;
         while (yep->zero == 1 && len < yep->width && yep->prcn < 0)

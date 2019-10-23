@@ -34,6 +34,7 @@ size_t		ft_treatment(va_list *ap, char **format, t_flags *yep)
 			if ((ft_parse(yep, ap, *format)) == -1)
 			    return (-1);
 			*format = yep->type;
+			//ft_delete(yep);
 			return (ft_assoc(ap, yep));
 		}
 	}

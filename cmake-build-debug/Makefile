@@ -177,6 +177,33 @@ float.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/float.c.s
 .PHONY : float.c.s
 
+ft_arg_Xx.o: ft_arg_Xx.c.o
+
+.PHONY : ft_arg_Xx.o
+
+# target to build an object file
+ft_arg_Xx.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_Xx.c.o
+.PHONY : ft_arg_Xx.c.o
+
+ft_arg_Xx.i: ft_arg_Xx.c.i
+
+.PHONY : ft_arg_Xx.i
+
+# target to preprocess a source file
+ft_arg_Xx.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_Xx.c.i
+.PHONY : ft_arg_Xx.c.i
+
+ft_arg_Xx.s: ft_arg_Xx.c.s
+
+.PHONY : ft_arg_Xx.s
+
+# target to generate assembly for a file
+ft_arg_Xx.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_Xx.c.s
+.PHONY : ft_arg_Xx.c.s
+
 ft_arg_di.o: ft_arg_di.c.o
 
 .PHONY : ft_arg_di.o
@@ -366,6 +393,33 @@ parse.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/parse.c.s
 .PHONY : parse.c.s
 
+print_Xx.o: print_Xx.c.o
+
+.PHONY : print_Xx.o
+
+# target to build an object file
+print_Xx.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_Xx.c.o
+.PHONY : print_Xx.c.o
+
+print_Xx.i: print_Xx.c.i
+
+.PHONY : print_Xx.i
+
+# target to preprocess a source file
+print_Xx.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_Xx.c.i
+.PHONY : print_Xx.c.i
+
+print_Xx.s: print_Xx.c.s
+
+.PHONY : print_Xx.s
+
+# target to generate assembly for a file
+print_Xx.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_Xx.c.s
+.PHONY : print_Xx.c.s
+
 print_di.o: print_di.c.o
 
 .PHONY : print_di.o
@@ -462,6 +516,9 @@ help:
 	@echo "... float.o"
 	@echo "... float.i"
 	@echo "... float.s"
+	@echo "... ft_arg_Xx.o"
+	@echo "... ft_arg_Xx.i"
+	@echo "... ft_arg_Xx.s"
 	@echo "... ft_arg_di.o"
 	@echo "... ft_arg_di.i"
 	@echo "... ft_arg_di.s"
@@ -483,6 +540,9 @@ help:
 	@echo "... parse.o"
 	@echo "... parse.i"
 	@echo "... parse.s"
+	@echo "... print_Xx.o"
+	@echo "... print_Xx.i"
+	@echo "... print_Xx.s"
 	@echo "... print_di.o"
 	@echo "... print_di.i"
 	@echo "... print_di.s"

@@ -48,7 +48,8 @@ int		main()
 	q = -1;*/
 
 	int tyu;
-	printf("%d\n", printf("hello %-34d\n", tyu));
+	tyu = 398773;
+	printf("%d\n", printf("hello %####.23x %0.15o\n", tyu, tyu));
 	printf("\n------------------------------------------\n");
 	/*char *yui;
 	char *tt;

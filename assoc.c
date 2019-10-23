@@ -15,17 +15,20 @@
 size_t		ft_assoc(va_list *ap, t_flags *yep)
 {
 	size_t res;
+	int flag;
 
 	res = 0;
-	if (*(yep->type ) == 'd' || *(yep->type) == 'i')
+	flag = 0;
+	if (*(yep->type ) == 'd' || *(yep->type) == 'i' || *(yep->type) == 'D'
+	    || *(yep->type) == 'I')
 		res = ft_di(yep, ap);
-	/*else if (*(yep->type) == 'o')
-	    res = ft_o(yep, ap);
-	else if (*(yep->type) == 'u')
-	    res = ft_u(yep, ap);
+	//else if (*(yep->type) == 'o' || *(yep->type) == 'O')
+	//    res = ft_o(yep, ap);
+	/*else if (*(yep->type) == 'u')
+	    res = ft_u(yep, ap);*/
 	else if (*(yep->type) == 'x' || *(yep->type) == 'X')
 	    res = ft_x(yep, ap);
-	else if (*(yep->type) == 'c')
+	/*else if (*(yep->type) == 'c')
 	    res = ft_c(yep, (char)va_arg(*ap, int);
 	else if (*(yep->type) == 's')
 	    res = ft_s(yep, (char *)va_arg(*ap, char *));
