@@ -70,8 +70,8 @@ int		main()
 	int a;
 	a = 320;
 	//ft_printf("hello %100d", a);
-	printf("%d\n",ft_printf("hello %.12d %#100.20o\n", a, a));
+	printf("%d\n",ft_printf("hello %.12d %.34u\n", a, a));
 
-    printf("%d\n", printf("hello %.12d %#100.20o\n", a, a));
+    printf("%d\n", printf("hello %.12d %.34u\n", a, a));
 	return (0);
 }

@@ -46,6 +46,10 @@ char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
 int				ft_float(long double nb, int acc);
 
 
+static void     ft_width_u(t_flags *yep);
+static void     ft_prcn_u(t_flags *yep);
+size_t      ft_u(t_flags *yep, va_list *ap);
+
 static void     ft_hash_o(t_flags *yep, int num);
 static void     ft_width_o(t_flags *yep);
 static void     ft_prcn_o(t_flags *yep, int updown);

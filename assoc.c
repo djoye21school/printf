@@ -22,10 +22,10 @@ size_t		ft_assoc(va_list *ap, t_flags *yep)
 	if (*(yep->type ) == 'd' || *(yep->type) == 'i' || *(yep->type) == 'D'
 	    || *(yep->type) == 'I')
 		res = ft_di(yep, ap);
-	//else if (*(yep->type) == 'o' || *(yep->type) == 'O')
-	//    res = ft_o(yep, ap);
-	/*else if (*(yep->type) == 'u')
-	    res = ft_u(yep, ap);*/
+	else if (*(yep->type) == 'o' || *(yep->type) == 'O')
+	    res = ft_o(yep, ap);
+	else if (*(yep->type) == 'u' || *(yep->type) == 'U')
+	    res = ft_u(yep, ap);
 	else if (*(yep->type) == 'x' || *(yep->type) == 'X')
 	    res = ft_x(yep, ap);
 	/*else if (*(yep->type) == 'c')

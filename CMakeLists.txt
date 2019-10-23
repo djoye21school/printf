@@ -21,5 +21,6 @@ add_executable(printf
         func_str.c
         parse.c
         print_di.c
+        print_u.c
         print_p.c
         treatment.c)

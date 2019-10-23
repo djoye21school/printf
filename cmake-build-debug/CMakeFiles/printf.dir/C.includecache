@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/sdoughnu/Desktop/printf/ft_arg_o.c
+/Users/sdoughnu/Desktop/printf/ft_printf.c
 ft_printf.h
 /Users/sdoughnu/Desktop/printf/ft_printf.h
 
@@ -25,8 +25,4 @@ stddef.h
 -
 stdio.h
 -
-
-/Users/sdoughnu/Desktop/printf/print_o.c
-ft_printf.h
-/Users/sdoughnu/Desktop/printf/ft_printf.h
 

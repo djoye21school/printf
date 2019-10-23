@@ -528,6 +528,33 @@ print_p.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_p.c.s
 .PHONY : print_p.c.s
 
+print_u.o: print_u.c.o
+
+.PHONY : print_u.o
+
+# target to build an object file
+print_u.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_u.c.o
+.PHONY : print_u.c.o
+
+print_u.i: print_u.c.i
+
+.PHONY : print_u.i
+
+# target to preprocess a source file
+print_u.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_u.c.i
+.PHONY : print_u.c.i
+
+print_u.s: print_u.c.s
+
+.PHONY : print_u.s
+
+# target to generate assembly for a file
+print_u.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_u.c.s
+.PHONY : print_u.c.s
+
 treatment.o: treatment.c.o
 
 .PHONY : treatment.o
@@ -609,6 +636,9 @@ help:
 	@echo "... print_p.o"
 	@echo "... print_p.i"
 	@echo "... print_p.s"
+	@echo "... print_u.o"
+	@echo "... print_u.i"
+	@echo "... print_u.s"
 	@echo "... treatment.o"
 	@echo "... treatment.i"
 	@echo "... treatment.s"

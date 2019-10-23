@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/func_str.c.o"
   "CMakeFiles/printf.dir/parse.c.o"
   "CMakeFiles/printf.dir/print_di.c.o"
+  "CMakeFiles/printf.dir/print_u.c.o"
   "CMakeFiles/printf.dir/print_p.c.o"
   "CMakeFiles/printf.dir/treatment.c.o"
   "printf.pdb"

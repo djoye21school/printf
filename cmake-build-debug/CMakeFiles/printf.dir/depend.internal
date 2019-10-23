@@ -45,6 +45,9 @@ CMakeFiles/printf.dir/print_o.c.o
  /Users/sdoughnu/Desktop/printf/print_o.c
 CMakeFiles/printf.dir/print_p.c.o
  /Users/sdoughnu/Desktop/printf/print_p.c
+CMakeFiles/printf.dir/print_u.c.o
+ /Users/sdoughnu/Desktop/printf/ft_printf.h
+ /Users/sdoughnu/Desktop/printf/print_u.c
 CMakeFiles/printf.dir/treatment.c.o
  /Users/sdoughnu/Desktop/printf/ft_printf.h
  /Users/sdoughnu/Desktop/printf/treatment.c

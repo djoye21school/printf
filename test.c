@@ -49,7 +49,7 @@ int		main()
 
 	int tyu;
 	tyu = 398773;
-	printf("%d\n", printf("hello %####.23x %0.15o\n", tyu, tyu));
+	printf("%d\n", printf("hello %0100u\n", tyu));
 	printf("\n------------------------------------------\n");
 	/*char *yui;
 	char *tt;
