@@ -49,7 +49,7 @@ int		main()
 
 	int tyu;
 	tyu = 398773;
-	printf("%d\n", printf("%10P\n", &tyu));
+	printf("%d\n", printf("%.10%\n"));
 	printf("\n------------------------------------------\n");
 	/*char *yui;
 	char *tt;

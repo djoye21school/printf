@@ -20,6 +20,7 @@ add_executable(printf
         ft_strnew.c
         ft_strjoin.c
         func_str.c
+        print_perc.c
         parse.c
         print_di.c
         print_u.c

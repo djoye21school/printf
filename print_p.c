@@ -22,6 +22,7 @@ static void     ft_width_p(t_flags *yep)
         while (yep->min != 0 && len < yep->width)
         {
             yep->s = ft_strjoin(yep->s, " ");
+            len++;
         }
         if (yep->zero != 0 && yep->min == 0)
             len += 2;

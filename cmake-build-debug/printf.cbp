@@ -130,6 +130,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/printf/print_p.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/print_perc.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/print_u.c">
 			<Option target="printf"/>
 		</Unit>

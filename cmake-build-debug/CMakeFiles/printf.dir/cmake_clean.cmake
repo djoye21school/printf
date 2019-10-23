@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/ft_strnew.c.o"
   "CMakeFiles/printf.dir/ft_strjoin.c.o"
   "CMakeFiles/printf.dir/func_str.c.o"
+  "CMakeFiles/printf.dir/print_perc.c.o"
   "CMakeFiles/printf.dir/parse.c.o"
   "CMakeFiles/printf.dir/print_di.c.o"
   "CMakeFiles/printf.dir/print_u.c.o"
