@@ -67,11 +67,11 @@ int		ft_printf(const char *format, ...)
 
 /*int		main()
 {
-	int a;
-	a = 320;
+	char a;
+	a = -128;
 	//ft_printf("hello %100d", a);
-	printf("%d\n",ft_printf("hello %.12d %0100%\n", &a));
+	printf("%d\n",ft_printf("%hhd\n", a));
 
-    printf("%d\n", printf("hello %.12d %0100%\n", a));
+    printf("%d\n", printf("%hhd\n", a));
 	return (0);
 }*/
