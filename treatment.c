@@ -14,9 +14,7 @@
 
 size_t		ft_treatment(va_list *ap, char **format, t_flags *yep)
 {
-	int     check;
-
-	yep->plus = 0;
+    yep->plus = 0;
 	yep->min = 0;
 	yep->space = 0;
 	yep->hash = 0;

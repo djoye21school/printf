@@ -53,7 +53,7 @@ int     ft_parsestr(const char *format, va_list *ap)
     return (size);
 }
 
-int		ft_printf(char *format, ...)
+int		ft_printf(const char *format, ...)
 {
 	int res;
 	va_list ap;
@@ -65,7 +65,7 @@ int		ft_printf(char *format, ...)
 	return (res);
 }
 
-int		main()
+/*int		main()
 {
 	int a;
 	a = 320;
@@ -74,4 +74,4 @@ int		main()
 
     printf("%d\n", printf("hello %.12d %0100%\n", a));
 	return (0);
-}
+}*/

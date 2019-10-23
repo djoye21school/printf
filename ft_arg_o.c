@@ -46,7 +46,7 @@ static void     ft_width_o(t_flags *yep)
     }
 }
 
-static void     ft_prcn_o(t_flags *yep, int updown)
+static void     ft_prcn_o(t_flags *yep)
 {
     int num;
     int len;
@@ -71,7 +71,8 @@ size_t          ft_arg_o(t_flags *yep, int flag)
 {
     size_t res;
 
-    ft_prcn_o(yep, flag);
+    flag++;
+    ft_prcn_o(yep);
     res = ft_putstr(yep->s);
     return (res);
 }

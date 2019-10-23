@@ -56,7 +56,7 @@ static void     ft_prcn_p(t_flags *yep)
 
 size_t          ft_p(t_flags *yep, void *tmp)
 {
-    long long *buf;
+    long long buf;
     size_t      res;
 
     buf = (unsigned long long)tmp;

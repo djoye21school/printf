@@ -36,7 +36,7 @@ size_t      ft_x(t_flags *yep, va_list *ap)
     unsigned long l;
     unsigned long long ll;
 
-    (*(yep->type) == 'x') ? flag = 1 : (-1);
+    flag = (*(yep->type) == 'x') ? 1 : -1;
     if (yep->len == 0)
     {
         i = (unsigned int)va_arg(*ap, unsigned int);

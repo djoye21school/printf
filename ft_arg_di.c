@@ -26,7 +26,7 @@ static int      ft_neg(t_flags *yep)
     return (1);
 }
 
-static void     ft_prcn(t_flags *yep, int sign)
+static void     ft_prcn(t_flags *yep)
 {
     int len;
 
@@ -90,7 +90,7 @@ size_t             ft_arg_di(t_flags *yep)
     res = 0;
     if ((sign = ft_neg(yep)) == -2)
         return (-2);
-    ft_prcn(yep, sign);
+    ft_prcn(yep);
     if (yep->zero != 1 || yep->min == 1 || yep->prcn > 0)
         ft_addflag(yep, sign);
     ft_width_di(sign, yep);
