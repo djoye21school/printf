@@ -18,9 +18,11 @@ static int      ft_neg(t_flags *yep)
 
     if (*(yep->s) != '-')
         return (0);
+    buf = yep->s;
     (yep->s)++;
     if (!(yep->s = ft_strdup(yep->s)))
         return (-2);
+    free(buf);
     return (1);
 }
 
