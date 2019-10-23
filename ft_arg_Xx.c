@@ -81,11 +81,6 @@ static void     ft_prcn_x(t_flags *yep, int updown)
         }
 
     }
-    /*if (yep->prcn < 0 && num == 1)
-    {
-        free(yep->s);
-        yep->s = ft_strdup("");
-    }*/
     ft_hash(yep, -1, num, updown);
     ft_width_x(yep, num, updown);
 }

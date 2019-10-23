@@ -231,6 +231,33 @@ ft_arg_di.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_di.c.s
 .PHONY : ft_arg_di.c.s
 
+ft_arg_o.o: ft_arg_o.c.o
+
+.PHONY : ft_arg_o.o
+
+# target to build an object file
+ft_arg_o.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_o.c.o
+.PHONY : ft_arg_o.c.o
+
+ft_arg_o.i: ft_arg_o.c.i
+
+.PHONY : ft_arg_o.i
+
+# target to preprocess a source file
+ft_arg_o.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_o.c.i
+.PHONY : ft_arg_o.c.i
+
+ft_arg_o.s: ft_arg_o.c.s
+
+.PHONY : ft_arg_o.s
+
+# target to generate assembly for a file
+ft_arg_o.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/ft_arg_o.c.s
+.PHONY : ft_arg_o.c.s
+
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -447,6 +474,33 @@ print_di.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_di.c.s
 .PHONY : print_di.c.s
 
+print_o.o: print_o.c.o
+
+.PHONY : print_o.o
+
+# target to build an object file
+print_o.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_o.c.o
+.PHONY : print_o.c.o
+
+print_o.i: print_o.c.i
+
+.PHONY : print_o.i
+
+# target to preprocess a source file
+print_o.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_o.c.i
+.PHONY : print_o.c.i
+
+print_o.s: print_o.c.s
+
+.PHONY : print_o.s
+
+# target to generate assembly for a file
+print_o.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_o.c.s
+.PHONY : print_o.c.s
+
 print_p.o: print_p.c.o
 
 .PHONY : print_p.o
@@ -522,6 +576,9 @@ help:
 	@echo "... ft_arg_di.o"
 	@echo "... ft_arg_di.i"
 	@echo "... ft_arg_di.s"
+	@echo "... ft_arg_o.o"
+	@echo "... ft_arg_o.i"
+	@echo "... ft_arg_o.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
@@ -546,6 +603,9 @@ help:
 	@echo "... print_di.o"
 	@echo "... print_di.i"
 	@echo "... print_di.s"
+	@echo "... print_o.o"
+	@echo "... print_o.i"
+	@echo "... print_o.s"
 	@echo "... print_p.o"
 	@echo "... print_p.i"
 	@echo "... print_p.s"

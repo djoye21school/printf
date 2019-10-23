@@ -68,10 +68,10 @@ int		ft_printf(char *format, ...)
 int		main()
 {
 	int a;
-	a = 0;
+	a = 320;
 	//ft_printf("hello %100d", a);
-	printf("%d\n",ft_printf("hello %.12d %#0100.32x\n", a, a));
+	printf("%d\n",ft_printf("hello %.12d %#100.20o\n", a, a));
 
-    printf("%d\n", printf("hello %.12d %#0100.32x\n", a, a));
+    printf("%d\n", printf("hello %.12d %#100.20o\n", a, a));
 	return (0);
 }

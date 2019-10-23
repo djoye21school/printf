@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/ft_arg_Xx.c.o"
+  "CMakeFiles/printf.dir/ft_arg_o.c.o"
   "CMakeFiles/printf.dir/print_Xx.c.o"
+  "CMakeFiles/printf.dir/print_o.c.o"
   "CMakeFiles/printf.dir/assoc.c.o"
   "CMakeFiles/printf.dir/float.c.o"
   "CMakeFiles/printf.dir/ft_arg_di.c.o"

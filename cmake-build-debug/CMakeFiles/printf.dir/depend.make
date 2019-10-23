@@ -13,6 +13,9 @@ CMakeFiles/printf.dir/ft_arg_Xx.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/ft_arg_di.c.o: ../ft_arg_di.c
 CMakeFiles/printf.dir/ft_arg_di.c.o: ../ft_printf.h
 
+CMakeFiles/printf.dir/ft_arg_o.c.o: ../ft_arg_o.c
+CMakeFiles/printf.dir/ft_arg_o.c.o: ../ft_printf.h
+
 CMakeFiles/printf.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/printf.dir/ft_printf.c.o: ../ft_printf.h
 
@@ -36,6 +39,9 @@ CMakeFiles/printf.dir/print_Xx.c.o: ../print_Xx.c
 
 CMakeFiles/printf.dir/print_di.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/print_di.c.o: ../print_di.c
+
+CMakeFiles/printf.dir/print_o.c.o: ../ft_printf.h
+CMakeFiles/printf.dir/print_o.c.o: ../print_o.c
 
 CMakeFiles/printf.dir/print_p.c.o: ../print_p.c
 

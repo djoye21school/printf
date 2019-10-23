@@ -94,6 +94,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_arg_di.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_arg_o.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/ft_printf.c">
 			<Option target="printf"/>
 		</Unit>
@@ -119,6 +122,9 @@
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/print_di.c">
+			<Option target="printf"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/print_o.c">
 			<Option target="printf"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/print_p.c">

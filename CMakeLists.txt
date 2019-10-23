@@ -7,7 +7,9 @@ include_directories(.)
 
 add_executable(printf
         ft_arg_Xx.c
+        ft_arg_o.c
         print_Xx.c
+        print_o.c
         assoc.c
         float.c
         ft_arg_di.c

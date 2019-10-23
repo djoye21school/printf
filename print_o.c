@@ -37,7 +37,7 @@ size_t      ft_o(t_flags *yep, va_list *ap)
     unsigned long long ll;
 
     (*(yep->type) == 'o') ? flag = 1 : (-1);
-    if (yep->len = 0)
+    if (yep->len == 0)
     {
         i = (unsigned int)va_arg(*ap, unsigned int);
         yep->s = ft_itoa_base(i, 8, (flag > 0) ? 'a' : 'A', 1);
