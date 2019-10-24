@@ -34,7 +34,6 @@ static void    ft_di2(t_flags *yep, va_list *ap)
 
 size_t		ft_di(t_flags *yep, va_list *ap)
 {
-    int sign;
     int i;
     long l;
     long long ll;

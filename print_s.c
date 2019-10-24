@@ -18,7 +18,7 @@ static void     ft_prcn_s(t_flags *yep)
 
     len = ft_strlen(yep->s);
     if (yep->prcn < len)
-        yep->s[yep->prcn] = '/0';
+        yep->s[yep->prcn] = '\0';
 }
 
 static void     ft_width_s(t_flags *yep)
@@ -48,7 +48,6 @@ static void     ft_width_s(t_flags *yep)
 
 size_t          ft_s(t_flags *yep, char *s)
 {
-    char *str;
     size_t res;
 
     if (s)

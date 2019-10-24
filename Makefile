@@ -2,11 +2,11 @@ NAME = libftprintf.a
 MKEX = gcc -o
 COMP = gcc -c
 AR = ar -rc
-SRC =   ft_arg_o.c      ft_strjoin.c    print_di.c      treatment.c \
-        assoc.c         ft_printf.c     ft_strnew.c     print_o.c \
-        float.c             func_str.c      print_p.c \
-        ft_arg_Xx.c     parse.c         print_perc.c \
-        ft_arg_di.c     ft_strdup.c     print_Xx.c      print_u.c
+SRC = assoc.c treatment.c ft_arg_o.c ft_strjoin.c print_di.c   \
+      ft_printf.c  ft_strnew.c  ft_strdup.c                    \
+      float.c func_str.c print_p.c print_s.c                   \
+      ft_arg_Xx.c print_c.c ft_arg_di.c  print_u.c             \
+      print_o.c     parse.c    print_perc.c  print_Xx.c
 
 
 FLAGS = -Wall -Wextra -Werror
