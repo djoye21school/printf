@@ -14,6 +14,8 @@
 
 int		main()
 {
-	printf("%d\n", printf("%100c\n", 11));
+    char *s;
+    s = NULL;
+	printf("%d\n", printf("%.2s\n" , s));
 	return (0);
 }

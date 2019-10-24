@@ -582,6 +582,33 @@ print_perc.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_perc.c.s
 .PHONY : print_perc.c.s
 
+print_s.o: print_s.c.o
+
+.PHONY : print_s.o
+
+# target to build an object file
+print_s.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_s.c.o
+.PHONY : print_s.c.o
+
+print_s.i: print_s.c.i
+
+.PHONY : print_s.i
+
+# target to preprocess a source file
+print_s.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_s.c.i
+.PHONY : print_s.c.i
+
+print_s.s: print_s.c.s
+
+.PHONY : print_s.s
+
+# target to generate assembly for a file
+print_s.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/print_s.c.s
+.PHONY : print_s.c.s
+
 print_u.o: print_u.c.o
 
 .PHONY : print_u.o
@@ -696,6 +723,9 @@ help:
 	@echo "... print_perc.o"
 	@echo "... print_perc.i"
 	@echo "... print_perc.s"
+	@echo "... print_s.o"
+	@echo "... print_s.i"
+	@echo "... print_s.s"
 	@echo "... print_u.o"
 	@echo "... print_u.i"
 	@echo "... print_u.s"

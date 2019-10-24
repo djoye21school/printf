@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sdoughnu/Desktop/printf/print_o.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/print_o.c.o"
   "/Users/sdoughnu/Desktop/printf/print_p.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/print_p.c.o"
   "/Users/sdoughnu/Desktop/printf/print_perc.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/print_perc.c.o"
+  "/Users/sdoughnu/Desktop/printf/print_s.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/print_s.c.o"
   "/Users/sdoughnu/Desktop/printf/print_u.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/print_u.c.o"
   "/Users/sdoughnu/Desktop/printf/treatment.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/treatment.c.o"
   )

@@ -24,5 +24,6 @@ add_executable(printf
         print_p.c
         print_perc.c
         print_u.c
+        print_s.c
         print_Xx.c
         treatment.c)

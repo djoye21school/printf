@@ -52,6 +52,9 @@ CMakeFiles/printf.dir/print_p.c.o: ../print_p.c
 CMakeFiles/printf.dir/print_perc.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/print_perc.c.o: ../print_perc.c
 
+CMakeFiles/printf.dir/print_s.c.o: ../ft_printf.h
+CMakeFiles/printf.dir/print_s.c.o: ../print_s.c
+
 CMakeFiles/printf.dir/print_u.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/print_u.c.o: ../print_u.c
 
