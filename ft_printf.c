@@ -65,13 +65,13 @@ int		ft_printf(const char *format, ...)
 	return (res);
 }
 
-/*int		main()
+int		main()
 {
 	char a;
-	a = -128;
+	a = 120;
 	//ft_printf("hello %100d", a);
-	printf("%d\n",ft_printf("%hhd\n", a));
+	printf("%d\n",ft_printf("%c\n", a));
 
-    printf("%d\n", printf("%hhd\n", a));
+    printf("%d\n", printf("%c\n", a));
 	return (0);
-}*/
+}

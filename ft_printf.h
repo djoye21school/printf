@@ -42,8 +42,11 @@ char	*ft_strdup(const char *s1);
 char	*ft_strnew(size_t size);
 size_t			ft_strlen(char *str);
 size_t			ft_putstr(const char *s);
-char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn);
+char			*ft_itoa_base(long long dig, int base, char a);
 int				ft_float(long double nb, int acc);
+
+size_t      ft_s(t_flags *yep, char *s);
+size_t      ft_c(t_flags *yep, char c);
 
 size_t      ft_perc(t_flags *yep);
 

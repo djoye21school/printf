@@ -14,22 +14,21 @@
 
 static void    ft_di2(t_flags *yep, va_list *ap)
 {
-    int sign;
+    int i;
     short sh;
     char c;
 
     if (yep->len == 3)
     {
         sh = (short)va_arg(*ap, int);
-        sign = (sh >= 0) ? 1 : -1;
-        yep->s = ft_itoa_base((sh *= (sign < 0) ? -1 : 1), 10, 'a', sign);
+        i = (int)sh;
+        yep->s = ft_itoa_base(i, 10, 'a');
     }
     else if (yep->len == 4)
     {
         c = (char)va_arg(*ap, int);
-        sign = (c >= 0) ? 1 : -1;
-        sh = sign < 0 ? -c : c;
-        yep->s = ft_itoa_base((unsigned long long)sh, 10, 'a', sign);
+        sh = (short)c;
+        yep->s = ft_itoa_base(sh, 10, 'a');
     }
 }
 
@@ -42,21 +41,18 @@ size_t		ft_di(t_flags *yep, va_list *ap)
 
     if (yep->len == 0 && *(yep->type) != 'D' && *(yep->type) != 'I')
     {
-        i = (int)va_arg(*ap, int);
-        sign = (i >= 0) ? 1 : -1;
-        yep->s = ft_itoa_base(i *= (sign < 0) ? -1 : 1, 10, 'a', sign);
+        i = (long long)va_arg(*ap, int);
+        yep->s = ft_itoa_base(i, 10, 'a');
     }
     else if (yep->len == 1 || *(yep->type) == 'D' || *(yep->type) == 'I')
     {
-        l = (long)va_arg(*ap, long);
-        sign = (l >= 0) ? 1 : -1;
-        yep->s = ft_itoa_base(l *= (sign < 0) ? -1 : 1, 10, 'a', sign);
+        l = (long long)va_arg(*ap, long);
+        yep->s = ft_itoa_base(l, 10, 'a');
     }
     else if (yep->len == 2)
     {
         ll = (long long)va_arg(*ap, long long);
-        sign = (ll >= 0) ? 1 : -1;
-        yep->s = ft_itoa_base(ll *= (sign < 0) ? -1 : 1, 10, 'a', sign);
+        yep->s = ft_itoa_base(ll, 10, 'a');
     }
     else
         ft_di2(yep, ap);

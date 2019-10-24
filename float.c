@@ -12,15 +12,18 @@
 
 #include "ft_printf.h"
 
-char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn)
+char			*ft_itoa_base(long long dig, int base, char a)
 {
 	char				*s;
 	int					i;
 	unsigned long long	nb;
 	int					res;
+	int                 sgn;
 
 	nb = dig;
-	i = (sgn < 0 && base == 10) || dig == 0 ? 1 : 0;
+	sgn = (dig >= 0) ? 1 : -1;
+	dig = (sgn >= 0) ? dig : dig * (-1);
+	i = (dig < 0 && base == 10) || dig == 0 ? 1 : 0;
 	while (dig && ++i && base > 1 && base <= 36)
 		dig = dig / base;
 	if (!(s = (char*)malloc(sizeof(char) * (i + 1))))
@@ -36,7 +39,7 @@ char			*ft_itoa_base(unsigned long long dig, int base, char a, int sgn)
 	return (s);
 }
 
-int				ft_float(long double nb, int acc)
+/*int				ft_float(long double nb, int acc)
 {
 	char				*num;
 	unsigned long long	integer;
@@ -65,7 +68,7 @@ int				ft_float(long double nb, int acc)
 		while (acc-- > 0)
 			write(1, "0", 1);
 	return (0);
-}
+}*/
 
 /*int				main(void)
 {

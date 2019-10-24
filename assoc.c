@@ -28,10 +28,10 @@ size_t		ft_assoc(va_list *ap, t_flags *yep)
 	    res = ft_u(yep, ap);
 	else if (*(yep->type) == 'x' || *(yep->type) == 'X')
 	    res = ft_x(yep, ap);
-	/*else if (*(yep->type) == 'c')
-	    res = ft_c(yep, (char)va_arg(*ap, int);
+	else if (*(yep->type) == 'c')
+	    res = ft_c(yep, (char)va_arg(*ap, int));
 	else if (*(yep->type) == 's')
-	    res = ft_s(yep, (char *)va_arg(*ap, char *));*/
+	    res = ft_s(yep, (char *)va_arg(*ap, char *));
 	else if (*(yep->type) == 'p')
 	    res = ft_p(yep, va_arg(*ap, void *));
 	/*else if (*(yep->type) == 'f')

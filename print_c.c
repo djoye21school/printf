@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_p.c                                          :+:      :+:    :+:   */
+/*   print_c.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 16:33:51 by sdoughnu          #+#    #+#             */
-/*   Updated: 2019/10/23 16:33:54 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/10/24 09:27:38 by sdoughnu          #+#    #+#             */
+/*   Updated: 2019/10/24 09:27:40 by sdoughnu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void     ft_width_p(t_flags *yep)
+static void ft_width_c(t_flags *yep)
 {
     int len;
 
     len = ft_strlen(yep->s);
     if (yep->width > len)
     {
-        while (yep->min != 0 && len < yep->width)
+        while (yep->min == 1 && len < yep->width)
         {
             yep->s = ft_strjoin(yep->s, " ");
             len++;
         }
-        if (yep->zero != 0 && yep->min == 0)
-            len += 2;
-        while (yep->zero != 0 && len < yep->width)
+        while (yep->zero == 1 && len < yep->width)
         {
             yep->s = ft_strjoin("0", yep->s);
             len++;
@@ -39,34 +37,22 @@ static void     ft_width_p(t_flags *yep)
     }
 }
 
-static void     ft_prcn_p(t_flags *yep)
+size_t      ft_c(t_flags *yep, char c)
 {
-    int len;
+    int num;
+    size_t res;
 
-    len = ft_strlen(yep->s);
-    if (yep->prcn > len)
-    {
-        while (len < yep->prcn)
-        {
-            yep->s = ft_strjoin("0", yep->s);
-            len++;
-        }
-    }
-}
-
-size_t          ft_p(t_flags *yep, void *tmp)
-{
-    long long buf;
-    size_t      res;
-
-    buf = (unsigned long long)tmp;
-    yep->s = ft_itoa_base(buf, 16, 'a');
-    ft_prcn_p(yep);
-    if (yep->zero != 0 && yep->min == 0)
-        ft_width_p(yep);
-    yep ->s = ft_strjoin("0x", yep->s);
-    ft_width_p(yep);
+    num = 0;
+    yep->s = ft_strnew(1);
+    if (c == 0)
+        num++;
+    *(yep->s) = c;
+    //if (num == 1)
+    //    yep->width--;
+    if (yep->width > 0)
+        ft_width_c(yep);
+    //if (num == 1)
+    //    ft_spec_c(yep);
     res = ft_putstr(yep->s);
     return (res);
 }
-
