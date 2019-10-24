@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sdoughnu/Desktop/printf/ft_arg_Xx.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_arg_Xx.c.o"
   "/Users/sdoughnu/Desktop/printf/ft_arg_di.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_arg_di.c.o"
   "/Users/sdoughnu/Desktop/printf/ft_arg_o.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_arg_o.c.o"
+  "/Users/sdoughnu/Desktop/printf/ft_itoa_u.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_itoa_u.c.o"
   "/Users/sdoughnu/Desktop/printf/ft_printf.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_printf.c.o"
   "/Users/sdoughnu/Desktop/printf/ft_strdup.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_strdup.c.o"
   "/Users/sdoughnu/Desktop/printf/ft_strjoin.c" "/Users/sdoughnu/Desktop/printf/cmake-build-debug/CMakeFiles/printf.dir/ft_strjoin.c.o"

@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf.dir/print_u.c.o"
   "CMakeFiles/printf.dir/delete.c.o"
   "CMakeFiles/printf.dir/print_s.c.o"
+  "CMakeFiles/printf.dir/ft_itoa_u.c.o"
   "CMakeFiles/printf.dir/print_Xx.c.o"
   "CMakeFiles/printf.dir/treatment.c.o"
   "printf.pdb"

@@ -17,7 +17,7 @@ static void     ft_hash_o(t_flags *yep, int num)
     if (yep->hash != 0 && num != 1)
     {
         if ((yep->zero == 0 || yep->min != 0)
-            || (yep->zero != 0 || yep->prcn > 0))
+            || (yep->zero != 0 && yep->prcn > 0))
             yep->s = ft_strjoin("0", yep->s);
     }
 }

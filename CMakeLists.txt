@@ -26,5 +26,6 @@ add_executable(printf
         print_u.c
         delete.c
         print_s.c
+        ft_itoa_u.c
         print_Xx.c
         treatment.c)

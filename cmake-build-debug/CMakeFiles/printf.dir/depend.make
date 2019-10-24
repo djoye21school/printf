@@ -19,6 +19,9 @@ CMakeFiles/printf.dir/ft_arg_di.c.o: ../ft_printf.h
 CMakeFiles/printf.dir/ft_arg_o.c.o: ../ft_arg_o.c
 CMakeFiles/printf.dir/ft_arg_o.c.o: ../ft_printf.h
 
+CMakeFiles/printf.dir/ft_itoa_u.c.o: ../ft_itoa_u.c
+CMakeFiles/printf.dir/ft_itoa_u.c.o: ../ft_printf.h
+
 CMakeFiles/printf.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/printf.dir/ft_printf.c.o: ../ft_printf.h
 
