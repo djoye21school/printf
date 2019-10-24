@@ -45,6 +45,8 @@ size_t			ft_putstr(const char *s);
 char			*ft_itoa_base(long long dig, int base, char a);
 int				ft_float(long double nb, int acc);
 
+void    ft_delete(t_flags *yep);
+
 size_t      ft_s(t_flags *yep, char *s);
 size_t      ft_c(t_flags *yep, char c);
 

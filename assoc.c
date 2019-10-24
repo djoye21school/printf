@@ -40,5 +40,6 @@ size_t		ft_assoc(va_list *ap, t_flags *yep)
 	    res = ft_perc(yep);
 	else
 	    ft_c(yep, *(yep->type));
+    ft_delete(yep);
 	return (res);
 }

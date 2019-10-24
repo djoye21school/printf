@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tets.c                                             :+:      :+:    :+:   */
+/*   delete.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 09:38:00 by sdoughnu          #+#    #+#             */
-/*   Updated: 2019/10/24 09:39:58 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/10/24 10:53:40 by sdoughnu          #+#    #+#             */
+/*   Updated: 2019/10/24 10:53:41 by sdoughnu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "ft_printf.h"
 
-int		main()
+void    ft_delete(t_flags *yep)
 {
-    char *s;
-    s = NULL;
-	printf("%d\n", printf("%.2s\n" , s));
-	return (0);
+    yep->plus = 0;
+    yep->min = 0;
+    yep->space = 0;
+    yep->hash = 0;
+    yep->zero = 0;
+    yep->width = 0;
+    yep->prcn = -1;
+    yep->len = 0;
+    if (yep->s)
+    {
+        free(yep->s);
+        yep->s = NULL;
+    }
+    yep->type = NULL;
 }
