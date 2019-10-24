@@ -65,7 +65,7 @@ int		ft_printf(const char *format, ...)
 	return (res);
 }
 
-int		main()
+/*int		main()
 {
 	long a;
 	a = -42;
@@ -74,4 +74,4 @@ int		main()
 
     printf("%d\n", printf("%lu\n", a));
 	return (0);
-}
+}*/

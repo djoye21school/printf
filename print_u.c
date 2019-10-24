@@ -57,17 +57,17 @@ size_t      ft_u(t_flags *yep, va_list *ap)
     size_t res;
 
     if (yep->len == 0)
-        yep->s = ft_itoa_base((unsigned int)va_arg(*ap, unsigned int), 10, 'a');
+        yep->s = ft_itoa_base_u((unsigned long)va_arg(*ap, unsigned int), 10, 'a');
     else if (yep->len == 1)
         yep->s = ft_itoa_base_u((unsigned long long)va_arg(*ap, unsigned long), 10, 'a');
     else if (yep->len == 2)
-        yep->s = ft_itoa_base(
+        yep->s = ft_itoa_base_u(
                 (unsigned long long)va_arg(*ap, unsigned long long), 10, 'a');
     else if (yep->len == 3)
-        yep->s = ft_itoa_base((unsigned long)va_arg(*ap, unsigned),
+        yep->s = ft_itoa_base_u((unsigned long)va_arg(*ap, unsigned),
                 10, 'a');
     else if (yep->len == 4)
-        yep->s = ft_itoa_base((unsigned long)va_arg(*ap, unsigned), 10, 'a');
+        yep->s = ft_itoa_base_u((unsigned long)va_arg(*ap, unsigned), 10, 'a');
     ft_prcn_u(yep);
     ft_width_u(yep);
     res = ft_putstr(yep->s);
