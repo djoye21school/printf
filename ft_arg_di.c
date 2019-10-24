@@ -86,11 +86,19 @@ size_t             ft_arg_di(t_flags *yep)
 {
     size_t  res;
     int     sign;
+    int     num;
 
-    res = 0;
+    num = 0;
+    if (*(yep->s) == '0' && *(yep->s + 1) == '\0')
+        num++;
     if ((sign = ft_neg(yep)) == -2)
         return (-2);
     ft_prcn(yep);
+    if (num == 1 && yep->prcn == 0)
+    {
+        free(yep->s);
+        yep->s = ft_strdup("");
+    }
     if (yep->zero != 1 || yep->min == 1 || yep->prcn > 0)
         ft_addflag(yep, sign);
     ft_width_di(sign, yep);

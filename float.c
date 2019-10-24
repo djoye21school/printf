@@ -20,10 +20,10 @@ char			*ft_itoa_base(long long dig, int base, char a)
 	int					res;
 	int                 sgn;
 
-	nb = dig;
 	sgn = (dig >= 0) ? 1 : -1;
-	dig = (sgn >= 0) ? dig : dig * (-1);
 	i = (dig < 0 && base == 10) || dig == 0 ? 1 : 0;
+    dig = (sgn >= 0) ? dig : dig * (-1);
+    nb = dig;
 	while (dig && ++i && base > 1 && base <= 36)
 		dig = dig / base;
 	if (!(s = (char*)malloc(sizeof(char) * (i + 1))))

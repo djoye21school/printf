@@ -58,7 +58,7 @@ size_t      ft_u(t_flags *yep, va_list *ap)
     if (yep->len == 0)
         yep->s = ft_itoa_base((unsigned long)va_arg(*ap, unsigned int), 10, 'a');
     else if (yep->len == 1)
-        yep->s = ft_itoa_base((unsigned long long)va_arg(*ap, unsigned long), 10,
+        yep->s = ft_itoa_base((unsigned long)va_arg(*ap, unsigned long), 10,
                 'a');
     else if (yep->len == 2)
         yep->s = ft_itoa_base(

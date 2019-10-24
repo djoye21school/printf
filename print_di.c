@@ -40,7 +40,7 @@ size_t		ft_di(t_flags *yep, va_list *ap)
 
     if (yep->len == 0 && *(yep->type) != 'D' && *(yep->type) != 'I')
     {
-        i = (long long)va_arg(*ap, int);
+        i = (long int)va_arg(*ap, int);
         yep->s = ft_itoa_base(i, 10, 'a');
     }
     else if (yep->len == 1 || *(yep->type) == 'D' || *(yep->type) == 'I')

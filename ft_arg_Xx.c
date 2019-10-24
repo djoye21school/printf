@@ -43,7 +43,7 @@ static void     ft_width_x(t_flags *yep, int num, int updown)
     {
         while (yep->min == 1 && len < yep->width)
         {
-            ft_strjoin(yep->s, " ");
+            yep->s = ft_strjoin(yep->s, " ");
             len++;
         }
         if (yep->min == 0 && yep->zero == 1 && yep->hash == 1 &&
@@ -79,7 +79,11 @@ static void     ft_prcn_x(t_flags *yep, int updown)
             yep->s = ft_strjoin("0", yep->s);
             len++;
         }
-
+    }
+    if (yep->prcn == 0 && num == 1)
+    {
+        free(yep->s);
+        yep->s = ft_strdup("");
     }
     ft_hash(yep, -1, num, updown);
     ft_width_x(yep, num, updown);

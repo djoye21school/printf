@@ -37,22 +37,42 @@ static void ft_width_c(t_flags *yep)
     }
 }
 
+size_t      ft_spec_c(t_flags *yep)
+{
+    size_t      res;
+    int         i;
+
+    res = 0;
+    i = 0;
+    while (yep->s[i])
+    {
+        write(1, &(yep->s)[i], 1);
+        res++;
+        i++;
+    }
+    write(1, "\0", 1);
+    res++;
+    return (res);
+}
+
 size_t      ft_c(t_flags *yep, char c)
 {
     int num;
     size_t res;
 
     num = 0;
+    res = 0;
     yep->s = ft_strnew(1);
     if (c == 0)
         num++;
-    *(yep->s) = c;
-    //if (num == 1)
-    //    yep->width--;
+    yep->s[0] = c;
+    if (num == 1)
+        yep->width--;
     if (yep->width > 0)
         ft_width_c(yep);
-    //if (num == 1)
-    //    ft_spec_c(yep);
-    res = ft_putstr(yep->s);
+    if (num == 1)
+        res =ft_spec_c(yep);
+    else
+        res = ft_putstr(yep->s);
     return (res);
 }

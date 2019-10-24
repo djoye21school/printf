@@ -4,6 +4,9 @@
 CMakeFiles/printf.dir/assoc.c.o: ../assoc.c
 CMakeFiles/printf.dir/assoc.c.o: ../ft_printf.h
 
+CMakeFiles/printf.dir/delete.c.o: ../delete.c
+CMakeFiles/printf.dir/delete.c.o: ../ft_printf.h
+
 CMakeFiles/printf.dir/float.c.o: ../float.c
 CMakeFiles/printf.dir/float.c.o: ../ft_printf.h
 

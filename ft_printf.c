@@ -65,13 +65,13 @@ int		ft_printf(const char *format, ...)
 	return (res);
 }
 
-int		main()
+/*int		main()
 {
-	char *a;
-	a = "kjehjhe;";
+	int a;
+	a = 0;
 	//ft_printf("hello %100d", a);
-	printf("%d\n",ft_printf("%-10.3s\n", a));
+	printf("%d\n",ft_printf("%.o %.0o\n", a, a));
 
-    printf("%d\n", printf("%-10.3s\n", a));
+    printf("%d\n", printf("%#.o %#.0o\n", a, a));
 	return (0);
-}
+}*/

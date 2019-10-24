@@ -64,6 +64,11 @@ static void     ft_prcn_o(t_flags *yep)
             len++;
         }
     }
+    if (num == 1 && yep->prcn == 0 && yep->hash != 1)
+    {
+        free(yep->s);
+        yep->s = ft_strdup("");
+    }
     ft_width_o(yep);
 }
 

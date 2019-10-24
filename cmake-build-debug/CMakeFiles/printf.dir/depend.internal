@@ -4,6 +4,9 @@
 CMakeFiles/printf.dir/assoc.c.o
  /Users/sdoughnu/Desktop/printf/assoc.c
  /Users/sdoughnu/Desktop/printf/ft_printf.h
+CMakeFiles/printf.dir/delete.c.o
+ /Users/sdoughnu/Desktop/printf/delete.c
+ /Users/sdoughnu/Desktop/printf/ft_printf.h
 CMakeFiles/printf.dir/float.c.o
  /Users/sdoughnu/Desktop/printf/float.c
  /Users/sdoughnu/Desktop/printf/ft_printf.h

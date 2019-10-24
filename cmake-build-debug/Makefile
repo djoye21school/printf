@@ -150,6 +150,33 @@ assoc.c.s:
 	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/assoc.c.s
 .PHONY : assoc.c.s
 
+delete.o: delete.c.o
+
+.PHONY : delete.o
+
+# target to build an object file
+delete.c.o:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/delete.c.o
+.PHONY : delete.c.o
+
+delete.i: delete.c.i
+
+.PHONY : delete.i
+
+# target to preprocess a source file
+delete.c.i:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/delete.c.i
+.PHONY : delete.c.i
+
+delete.s: delete.c.s
+
+.PHONY : delete.s
+
+# target to generate assembly for a file
+delete.c.s:
+	$(MAKE) -f CMakeFiles/printf.dir/build.make CMakeFiles/printf.dir/delete.c.s
+.PHONY : delete.c.s
+
 float.o: float.c.o
 
 .PHONY : float.o
@@ -675,6 +702,9 @@ help:
 	@echo "... assoc.o"
 	@echo "... assoc.i"
 	@echo "... assoc.s"
+	@echo "... delete.o"
+	@echo "... delete.i"
+	@echo "... delete.s"
 	@echo "... float.o"
 	@echo "... float.i"
 	@echo "... float.s"

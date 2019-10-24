@@ -85,6 +85,9 @@
 		<Unit filename="/Users/sdoughnu/Desktop/printf/assoc.c">
 			<Option target="printf"/>
 		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/printf/delete.c">
+			<Option target="printf"/>
+		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/printf/float.c">
 			<Option target="printf"/>
 		</Unit>
