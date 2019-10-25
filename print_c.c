@@ -44,6 +44,7 @@ size_t      ft_spec_c(t_flags *yep)
 
     res = 0;
     i = 0;
+    printf("--%s--", yep->s);
     while (yep->s[i])
     {
         write(1, &(yep->s)[i], 1);

@@ -67,9 +67,10 @@ int		ft_printf(const char *format, ...)
 
 int		main()
 {
-	printf("%d\n", ft_printf("%-+.d|%- .d|%-0.d|%+ .d|%+0.d|% 0.d|%-+ 0.d", 0, 0, 0, 0, 0, 0, 0));
+    int UINT_MAX = 4294967295U;
+	printf("\n%d\n", ft_printf("%-#o|%-0o|%#0o|%-#0o", UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX));
 	printf("\n");
-    printf("%d\n", printf("%-+.d|%- .d|%-0.d|%+ .d|%+0.d|% 0.d|%-+ 0.d", 0, 0, 0, 0, 0, 0, 0));
-
+	           printf("\n%d\n", printf("%-#o|%-0o|%#0o|%-#0o", UINT_MAX, UINT_MAX, UINT_MAX, UINT_MAX));
+    printf("-----------------------\n");
 	return (0);
 }

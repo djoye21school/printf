@@ -23,8 +23,8 @@ static void     ft_hash(t_flags *yep, int flag, int num, int updown)
             else
                 yep->s = ft_strjoin("0X", yep->s);
         }
-        else if ((yep->zero == 1 && yep->prcn > 0 && flag == -1) ||
-                ((yep->zero == 0 || yep->min == 1) && flag == -1))
+        else if ((yep->zero == 1 && yep->prcn >= 0 && flag == -1) ||
+                   ((yep->zero == 0 || yep->min == 1) && flag == -1))
         {
             if (updown > 0)
                 yep->s = ft_strjoin("0x", yep->s);
@@ -47,7 +47,7 @@ static void     ft_width_x(t_flags *yep, int num, int updown)
             len++;
         }
         if (yep->min == 0 && yep->zero == 1 && yep->hash == 1 &&
-            yep->prcn < 0)
+            yep->prcn < 0 && num == 0)
             len += 2;
         while (yep->zero == 1 && yep->prcn < 0 && len < yep->width)
         {

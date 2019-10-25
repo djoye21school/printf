@@ -99,7 +99,7 @@ size_t             ft_arg_di(t_flags *yep)
         free(yep->s);
         yep->s = ft_strdup("");
     }
-    if (yep->zero != 1 || yep->min == 1 || yep->prcn > 0)
+    if (yep->zero != 1 || yep->min == 1 || yep->prcn >= 0)
         ft_addflag(yep, sign);
     ft_width_di(sign, yep);
     if (yep->zero == 1 && yep->min != 1 && yep->prcn < 0)
