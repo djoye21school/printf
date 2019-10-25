@@ -6,7 +6,7 @@
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 18:05:34 by djoye             #+#    #+#             */
-/*   Updated: 2019/10/23 18:45:08 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2019/10/25 14:59:10 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,28 +45,47 @@ char				*ft_float(long double nb, int acc)
 	unsigned long long	integer;
 	int					i;
 	int					sgn;
+	long double			ld;
+	char				*res;
 
 	sgn = nb < 0 ? -1 : 1;
 	nb = sgn < 0 ? -nb : nb;
-	i = acc;
+	i = 0;
+	ld = nb;
+	while (ld > 1 && ++i)
+		ld = ld / 10;
+	i += (sgn < 0) ? 1 : 0;
+	res = (char*)malloc(sizeof(char) * (i + acc + 2));
 	integer = (unsigned long long int)nb;
 	nb = nb - integer;
-	num = ft_itoa_base(integer, 10, 'A', sgn);
+	num = ft_itoa_base(integer, 10, 'A');
+	res[i + acc + 1] = '\0';
+	i = 0;
+	res[i++] = sgn < 0 ? '-' : '0';
 	while (*num)
-		write(1, num++, 1);
-	write(1, ".", 1);
-	while (i-- && (nb = nb * 10) > 0)
+		res[i++] = *num++;
+	res[i++] = '.';
+	sgn = acc;
+	while (sgn-- && (nb = nb * 10) > 0)
 		if (nb < 1)
-			write(1, "0", 1);
+			res[i++] = '0';
 	integer = (unsigned long long int)nb;
 	integer += (nb - integer) >= 0.5 ? 1 : 0;
-	num = ft_itoa_base(integer, 10, 'A', 1);
+	num = ft_itoa_base(integer, 10, 'A');
 	if (num[0] != '0')
 		while (*num)
-		    write(1, num++, 1);
+			res[i++] = *num++;
 	else
 		while (acc-- > 0)
-			write(1, "0", 1);
-	return ();
+			res[i++] = '0';
+	return (res);
+}
+
+int		main()
+{
+	long double nb = (long double)-1234567890123456789.1234567890;
+	printf("%s\n", ft_float(nb, 10));
+	printf("%.10Lf", nb);
+	return (0);
 }
 
