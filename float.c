@@ -6,7 +6,11 @@
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 18:05:34 by djoye             #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2019/10/25 16:03:25 by djoye            ###   ########.fr       */
+=======
+/*   Updated: 2019/10/25 15:44:02 by djoye            ###   ########.fr       */
+>>>>>>> 0664370b0bb88f77080f5b5fc9933465e0eee895
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +65,11 @@ char				*ft_float(long double nb, int acc)
 	num = ft_itoa_base(integer, 10, 'A');
 	res[i + acc + 1] = '\0';
 	i = 0;
+<<<<<<< HEAD
 	if (sgn < 0)
+=======
+	if ( sgn < 0)
+>>>>>>> 0664370b0bb88f77080f5b5fc9933465e0eee895
 	{
 		res[i] = '-';
 		i++;
@@ -86,3 +94,14 @@ char				*ft_float(long double nb, int acc)
 	return (res);
 }
 
+<<<<<<< HEAD
+=======
+int		main()
+{
+	long double nb = (long double)32.67;
+	printf("%s\n", ft_float(nb, 6));
+	printf("%Lf", nb);
+	return (0);
+}
+
+>>>>>>> 0664370b0bb88f77080f5b5fc9933465e0eee895
