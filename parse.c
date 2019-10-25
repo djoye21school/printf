@@ -60,7 +60,7 @@ static int     ft_precis(t_flags *yep, char **str, va_list *ap)
         *str += 1;
     }
     else if (**str == '-')
-        yep->prcn = -1;
+        yep->prcn = -2;
     else if (**str == '\0')
         return (-1);
     else

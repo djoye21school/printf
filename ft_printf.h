@@ -37,51 +37,39 @@ typedef	struct          t_list
 	char                *s;
 }				        t_flags;
 
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strdup(const char *s1);
-char	*ft_strnew(size_t size);
+char            *ft_strjoin(char const *s1, char const *s2);
+char	        *ft_strdup(const char *s1);
+char	        *ft_strnew(size_t size);
 size_t			ft_strlen(char *str);
 size_t			ft_putstr(const char *s);
 
 char            *ft_itoa_base_u(unsigned long long dig, int base, char a);
-
 char			*ft_itoa_base(long long dig, int base, char a);
-int				ft_float(long double nb, int acc);
 
-void    ft_delete(t_flags *yep);
 
-size_t      ft_s(t_flags *yep, char *s);
-size_t      ft_c(t_flags *yep, char c);
+void            ft_delete(t_flags *yep);
 
-size_t      ft_perc(t_flags *yep);
-
+size_t          ft_s(t_flags *yep, char *s);
+size_t          ft_c(t_flags *yep, char c);
+size_t          ft_perc(t_flags *yep);
 
 size_t          ft_p(t_flags *yep, void *tmp);
-
 size_t      ft_u(t_flags *yep, va_list *ap);
 
-
 size_t          ft_arg_o(t_flags *yep, int flag);
-
 size_t      ft_o(t_flags *yep, va_list *ap);
 
-
 size_t      ft_arg_x(t_flags *yep, int flag);
-
 size_t      ft_x(t_flags *yep, va_list *ap);
 
-
 size_t			ft_arg_di(t_flags *yep);
-
 size_t			ft_di(t_flags *yep, va_list *ap);
 
 size_t			ft_assoc(va_list *ap, t_flags *yep);
 
 
 long int		ft_atoi(const char *str);
-
 int				ft_parse(t_flags *yep, va_list *ap, char *str);
-
 size_t			ft_treatment(va_list *ap, char **format, t_flags *yep);
 
 void			ft_putstrl(char *str, int len);

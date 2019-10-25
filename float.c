@@ -63,7 +63,7 @@ char				*ft_float(long double nb, int acc)
 	num = ft_itoa_base(integer, 10, 'A', 1);
 	if (num[0] != '0')
 		while (*num)
-			write(1, num++, 1);
+		    write(1, num++, 1);
 	else
 		while (acc-- > 0)
 			write(1, "0", 1);

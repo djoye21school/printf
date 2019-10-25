@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/sdoughnu/Desktop/printf-master/. 
+C_INCLUDES = -I/Users/sdoughnu/Desktop/111/. 
 
