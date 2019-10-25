@@ -6,7 +6,7 @@
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 18:05:34 by djoye             #+#    #+#             */
-/*   Updated: 2019/10/25 15:46:55 by djoye            ###   ########.fr       */
+/*   Updated: 2019/10/25 16:03:25 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char				*ft_float(long double nb, int acc)
 	i += (sgn < 0) ? 1 : 0;
 	res = (char*)malloc(sizeof(char) * (i + acc + 2));
 	integer = (unsigned long long int)nb;
-	nb = nb - integer;
+	integer += ((nb - integer) >= 0.5 && acc == 0) ? 1 : 0;
 	num = ft_itoa_base(integer, 10, 'A');
 	res[i + acc + 1] = '\0';
 	i = 0;
@@ -68,7 +68,8 @@ char				*ft_float(long double nb, int acc)
 	}
 	while (*num)
 		res[i++] = *num++;
-	res[i++] = '.';
+	res[i++] = acc != 0 ? '.' : '\0';
+	nb = nb - integer;
 	sgn = acc;
 	while (sgn-- && (nb = nb * 10) > 0)
 		if (nb < 1)
@@ -76,7 +77,7 @@ char				*ft_float(long double nb, int acc)
 	integer = (unsigned long long int)nb;
 	integer += (nb - integer) >= 0.5 ? 1 : 0;
 	num = ft_itoa_base(integer, 10, 'A');
-	if (num[0] != '0')
+	if (num[0] != '0' && acc)
 		while (*num)
 			res[i++] = *num++;
 	else
@@ -84,12 +85,4 @@ char				*ft_float(long double nb, int acc)
 			res[i++] = '0';
 	return (res);
 }
-
-/*int		main()
-{
-	long double nb = (long double)32.67;
-	printf("%s\n", ft_float(nb, 6));
-	printf("%Lf", nb);
-	return (0);
-}*/
 

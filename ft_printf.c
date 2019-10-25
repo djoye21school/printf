@@ -67,9 +67,9 @@ int		ft_printf(const char *format, ...)
 
 int		main()
 {
-	printf("%d\n", ft_printf("% -010.1f\n", 32.67));
+	printf("%d\n", ft_printf("%-+.d|%- .d|%-0.d|%+ .d|%+0.d|% 0.d|%-+ 0.d", 0, 0, 0, 0, 0, 0, 0));
 	printf("\n");
-    printf("%d\n", printf("% -010.1f\n", 32.67));
+    printf("%d\n", printf("%-+.d|%- .d|%-0.d|%+ .d|%+0.d|% 0.d|%-+ 0.d", 0, 0, 0, 0, 0, 0, 0));
 
 	return (0);
 }
