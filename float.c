@@ -6,7 +6,7 @@
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 18:05:34 by djoye             #+#    #+#             */
-/*   Updated: 2019/10/25 14:59:10 by djoye            ###   ########.fr       */
+/*   Updated: 2019/10/25 15:46:55 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,11 @@ char				*ft_float(long double nb, int acc)
 	num = ft_itoa_base(integer, 10, 'A');
 	res[i + acc + 1] = '\0';
 	i = 0;
-	res[i++] = sgn < 0 ? '-' : '0';
+	if (sgn < 0)
+	{
+		res[i] = '-';
+		i++;
+	}
 	while (*num)
 		res[i++] = *num++;
 	res[i++] = '.';
@@ -80,3 +84,12 @@ char				*ft_float(long double nb, int acc)
 			res[i++] = '0';
 	return (res);
 }
+
+/*int		main()
+{
+	long double nb = (long double)32.67;
+	printf("%s\n", ft_float(nb, 6));
+	printf("%Lf", nb);
+	return (0);
+}*/
+

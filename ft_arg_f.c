@@ -71,7 +71,7 @@ size_t      ft_arg_f(t_flags *yep)
     size_t res;
     int sign;
 
-    if ((sign == ft_neg(yep)) == -2)
+    if ((sign = ft_neg(yep)) == -2)
         return (-2);
     if (yep->zero == 0 || yep->min == 1)
         ft_flag_f(yep, sign);

@@ -67,12 +67,9 @@ int		ft_printf(const char *format, ...)
 
 int		main()
 {
-	unsigned long long ULLONG_MAX;
-    ULLONG_MAX = 18446744073709551615ULL;
-	//printf("hello %100d", a);
-	printf("%d\n", ft_printf("%f", 32.67));
+	printf("%d\n", ft_printf("% -010.1f\n", 32.67));
 	printf("\n");
-    printf("%d\n", printf("%f", 32.67));
+    printf("%d\n", printf("% -010.1f\n", 32.67));
 
 	return (0);
 }
