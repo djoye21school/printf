@@ -34,8 +34,8 @@ size_t		ft_assoc(va_list *ap, t_flags *yep)
 	    res = ft_s(yep, (char *)va_arg(*ap, char *));
 	else if (*(yep->type) == 'p')
 	    res = ft_p(yep, va_arg(*ap, void *));
-	/*else if (*(yep->type) == 'f')
-	    res = ft_f(yep, ap);*/
+	else if (*(yep->type) == 'f')
+	    res = ft_f(yep, ap);
 	else if (*(yep->type) == '%')
 	    res = ft_perc(yep);
 	else

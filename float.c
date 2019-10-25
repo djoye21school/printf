@@ -39,7 +39,7 @@ char			*ft_itoa_base(long long dig, int base, char a)
 	return (s);
 }
 
-/*int				ft_float(long double nb, int acc)
+char				*ft_float(long double nb, int acc)
 {
 	char				*num;
 	unsigned long long	integer;
@@ -67,34 +67,6 @@ char			*ft_itoa_base(long long dig, int base, char a)
 	else
 		while (acc-- > 0)
 			write(1, "0", 1);
-	return (0);
-}*/
-
-/*int				main(void)
-{
-	long double			ld;
-	int					acc;
-	unsigned long long	u;
-	long long			l;
-	long long			adr;
-
-	ld = (long double)-3244243.54645;
-	adr = (long long)&acc;
-	printf("%s\n", ft_itoa_base(adr, 16, 'a', 1));
-	printf("%d\n", printf("%p\n", &acc));
-//	printf("%d\n a dfasfdasisdf %Lf" ,printf("%p\n", &acc), (long double)0/0);
-	acc = 18;
-
-	u = ld;
-
-	ft_float(ld, acc);
-	printf("\n%.*Lf\n", acc, ld);
-//	printf("\n size %d\n", sizeof(ld));
-//	printf("\n size %d\n", sizeof(u));
-//	printf("\n size %d\n", sizeof(acc));
-//	printf("\n%llu", u);
-//	printf("\n%lli", l);
-//	printf("\n%lli", u - l);
-	return (0);
+	return ();
 }
- */
+

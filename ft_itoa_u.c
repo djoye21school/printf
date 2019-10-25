@@ -18,7 +18,8 @@ char            *ft_itoa_base_u(unsigned long long dig, int base, char a)
     int                 i;
     unsigned long long  nb;
     int                 res;
-    int sgn;
+    int                 sgn;
+
     sgn = 1;
     nb = dig;
     i = (sgn < 0 && base == 10) || dig == 0 ? 1 : 0;

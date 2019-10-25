@@ -55,20 +55,29 @@ static void     ft_prcn_u(t_flags *yep)
 size_t      ft_u(t_flags *yep, va_list *ap)
 {
     size_t res;
+    int num;
 
+    num = 0;
     if (yep->len == 0)
-        yep->s = ft_itoa_base_u((unsigned long)va_arg(*ap, unsigned int), 10, 'a');
+        yep->s = ft_itoa_base_u((unsigned int)va_arg(*ap, unsigned int), 10, 'a');
     else if (yep->len == 1)
-        yep->s = ft_itoa_base_u((unsigned long long)va_arg(*ap, unsigned long), 10, 'a');
+        yep->s = ft_itoa_base_u((unsigned long)va_arg(*ap, unsigned long), 10, 'a');
     else if (yep->len == 2)
         yep->s = ft_itoa_base_u(
                 (unsigned long long)va_arg(*ap, unsigned long long), 10, 'a');
     else if (yep->len == 3)
-        yep->s = ft_itoa_base_u((unsigned long)va_arg(*ap, unsigned),
+        yep->s = ft_itoa_base_u((unsigned short)va_arg(*ap, unsigned int),
                 10, 'a');
     else if (yep->len == 4)
-        yep->s = ft_itoa_base_u((unsigned long)va_arg(*ap, unsigned), 10, 'a');
+        yep->s = ft_itoa_base_u((unsigned char)va_arg(*ap, unsigned int), 10, 'a');
+    if (*(yep->s) == '0' && *(yep->s + 1) == '\0')
+        num++;
     ft_prcn_u(yep);
+    if (yep->prcn == 0 && num == 1)
+    {
+        free(yep->s);
+        yep->s = ft_strdup("");
+    }
     ft_width_u(yep);
     res = ft_putstr(yep->s);
     return(res);

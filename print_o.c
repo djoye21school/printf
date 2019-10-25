@@ -22,13 +22,13 @@ static void ft_o2(t_flags *yep, va_list *ap, int flag)
     {
         h = (unsigned short)va_arg(*ap, int);
         i = (unsigned int)h;
-        yep->s = ft_itoa_base(i, 8, (flag > 0) ? 'a' : 'A');
+        yep->s = ft_itoa_base_u(i, 8, (flag > 0) ? 'a' : 'A');
     }
     else if (yep->len == 4)
     {
         hh = (unsigned char)va_arg(*ap, int);
         i = (unsigned int)hh;
-        yep->s = ft_itoa_base(i, 8, (flag > 0) ? 'a' : 'A');
+        yep->s = ft_itoa_base_u(i, 8, (flag > 0) ? 'a' : 'A');
     }
 }
 
@@ -42,18 +42,18 @@ size_t      ft_o(t_flags *yep, va_list *ap)
     flag = (*(yep->type) == 'o') ? 1 : -1;
     if (yep->len == 0)
     {
-        i = (unsigned long int)va_arg(*ap, unsigned int);
-        yep->s = ft_itoa_base(i, 8, (flag > 0) ? 'a' : 'A');
+        i = (unsigned)va_arg(*ap, unsigned int);
+        yep->s = ft_itoa_base_u(i, 8, (flag > 0) ? 'a' : 'A');
     }
     else if (yep->len == 1)
     {
-        l = (unsigned long long)va_arg(*ap, unsigned long);
-        yep->s = ft_itoa_base(l, 8, (flag > 0) ? 'a' : 'A');
+        l = (unsigned long)va_arg(*ap, unsigned long);
+        yep->s = ft_itoa_base_u(l, 8, (flag > 0) ? 'a' : 'A');
     }
     else if (yep->len == 2)
     {
         ll = (unsigned long long)va_arg(*ap, unsigned long long);
-        yep->s = ft_itoa_base(ll, 8, (flag > 0) ? 'a' : 'A');
+        yep->s = ft_itoa_base_u(ll, 8, (flag > 0) ? 'a' : 'A');
     }
     else
         ft_o2(yep, ap, flag);
