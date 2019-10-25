@@ -59,45 +59,45 @@ RM = /Users/sdoughnu/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sdoughnu/Desktop/111
+CMAKE_SOURCE_DIR = /Users/sdoughnu/Desktop/GG
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/111/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sdoughnu/Desktop/GG/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/printf_master.dir
+# Target rules for target CMakeFiles/GG.dir
 
 # All Build rule for target.
-CMakeFiles/printf_master.dir/all:
-	$(MAKE) -f CMakeFiles/printf_master.dir/build.make CMakeFiles/printf_master.dir/depend
-	$(MAKE) -f CMakeFiles/printf_master.dir/build.make CMakeFiles/printf_master.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sdoughnu/Desktop/111/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target printf_master"
-.PHONY : CMakeFiles/printf_master.dir/all
+CMakeFiles/GG.dir/all:
+	$(MAKE) -f CMakeFiles/GG.dir/build.make CMakeFiles/GG.dir/depend
+	$(MAKE) -f CMakeFiles/GG.dir/build.make CMakeFiles/GG.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sdoughnu/Desktop/GG/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target GG"
+.PHONY : CMakeFiles/GG.dir/all
 
 # Include target in all.
-all: CMakeFiles/printf_master.dir/all
+all: CMakeFiles/GG.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/printf_master.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/111/cmake-build-debug/CMakeFiles 23
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/printf_master.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/111/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/printf_master.dir/rule
+CMakeFiles/GG.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/GG/cmake-build-debug/CMakeFiles 25
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GG.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sdoughnu/Desktop/GG/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/GG.dir/rule
 
 # Convenience name for target.
-printf_master: CMakeFiles/printf_master.dir/rule
+GG: CMakeFiles/GG.dir/rule
 
-.PHONY : printf_master
-
-# clean rule for target.
-CMakeFiles/printf_master.dir/clean:
-	$(MAKE) -f CMakeFiles/printf_master.dir/build.make CMakeFiles/printf_master.dir/clean
-.PHONY : CMakeFiles/printf_master.dir/clean
+.PHONY : GG
 
 # clean rule for target.
-clean: CMakeFiles/printf_master.dir/clean
+CMakeFiles/GG.dir/clean:
+	$(MAKE) -f CMakeFiles/GG.dir/build.make CMakeFiles/GG.dir/clean
+.PHONY : CMakeFiles/GG.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/GG.dir/clean
 
 .PHONY : clean
 

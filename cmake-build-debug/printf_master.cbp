@@ -8,43 +8,43 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/sdoughnu/Desktop/111/cmake-build-debug"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/GG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/sdoughnu/Desktop/111/cmake-build-debug"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/GG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/sdoughnu/Desktop/111/cmake-build-debug"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/GG/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="printf_master">
-				<Option output="/Users/sdoughnu/Desktop/111/cmake-build-debug/printf_master" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sdoughnu/Desktop/111/cmake-build-debug"/>
+				<Option output="/Users/sdoughnu/Desktop/GG/cmake-build-debug/printf_master" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/GG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/sdoughnu/Desktop/111/."/>
+					<Add directory="/Users/sdoughnu/Desktop/GG/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -53,20 +53,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf_master"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf_master"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="printf_master/fast">
-				<Option output="/Users/sdoughnu/Desktop/111/cmake-build-debug/printf_master" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sdoughnu/Desktop/111/cmake-build-debug"/>
+				<Option output="/Users/sdoughnu/Desktop/GG/cmake-build-debug/printf_master" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sdoughnu/Desktop/GG/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/sdoughnu/Desktop/111/."/>
+					<Add directory="/Users/sdoughnu/Desktop/GG/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -75,83 +75,83 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf_master/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/111/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 printf_master/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sdoughnu/Desktop/GG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/sdoughnu/Desktop/111/assoc.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/assoc.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/delete.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/delete.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/float.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/float.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_arg_Xx.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_arg_Xx.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_arg_di.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_arg_di.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_arg_o.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_arg_o.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_itoa_u.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_itoa_u.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_printf.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_printf.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_printf.h">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_printf.h">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_strdup.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_strdup.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_strjoin.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_strjoin.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/ft_strnew.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/ft_strnew.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/func_str.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/func_str.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/parse.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/parse.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_Xx.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_Xx.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_c.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_c.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_di.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_di.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_o.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_o.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_p.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_p.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_perc.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_perc.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_s.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_s.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/print_u.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/print_u.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/treatment.c">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/treatment.c">
 			<Option target="printf_master"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/111/CMakeLists.txt">
+		<Unit filename="/Users/sdoughnu/Desktop/GG/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

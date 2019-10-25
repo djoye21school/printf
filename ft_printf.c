@@ -69,13 +69,10 @@ int		main()
 {
 	unsigned long long ULLONG_MAX;
     ULLONG_MAX = 18446744073709551615ULL;
-	//a = -42;
-	//ft_printf("hello %100d", a);
-	/*printf("%d\n",*/ ft_printf("%-#23x|%-023x|%#023x|%-#023x", 0U, 0U, 0U, 0U);
+	//printf("hello %100d", a);
+	printf("%d\n", ft_printf("%f", 32.67));
 	printf("\n");
-    /*printf("%d\n",*/ printf("%-#23x|%-023x|%#023x|%-#023x", 0U, 0U, 0U, 0U);
+    printf("%d\n", printf("%f", 32.67));
 
-    printf("\n");
-    printf("%.1150f|%.1150f|%.1150f|%.1150f", 0x1p-1074, 0x1.ffffffffffffep-1023, 0x1.4e46p-1058, 0x1.59a8b0c3dp-1037);
 	return (0);
 }

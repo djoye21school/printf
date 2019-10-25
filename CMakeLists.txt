@@ -1,15 +1,16 @@
 cmake_minimum_required(VERSION 3.14)
-project(printf_master C)
+project(GG C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 
-add_executable(printf_master
+add_executable(GG
         assoc.c
         delete.c
         float.c
         ft_arg_di.c
+        ft_arg_f.c
         ft_arg_o.c
         ft_arg_Xx.c
         ft_itoa_u.c
@@ -22,6 +23,7 @@ add_executable(printf_master
         parse.c
         print_c.c
         print_di.c
+        print_f.c
         print_o.c
         print_p.c
         print_perc.c

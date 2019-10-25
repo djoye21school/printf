@@ -80,12 +80,3 @@ char				*ft_float(long double nb, int acc)
 			res[i++] = '0';
 	return (res);
 }
-
-int		main()
-{
-	long double nb = (long double)-1234567890123456789.1234567890;
-	printf("%s\n", ft_float(nb, 10));
-	printf("%.10Lf", nb);
-	return (0);
-}
-

@@ -47,7 +47,7 @@ static void    ft_addflag(t_flags *yep, int sign)
     {
         if (yep->space == 1 && yep->plus == 0)
             yep->s = ft_strjoin(" ", yep->s);
-        else if (yep-> plus == 1)
+        else if (yep->plus == 1)
             yep->s = ft_strjoin("+", yep->s);
     }
     else
