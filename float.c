@@ -52,7 +52,6 @@ char					*ft_float(long double nb, int acc)
 
 	if (nb != nb)
 		return ("nan");
-//	printf("%.14Lf orig\n", nb);
 	sgn = nb < 0 ? -1 : 1;
 	nb = sgn < 0 ? -nb : nb;
 	i = 0;
@@ -60,14 +59,14 @@ char					*ft_float(long double nb, int acc)
 	while (ld > 1 && ++i)
 		ld = ld / 10;
 	i += (sgn < 0) ? 1 : 0;
-//    printf("%d len\n", i + acc + 2);
+
 	res = (char*)malloc(sizeof(char) * (i + acc + 2));
 	integer = (unsigned long long int)nb;
 	integer += ((nb - integer) >= 0.5 && acc == 0) ? 1 : 0;
 	num = ft_itoa_base(integer, 10, 'A');
 	res[i + acc + 1] = '\0';
 	i = 0;
-	if ( sgn < 0)
+	if (sgn < 0)
 	{
 		res[i] = '-';
 		i++;
@@ -82,6 +81,6 @@ char					*ft_float(long double nb, int acc)
 		else res[i] = ((unsigned long long)nb % 10 + '0');
 		nb = nb - (unsigned long long)nb;
 	}
-//	printf("%s res\n", res);
+	printf("%s\n", res);
 	return (res);
 }

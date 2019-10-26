@@ -12,29 +12,29 @@
 
 #include "ft_printf.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*str;
-	unsigned int	i;
-	unsigned int	c;
+    char			*str;
+    unsigned int	i;
+    unsigned int	c;
 
-	i = 0;
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-	while (s1[i] != '\0')
-		i++;
-	c = 0;
-	while (s2[c] != '\0')
-		c++;
-	i = c + i;
-	str = (char*)malloc(sizeof(char) * (i + 1));
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	while (*s1)
-		str[i++] = *s1++;
-	while (*s2)
-		str[i++] = *s2++;
-	str[i] = '\0';
-	return (str);
+    i = 0;
+    if (s1 == NULL || s2 == NULL)
+        return (NULL);
+    while (s1[i] != '\0')
+        i++;
+    c = 0;
+    while (s2[c] != '\0')
+        c++;
+    i = c + i;
+    str = (char*)malloc(sizeof(char) * (i + 1));
+    if (str == NULL)
+        return (NULL);
+    i = 0;
+    while (*s1)
+        str[i++] = *s1++;
+    while (*s2)
+        str[i++] = *s2++;
+    str[i] = '\0';
+    return (str);
 }
