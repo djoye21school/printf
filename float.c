@@ -43,44 +43,92 @@ char					*ft_itoa_base(long long dig, int base, char a)
 
 char					*ft_float(long double nb, int acc)
 {
-	char				*num;
+	char				*num = NULL;
 	unsigned long long	integer;
 	int					i;
 	int					sgn;
 	long double			ld;
-	char				*res;
+	char				*res = NULL;
 
 	if (nb != nb)
 		return ("nan");
 	sgn = nb < 0 ? -1 : 1;
-	nb = sgn < 0 ? -nb : nb;
-	i = 0;
+	nb = nb
+	        < 0 ? -nb : nb;
 	ld = nb;
+    i = (sgn < 0) ? 1 : 0;
 	while (ld > 1 && ++i)
 		ld = ld / 10;
-	i += (sgn < 0) ? 1 : 0;
 
 	res = (char*)malloc(sizeof(char) * (i + acc + 2));
+    res[i + acc+1] = '\0';
 	integer = (unsigned long long int)nb;
 	integer += ((nb - integer) >= 0.5 && acc == 0) ? 1 : 0;
 	num = ft_itoa_base(integer, 10, 'A');
-	res[i + acc + 1] = '\0';
 	i = 0;
 	if (sgn < 0)
 	{
 		res[i] = '-';
 		i++;
 	}
-	while (*num)
+	while (*num != '\0')
 		res[i++] = *num++;
 	res[i] = acc != 0 ? '.' : '\0';
-	while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i)
-	{
-		if ((nb - (unsigned long long)nb) >= 0.5 && acc == 0)
-			res[i] = (unsigned long long)nb % 10 + 1 + '0';
-		else res[i] = ((unsigned long long)nb % 10 + '0');
-		nb = nb - (unsigned long long)nb;
-	}
-	printf("%s\n", res);
+	if (acc == 0 && nb == 0)
+    {
+	    int c = 0;
+	    while (c++ < 6)
+	        res[i++] = '0';
+    }
+	else
+    {
+        while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i) {
+            if ((nb - (unsigned long long) nb) >= 0.5 && acc == 0)
+                res[i] = (unsigned long long) nb % 10 + 1 + '0';
+            else res[i] = ((unsigned long long) nb % 10 + '0');
+            nb = nb - (unsigned long long) nb;
+        }
+    }
+
 	return (res);
 }
+
+
+/*char					*ft_float(long double nb, int acc)
+{
+    int					i;
+    int					sgn;
+    char				*res;
+    int					c;
+
+    if (nb != nb)
+        return ("nan");
+    sgn = nb < 0 ? -1 : 1;
+    nb = sgn < 0 ? -nb : nb;
+    c = (sgn < 0) ? 1 : 0;
+    while (nb > 1 && c++)
+        nb = nb / 10;
+    res = (char*)malloc(sizeof(char) * (c + acc + 2));
+    res[c + acc + 1] = '\0';
+    i = 0;
+    res[0] = sgn < 0 ? '-' : '0';
+    while (i <= c && (nb = nb * 10) >= 0)
+    {
+        if ((nb - (unsigned long long)nb) >= 0.5 && acc == 0)
+            res[i++] = (unsigned long long)nb % 10 + 1 + '0';
+        else
+            res[i++] = ((unsigned long long)nb % 10 + '0');
+        nb = nb - (unsigned long long)nb;
+    }
+    res[i] = acc != 0 ? '.' : '\0';
+    while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i)
+    {
+        if ((nb - (unsigned long long)nb) >= 0.5 && acc == 0)
+            res[i] = ((unsigned long long)nb % 10 + '0' + 1);
+        else
+            res[i] = ((unsigned long long)nb % 10 + '0');
+        nb = nb - (unsigned long long)nb;
+    }
+    printf("\n%s\n", res);
+    return (res);
+}*/

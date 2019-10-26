@@ -55,22 +55,20 @@ int     ft_parsestr(const char *format, va_list *ap)
 
 int		ft_printf(const char *format, ...)
 {
-	int res;
+    int res;
 	va_list ap;
 
-	res = 0;
 	va_start(ap, format);
 	res = ft_parsestr(format, &ap);
 	va_end(ap);
 	return (res);
 }
 
-int		main()
+int main()
 {
-    int UINT_MAX = 4294967295U;
-	ft_printf("%+8.14f", 0.);
-    printf("\n");
-	printf("%+8.14f", 0.);
+    //printf("\n%d\n", ft_printf("{%*c}", -5, 0));
 
-	return (0);
+    ft_printf("%f|%-f|%+f|% f|%#f|%0f", 0. / 0., 0. / 0., 0. / 0., 0. / 0., 0. / 0., 0. / 0.);
+    printf("\n");
+    printf("%f|%-f|%+f|% f|%#f|%0f", 0. / 0., 0. / 0., 0. / 0., 0. / 0., 0. / 0., 0. / 0.);
 }

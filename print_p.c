@@ -52,6 +52,11 @@ static void     ft_prcn_p(t_flags *yep)
             len++;
         }
     }
+    if (yep->prcn == 0 && *(yep->s) == '0' && *(yep->s + 1) == '\0')
+    {
+        free(yep->s);
+        yep->s = ft_strdup("");
+    }
 }
 
 size_t          ft_p(t_flags *yep, void *tmp)
@@ -64,6 +69,7 @@ size_t          ft_p(t_flags *yep, void *tmp)
     ft_prcn_p(yep);
     if (yep->zero != 0 && yep->min == 0)
         ft_width_p(yep);
+
     yep ->s = ft_strjoin("0x", yep->s);
     ft_width_p(yep);
     res = ft_putstr(yep->s);

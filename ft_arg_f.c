@@ -56,6 +56,7 @@ static void     ft_width_f(t_flags *yep, int sign)
             len++;
         while (yep->zero == 1 && len < yep->width)
         {
+
             yep->s = ft_strjoin("0", yep->s);
             len++;
         }

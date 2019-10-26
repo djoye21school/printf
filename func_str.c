@@ -33,7 +33,6 @@ long int	ft_atoi(const char *str)
         nbr = (nbr * 10) + (*str- '0');
         str += 1;
     }
-
     return ((long int)nbr * sign);
 }
 

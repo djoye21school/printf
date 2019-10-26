@@ -24,9 +24,9 @@ static void     ft_flags(t_flags *yep, char **str)
         (**str == '#') ? yep->hash = 1 : 0;
         (*str)++;
     }
-    if (yep->space == 1 && yep->plus == 1) // в приоритете +, ставится знак
+    if (yep->space == 1 && yep->plus == 1)
         yep->space = 0;
-    if (yep->zero == 1 && yep->min == 1) // в приоритете -, выравнивается по правому краю
+    if (yep->zero == 1 && yep->min == 1)
         yep->zero = 0;
 }
 
@@ -34,7 +34,7 @@ static void     ft_width(t_flags *yep, char **str, va_list *ap)
 {
     if (**str == '*')
     {
-        yep->width = (long long)va_arg(*ap, long long int);
+        yep->width = (long int)va_arg(*ap, int);
         if (yep->width < 0)
         {
             yep->width = yep->width * (-1);
@@ -56,7 +56,9 @@ static int     ft_precis(t_flags *yep, char **str, va_list *ap)
         yep->prcn = ft_atoi(*str);
     else if (**str == '*')
     {
-        yep->prcn = (unsigned long long)va_arg(*ap, unsigned long long);
+        yep->prcn = (long int)va_arg(*ap, int);
+        if (yep->prcn < 0)
+            yep->prcn = -1;
         *str += 1;
     }
     else if (**str == '-')

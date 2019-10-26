@@ -30,12 +30,13 @@ typedef	struct          t_list
 	int		            space;
 	int		            hash;
     int		            zero;
-	long long           width;
-	long long           prcn;
+	long int           width;
+	long int           prcn;
 	char	            *type;
 	int 		        len;
 	char                *s;
 }				        t_flags;
+
 
 char            *ft_strjoin(char const *s1, char const *s2);
 char	        *ft_strdup(const char *s1);
