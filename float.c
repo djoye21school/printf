@@ -83,7 +83,7 @@ char					*ft_float(long double nb, int acc)
 	return (res);
 }
 
-int						main(void)
+/*int						main(void)
 {
 	long double nb;
 
@@ -92,4 +92,4 @@ int						main(void)
 	printf("%s", ft_float(nb, 69));
 	printf("\n%.69Lf", nb);
 	return (0);
-}
+}*/
