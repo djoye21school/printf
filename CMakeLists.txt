@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
-project(GG C)
+project(1111 C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 
-add_executable(GG
+add_executable(1111
         assoc.c
         delete.c
         float.c

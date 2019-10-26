@@ -38,6 +38,7 @@ static void     ft_flag_f(t_flags *yep, int sign)
         yep->s = ft_strjoin("-", yep->s);
 }
 
+
 static void     ft_width_f(t_flags *yep, int sign)
 {
     int len;

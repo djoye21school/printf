@@ -65,7 +65,7 @@ int		ft_printf(const char *format, ...)
 	return (res);
 }
 
-/*int		main()
+int		main()
 {
     int UINT_MAX = 4294967295U;
 	printf("\n%d\n", ft_printf("%+8.14f|%+ 8.14f|%+-8.14f|%+#8.14f|%+08.14f|%+ -#08.14f", 0., 0., 0., 0., 0., 0.));
@@ -81,4 +81,4 @@ int		ft_printf(const char *format, ...)
     printf("\n%d\n", ft_printf("%.32f",  2.33456));
     printf("\n%d\n", printf("%.32f", 2.33456));
 	return (0);
-}*/
+}
