@@ -6,7 +6,7 @@
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 10:13:47 by sdoughnu          #+#    #+#             */
-/*   Updated: 2019/10/26 17:39:15 by sdoughnu         ###   ########.fr       */
+/*   Updated: 2019/10/26 17:41:25 by sdoughnu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void		ft_hash(t_flags *yep, int flag, int num, int updown)
 static void		ft_width_x(t_flags *yep, int num, int updown)
 {
 	int len;
-	
+
 	len = ft_strlen(yep->s);
 	if (yep->width > len)
 	{
@@ -67,7 +67,7 @@ static void		ft_prcn_x(t_flags *yep, int updown)
 {
 	int	num;
 	int	len;
-	
+
 	num = 0;
 	if (*(yep->s) == '0' && *(yep->s + 1) == '\0')
 		num++;
@@ -91,9 +91,9 @@ static void		ft_prcn_x(t_flags *yep, int updown)
 
 size_t		ft_arg_x(t_flags *yep, int flag)
 {
-    size_t res;
+	size_t res;
 
-    ft_prcn_x(yep, flag);
-    res = ft_putstr(yep->s);
-    return (res);
+	ft_prcn_x(yep, flag);
+	res = ft_putstr(yep->s);
+	return (res);
 }
