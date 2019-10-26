@@ -51,7 +51,7 @@ char					*ft_float(long double nb, int acc)
 	char				*res = NULL;
 
 	if (nb != nb)
-		return ("nan");
+		return ("nan\n");
 	sgn = nb < 0 ? -1 : 1;
 	nb = nb
 	        < 0 ? -nb : nb;
@@ -74,22 +74,15 @@ char					*ft_float(long double nb, int acc)
 	while (*num != '\0')
 		res[i++] = *num++;
 	res[i] = acc != 0 ? '.' : '\0';
-	if (acc == 0 && nb == 0)
-    {
-	    int c = 0;
-	    while (c++ < 6)
-	        res[i++] = '0';
-    }
-	else
-    {
-        while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i) {
-            if ((nb - (unsigned long long) nb) >= 0.5 && acc == 0)
-                res[i] = (unsigned long long) nb % 10 + 1 + '0';
-            else res[i] = ((unsigned long long) nb % 10 + '0');
+	while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i)
+	{
+	    if ((nb - (unsigned long long) nb) >= 0.5 && acc == 0)
+	        res[i] = (unsigned long long) nb % 10 + 1 + '0';
+	    else res[i] = ((unsigned long long) nb % 10 + '0');
             nb = nb - (unsigned long long) nb;
-        }
-    }
-
+	}
+	res[++i] = '\0';
+//	printf("\n%s\n", res);
 	return (res);
 }
 
@@ -129,6 +122,7 @@ char					*ft_float(long double nb, int acc)
             res[i] = ((unsigned long long)nb % 10 + '0');
         nb = nb - (unsigned long long)nb;
     }
-    printf("\n%s\n", res);
+    res[++i] = '\0';
     return (res);
-}*/
+}
+*/
