@@ -15,11 +15,8 @@
 size_t		ft_assoc(va_list *ap, t_flags *yep)
 {
 	size_t	res;
-	int		flag;
 
-	res = 0;
-	flag = 0;
-	if (*(yep->type ) == 'd' || *(yep->type) == 'i' || *(yep->type) == 'D'
+	if (*(yep->type) == 'd' || *(yep->type) == 'i' || *(yep->type) == 'D'
 			|| *(yep->type) == 'I')
 		res = ft_di(yep, ap);
 	else if (*(yep->type) == 'o' || *(yep->type) == 'O')
@@ -39,7 +36,7 @@ size_t		ft_assoc(va_list *ap, t_flags *yep)
 	else if (*(yep->type) == '%')
 		res = ft_perc(yep);
 	else
-		ft_c(yep, *(yep->type));
+		res = ft_c(yep, *(yep->type));
 	ft_delete(yep);
 	return (res);
 }

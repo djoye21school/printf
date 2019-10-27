@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arg_Xx.c                                        :+:      :+:    :+:   */
+/*   ft_arg_xx.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdoughnu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/23 10:13:47 by sdoughnu          #+#    #+#             */
-/*   Updated: 2019/10/26 17:41:25 by sdoughnu         ###   ########.fr       */
+/*   Created: 2019/10/27 14:15:50 by sdoughnu          #+#    #+#             */
+/*   Updated: 2019/10/27 14:15:56 by sdoughnu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ static void		ft_prcn_x(t_flags *yep, int updown)
 	ft_width_x(yep, num, updown);
 }
 
-size_t		ft_arg_x(t_flags *yep, int flag)
+size_t			ft_arg_x(t_flags *yep, int flag)
 {
 	size_t res;
 

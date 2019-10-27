@@ -64,10 +64,17 @@ int		ft_printf(const char *format, ...)
 	return (res);
 }
 
-int main()
-{//printf("\n%d\n", ft_printf("{%*c}", -5, 0));
-
-  printf("\n%d\n", ft_printf( "%f|%-f|%+f|% f|%#f|%0f", -0., -0., -0., -0., -0., -0.));
+/*int main()
+{
+ //printf("\n%d\n", ft_printf("{%*c}", -5, 0));
+# define INFINITY  1.0 / 0.0
+# define NAN  0. / 0.0
+  printf("\n%d\n", ft_printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
     printf("\n");
-       printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", -0., -0., -0., -0., -0., -0.));
-}
+       printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
+
+       printf("\n");
+	printf("\n%d\n", ft_printf("%+8.14f|%+ 8.14f|%+-8.14f|%+#8.14f|%+08.14f|%+ -#08.14f", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY));
+	printf("\n");
+	printf("\n%d\n", printf("%+8.14f|%+ 8.14f|%+-8.14f|%+#8.14f|%+08.14f|%+ -#08.14f", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY));
+}*/

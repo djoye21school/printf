@@ -12,7 +12,7 @@ add_executable(222
         ft_arg_di.c
         ft_arg_f.c
         ft_arg_o.c
-        ft_arg_Xx.c
+        ft_arg_xx.c
         ft_itoa_u.c
         ft_printf.c
         ft_printf.h
@@ -29,5 +29,5 @@ add_executable(222
         print_perc.c
         print_s.c
         print_u.c
-        print_Xx.c
+        print_xx.c
         treatment.c)

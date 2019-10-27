@@ -12,68 +12,68 @@
 
 #include "ft_printf.h"
 
-static void     ft_hash_o(t_flags *yep, int num)
+static void		ft_hash_o(t_flags *yep, int num)
 {
-    if (yep->hash != 0 && num != 1)
-        yep->s = ft_strjoin("0", yep->s);
+	if (yep->hash != 0 && num != 1)
+		yep->s = ft_strjoin("0", yep->s);
 }
 
-static void     ft_width_o(t_flags *yep)
+static void		ft_width_o(t_flags *yep)
 {
-    int len;
-    len = ft_strlen(yep->s);
-    if (yep->width > len)
-    {
-        while (yep->min != 0 && len < yep->width)
-        {
-            yep->s = ft_strjoin(yep->s, " ");
-            len++;
-        }
-        while (yep->prcn < 0 && yep->zero != 0 && len < yep->width)
-        {
-            yep->s = ft_strjoin("0", yep->s);
-            len++;
-        }
-        while (len < yep->width)
-        {
-            yep->s = ft_strjoin(" ", yep->s);
-            len++;
-        }
-    }
+	int len;
+
+	len = ft_strlen(yep->s);
+	if (yep->width > len)
+	{
+		while (yep->min != 0 && len < yep->width)
+		{
+			yep->s = ft_strjoin(yep->s, " ");
+			len++;
+		}
+		while (yep->prcn < 0 && yep->zero != 0 && len < yep->width)
+		{
+			yep->s = ft_strjoin("0", yep->s);
+			len++;
+		}
+		while (len < yep->width)
+		{
+			yep->s = ft_strjoin(" ", yep->s);
+			len++;
+		}
+	}
 }
 
-static void     ft_prcn_o(t_flags *yep)
+static void		ft_prcn_o(t_flags *yep)
 {
-    int num;
-    int len;
+	int	num;
+	int	len;
 
-    num = 0;
-    if (*(yep->s) == '0' && (*(yep->s + 1)) == '\0')
-        num++;
-    ft_hash_o(yep, num);
-    len = ft_strlen(yep->s);
-    if (yep->prcn > len)
-    {
-        while (len < yep->prcn)
-        {
-            yep->s = ft_strjoin("0", yep->s);
-            len++;
-        }
-    }
-    if (num == 1 && yep->prcn == 0 && yep->hash != 1)
-    {
-        free(yep->s);
-        yep->s = ft_strdup("");
-    }
-    ft_width_o(yep);
+	num = 0;
+	if (*(yep->s) == '0' && (*(yep->s + 1)) == '\0')
+		num++;
+	ft_hash_o(yep, num);
+	len = ft_strlen(yep->s);
+	if (yep->prcn > len)
+	{
+		while (len < yep->prcn)
+		{
+			yep->s = ft_strjoin("0", yep->s);
+			len++;
+		}
+	}
+	if (num == 1 && yep->prcn == 0 && yep->hash != 1)
+	{
+		free(yep->s);
+		yep->s = ft_strdup("");
+	}
+	ft_width_o(yep);
 }
 
-size_t          ft_arg_o(t_flags *yep, int flag)
+size_t			ft_arg_o(t_flags *yep)
 {
-    size_t res;
+	size_t res;
 
-    flag++;
-    ft_prcn_o(yep);
-    res = ft_putstr(yep->s);
-    return (res);
+	ft_prcn_o(yep);
+	res = ft_putstr(yep->s);
+	return (res);
 }

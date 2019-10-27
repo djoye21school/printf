@@ -14,26 +14,26 @@
 
 long int	ft_atoi(const char *str)
 {
-    int sign;
-    unsigned long int nbr;
+	int					sign;
+	unsigned long int	nbr;
 
-    sign = 1;
-    nbr = 0;
-    while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v' ||
-            *str == '\f' || *str == '\r')
-        str++;
-    if (*str == '+' || *str == '-')
-    {
-        if (*str == '-')
-            sign = -1;
-        str += 1;
-    }
-    while (*str >= '0' && *str <= '9')
-    {
-        nbr = (nbr * 10) + (*str- '0');
-        str += 1;
-    }
-    return ((long int)nbr * sign);
+	sign = 1;
+	nbr = 0;
+	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\v' ||
+	*str == '\f' || *str == '\r')
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		if (*str == '-')
+			sign = -1;
+		str += 1;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		nbr = (nbr * 10) + (*str - '0');
+		str += 1;
+	}
+	return ((long int)nbr * sign);
 }
 
 size_t		ft_putstr(const char *s)
@@ -53,12 +53,20 @@ size_t		ft_putstr(const char *s)
 
 size_t		ft_strlen(char *str)
 {
-    size_t i;
+	size_t i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
+int			ft_strcmp(const char *s1, const char *s2)
+{
+	unsigned int i;
 
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
+}

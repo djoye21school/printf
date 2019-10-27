@@ -14,7 +14,7 @@
 
 size_t		ft_treatment(va_list *ap, char **format, t_flags *yep)
 {
-    yep->plus = 0;
+	yep->plus = 0;
 	yep->min = 0;
 	yep->space = 0;
 	yep->hash = 0;
@@ -30,7 +30,7 @@ size_t		ft_treatment(va_list *ap, char **format, t_flags *yep)
 		if (**format != '\0')
 		{
 			if ((ft_parse(yep, ap, *format)) == -1)
-			    return (-1);
+				return (-1);
 			*format = yep->type;
 			return (ft_assoc(ap, yep));
 		}

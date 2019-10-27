@@ -12,67 +12,66 @@
 
 #include "ft_printf.h"
 
-static void ft_width_c(t_flags *yep)
+static void		ft_width_c(t_flags *yep)
 {
-    int len;
+	int	len;
 
-    len = ft_strlen(yep->s);
-    if (yep->width > len)
-    {
-        while (yep->min == 1 && len < yep->width)
-        {
-            yep->s = ft_strjoin(yep->s, " ");
-            len++;
-        }
-        while (yep->zero == 1 && len < yep->width)
-        {
-            yep->s = ft_strjoin("0", yep->s);
-            len++;
-        }
-        while (len < yep->width)
-        {
-            yep->s = ft_strjoin(" ", yep->s);
-            len++;
-        }
-    }
+	len = ft_strlen(yep->s);
+	if (yep->width > len)
+	{
+		while (yep->min == 1 && len < yep->width)
+		{
+			yep->s = ft_strjoin(yep->s, " ");
+			len++;
+		}
+		while (yep->zero == 1 && len < yep->width)
+		{
+			yep->s = ft_strjoin("0", yep->s);
+			len++;
+		}
+		while (len < yep->width)
+		{
+			yep->s = ft_strjoin(" ", yep->s);
+			len++;
+		}
+	}
 }
 
-size_t      ft_spec_c(t_flags *yep)
+size_t			ft_spec_c(t_flags *yep)
 {
-    size_t      res;
-    int         i;
+	size_t		res;
+	int			i;
 
-    res = 0;
-    i = 0;
-    while (yep->s[i])
-    {
-        write(1, &(yep->s)[i], 1);
-        res++;
-        i++;
-    }
-    write(1, "\0", 1);
-    res++;
-    return (res);
+	res = 0;
+	i = 0;
+	while (yep->s[i])
+	{
+		write(1, &(yep->s)[i], 1);
+		res++;
+		i++;
+	}
+	write(1, "\0", 1);
+	res++;
+	return (res);
 }
 
-size_t      ft_c(t_flags *yep, char c)
+size_t			ft_c(t_flags *yep, char c)
 {
-    int num;
-    size_t res;
+	int		num;
+	size_t	res;
 
-    num = 0;
-    res = 0;
-    yep->s = ft_strnew(1);
-    if (c == 0)
-        num++;
-    yep->s[0] = c;
-    if (num == 1)
-        yep->width--;
-    if (yep->width > 0)
-        ft_width_c(yep);
-    if (num == 1)
-        res =ft_spec_c(yep);
-    else
-        res = ft_putstr(yep->s);
-    return (res);
+	num = 0;
+	yep->s = ft_strnew(1);
+	if (c == 0)
+		num++;
+	yep->s[0] = c;
+	if (num == 1)
+		yep->width--;
+	if (yep->width > 0)
+		ft_width_c(yep);
+	if (num == 1)
+		res = ft_spec_c(yep);
+	else
+		res = ft_putstr(yep->s);
+	return (res);
 }
