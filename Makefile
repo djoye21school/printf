@@ -1,36 +1,53 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: djoye <marvin@42.fr>                       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/10/27 16:14:57 by djoye             #+#    #+#              #
+#    Updated: 2019/10/27 16:26:28 by djoye            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+SRC = assoc.c treatment.c ft_arg_o.c ft_strjoin.c print_di.c ft_printf.c \
+	  ft_strnew.c  ft_strdup.c  delete.c float.c func_str.c print_p.c \
+	  print_s.c ft_itoa_u.c ft_arg_xx.c print_c.c ft_arg_di.c  print_u.c \
+	  print_f.c print_o.c parse.c print_perc.c  print_xx.c ft_arg_f.c
+
+OBJ = $(SRC:.c=.o)
+
+SRCDIR = srcs
+OBJDIR = objs
+
+SRCS = $(addprefix $(SRCDIR)/, $(SRC))
+OBJS = $(addprefix $(OBJDIR)/, $(OBJ))
+HEADER = -I includes
+
+CFLAGS = -c -Wall -Wextra -Werror
+
 NAME = libftprintf.a
-MKEX = gcc -o
-COMP = gcc -c
-AR = ar -rc
-SRC = assoc.c treatment.c ft_arg_o.c ft_strjoin.c print_di.c   \
-      ft_printf.c  ft_strnew.c  ft_strdup.c  delete.c          \
-      float.c func_str.c print_p.c print_s.c  ft_itoa_u.c      \
-      ft_arg_xx.c print_c.c ft_arg_di.c  print_u.c  print_f.c  \
-      print_o.c     parse.c    print_perc.c  print_xx.c        \
-      ft_arg_f.c
 
+.PHONY: all clean fclean re
+	.SUFFIXES: .c .o
 
-FLAGS = -Wall -Wextra -Werror
-OBJECT = $(SRC:.c=.o)
+all: $(NAME)
 
-all : $(NAME)
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+		@/bin/mkdir -p $(OBJDIR)
+			@gcc $(CFLAGS) $(HEADER) $< -o $@
 
-$(NAME) : $(OBJECT)
-	@$(AR) $(NAME) $(OBJECT)
-	@ranlib $(NAME)
-	@echo "\033[32m$(NAME) OK ! \033[0m"
+$(NAME): $(OBJS)
+		@ar rcs $@ $^
+			@ranlib $@
+			@echo "\033[32m$(NAME) OK ! \033[0m"
 
-$(OBJECT) :
-	@$(COMP) $(SRC) $(FLAGS)
-	@echo "\033[33mCompilation OK\033[0m"
+clean:
+		@/bin/rm -rf $(OBJDIR)
+		@echo "\033[33mObject deleted\033[0m"
 
-clean :
-	@/bin/rm -f $(OBJECT)
-	@echo "\033[33mObject deleted\033[0m"
+fclean: clean
+		@/bin/rm -f $(NAME)
+		@echo "\033[33mExec deleted\033[0m"
 
-
-fclean : clean
-	@/bin/rm -f $(NAME)
-	@echo "\033[33mExec deleted\033[0m"
-
-re : fclean all
+re: fclean all
