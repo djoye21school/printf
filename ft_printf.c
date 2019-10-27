@@ -14,7 +14,7 @@
 
 void	ft_putstrl(char *str, int len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < len && str[i])
@@ -24,39 +24,39 @@ void	ft_putstrl(char *str, int len)
 	}
 }
 
-int     ft_parsestr(const char *format, va_list *ap)
+int		ft_parsestr(const char *format, va_list *ap)
 {
-	char *str;
-	char *go;
-    size_t size;
-    t_flags yep;
+	char	*str;
+	char	*go;
+	size_t	size;
+	t_flags	yep;
 
-    size = 0;
-    go = (char *)format;
-    str = go;
-    while (*go != '\0')
-    {
-        if (*go != '\0' && *go != '%')
+	size = 0;
+	go = (char *)format;
+	str = go;
+	while (*go != '\0')
+	{
+		if (*go != '\0' && *go != '%')
 		{
-        	go++;
-        	size++;
+			go++;
+			size++;
 		}
-        else if (*go == '%')
-        {
-        	ft_putstrl(str, go - str);
-        	size = size + ft_treatment(ap, &go, &yep);
-        	go++;
-        	str = go;
+		else if (*go == '%')
+		{
+			ft_putstrl(str, go - str);
+			size = size + ft_treatment(ap, &go, &yep);
+			go++;
+			str = go;
 		}
-    }
-    ft_putstrl(str, go - str);
-    return (size);
+	}
+	ft_putstrl(str, go - str);
+	return (size);
 }
 
 int		ft_printf(const char *format, ...)
 {
-    int res;
-	va_list ap;
+	int		res;
+	va_list	ap;
 
 	va_start(ap, format);
 	res = ft_parsestr(format, &ap);
