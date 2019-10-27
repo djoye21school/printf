@@ -60,3 +60,5 @@ size_t		ft_strlen(char *str)
         i++;
     return (i);
 }
+
+

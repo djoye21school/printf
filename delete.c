@@ -22,10 +22,10 @@ void	ft_delete(t_flags *yep)
 	yep->width = 0;
 	yep->prcn = -1;
 	yep->len = 0;
-	if (yep->s)
+	/*if (yep->s)
 	{
 		free(yep->s);
 		yep->s = NULL;
 	}
-	yep->type = NULL;
+	yep->type = NULL;*/
 }

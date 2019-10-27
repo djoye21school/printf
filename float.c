@@ -50,11 +50,16 @@ char					*ft_float(long double nb, int acc)
 	long double			ld;
 	char				*res = NULL;
 
-	if (nb != nb)
-		return ("nan\n");
-	sgn = nb < 0 ? -1 : 1;
-	nb = nb
-	        < 0 ? -nb : nb;
+    if (nb != nb)
+        return (ft_strdup("nan"));
+    else if (nb == 1.0 / 0.0)
+        return (ft_strdup("inf"));
+    else if (nb == -1.0 / 0.0)
+        return (ft_strdup("-inf"));
+   /*if (((((*(__int128_t*)&nb) >> 79) & 1) == 1) && nb == 0)
+        return ("-0"); */
+	sgn = (nb < 0) ? -1 : 1;
+	nb = (nb < 0) ? -nb : nb;
 	ld = nb;
     i = (sgn < 0) ? 1 : 0;
 	while (ld > 1 && ++i)
@@ -82,7 +87,6 @@ char					*ft_float(long double nb, int acc)
             nb = nb - (unsigned long long) nb;
 	}
 	res[++i] = '\0';
-//	printf("\n%s\n", res);
 	return (res);
 }
 
