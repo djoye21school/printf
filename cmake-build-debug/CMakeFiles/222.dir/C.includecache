@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/sdoughnu/Desktop/222/ft_arg_f.c
+/Users/sdoughnu/Desktop/222/ft_printf.c
 ft_printf.h
 /Users/sdoughnu/Desktop/222/ft_printf.h
 
@@ -27,4 +27,8 @@ stdint.h
 -
 stdio.h
 -
+
+/Users/sdoughnu/Desktop/222/print_c.c
+ft_printf.h
+/Users/sdoughnu/Desktop/222/ft_printf.h
 

@@ -50,20 +50,20 @@ char					*ft_float(long double nb, int acc)
 	long double			ld;
 	char				*res = NULL;
 
-    if (nb != nb)
-        return (ft_strdup("nan"));
-    else if (nb == 1.0 / 0.0)
-        return (ft_strdup("inf"));
-    else if (nb == -1.0 / 0.0)
-        return (ft_strdup("-inf"));
+	if (nb != nb)
+		return (ft_strdup("nan"));
+	else if (nb == 1.0 / 0.0)
+		return (ft_strdup("inf"));
+	else if (nb == -1.0 / 0.0)
+		return (ft_strdup("-inf"));
 	sgn = ((*(__int128_t*)&nb) >> 79) & 1;
 	nb = (nb < 0) ? -nb : nb;
 	ld = nb;
-    i = (sgn == 1) ? 1 : 0;
+	i = (sgn == 1) ? 1 : 0;
 	while (ld > 1 && ++i)
 		ld = ld / 10;
 	res = (char*)malloc(sizeof(char) * (i + acc + 2));
-    res[i + acc + 1] = '\0';
+	res[i + acc + 1] = '\0';
 	integer = (unsigned long long int)nb;
 	integer += ((nb - integer) >= 0.5 && acc == 0) ? 1 : 0;
 	num = ft_itoa_base(integer, 10, 'A');
@@ -78,14 +78,15 @@ char					*ft_float(long double nb, int acc)
 	res[i] = acc != 0 ? '.' : '\0';
 	while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i)
 	{
-	    if ((nb - (unsigned long long) nb) >= 0.5 && acc == 0)
-	        res[i] = (unsigned long long) nb % 10 + 1 + '0';
-	    else res[i] = ((unsigned long long) nb % 10 + '0');
-            nb = nb - (unsigned long long) nb;
+		if ((nb - (unsigned long long) nb) >= 0.5 && acc == 0)
+			res[i] = (unsigned long long) nb % 10 + 1 + '0';
+		else res[i] = ((unsigned long long) nb % 10 + '0');
+		nb = nb - (unsigned long long) nb;
 	}
 	res[++i] = '\0';
 	return (res);
 }
+
 /*
 int 	main()
 {

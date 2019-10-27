@@ -43,6 +43,8 @@ int		ft_parsestr(const char *format, va_list *ap)
 		}
 		else if (*go == '%')
 		{
+			if (*(go + 1) == '\0')
+				return (0);
 			ft_putstrl(str, go - str);
 			size = size + ft_treatment(ap, &go, &yep);
 			go++;
@@ -69,12 +71,14 @@ int		ft_printf(const char *format, ...)
  //printf("\n%d\n", ft_printf("{%*c}", -5, 0));
 # define INFINITY  1.0 / 0.0
 # define NAN  0. / 0.0
-  printf("\n%d\n", ft_printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
-    printf("\n");
-       printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
-
-       printf("\n");
-	printf("\n%d\n", ft_printf("%+8.14f|%+ 8.14f|%+-8.14f|%+#8.14f|%+08.14f|%+ -#08.14f", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY));
+ // printf("\n%d\n", ft_printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
+  //  printf("\n");
+ //      printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
+	printf("\n%d\n", ft_printf("{%*c}", -15, 0));
 	printf("\n");
-	printf("\n%d\n", printf("%+8.14f|%+ 8.14f|%+-8.14f|%+#8.14f|%+08.14f|%+ -#08.14f", INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY));
+	printf("\n%d\n", printf("{%*c}", -15, 0));
+//	printf("\n");
+	//printf("\n%d\n", ft_printf("%.1f|%.2f|%.f|%.12f", 999.90, 999.995, 999.99999, 999.99999));
+//	printf("\n");
+	//printf("\n%d\n", printf("%.1f|%.2f|%.f|%.12f", 999.90, 999.995, 999.99999, 999.99999));
 }*/

@@ -10,9 +10,6 @@ CMakeFiles/222.dir/delete.c.o: ../ft_printf.h
 CMakeFiles/222.dir/float.c.o: ../float.c
 CMakeFiles/222.dir/float.c.o: ../ft_printf.h
 
-CMakeFiles/222.dir/ft_arg_Xx.c.o: ../ft_arg_Xx.c
-CMakeFiles/222.dir/ft_arg_Xx.c.o: ../ft_printf.h
-
 CMakeFiles/222.dir/ft_arg_di.c.o: ../ft_arg_di.c
 CMakeFiles/222.dir/ft_arg_di.c.o: ../ft_printf.h
 
@@ -21,6 +18,9 @@ CMakeFiles/222.dir/ft_arg_f.c.o: ../ft_printf.h
 
 CMakeFiles/222.dir/ft_arg_o.c.o: ../ft_arg_o.c
 CMakeFiles/222.dir/ft_arg_o.c.o: ../ft_printf.h
+
+CMakeFiles/222.dir/ft_arg_xx.c.o: ../ft_arg_xx.c
+CMakeFiles/222.dir/ft_arg_xx.c.o: ../ft_printf.h
 
 CMakeFiles/222.dir/ft_itoa_u.c.o: ../ft_itoa_u.c
 CMakeFiles/222.dir/ft_itoa_u.c.o: ../ft_printf.h
@@ -42,9 +42,6 @@ CMakeFiles/222.dir/func_str.c.o: ../func_str.c
 
 CMakeFiles/222.dir/parse.c.o: ../ft_printf.h
 CMakeFiles/222.dir/parse.c.o: ../parse.c
-
-CMakeFiles/222.dir/print_Xx.c.o: ../ft_printf.h
-CMakeFiles/222.dir/print_Xx.c.o: ../print_Xx.c
 
 CMakeFiles/222.dir/print_c.c.o: ../ft_printf.h
 CMakeFiles/222.dir/print_c.c.o: ../print_c.c
@@ -69,6 +66,9 @@ CMakeFiles/222.dir/print_s.c.o: ../print_s.c
 
 CMakeFiles/222.dir/print_u.c.o: ../ft_printf.h
 CMakeFiles/222.dir/print_u.c.o: ../print_u.c
+
+CMakeFiles/222.dir/print_xx.c.o: ../ft_printf.h
+CMakeFiles/222.dir/print_xx.c.o: ../print_xx.c
 
 CMakeFiles/222.dir/treatment.c.o: ../ft_printf.h
 CMakeFiles/222.dir/treatment.c.o: ../treatment.c

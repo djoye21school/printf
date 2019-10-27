@@ -135,18 +135,18 @@ CMakeFiles/222.dir/ft_arg_o.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/222.dir/ft_arg_o.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/222/ft_arg_o.c -o CMakeFiles/222.dir/ft_arg_o.c.s
 
-CMakeFiles/222.dir/ft_arg_Xx.c.o: CMakeFiles/222.dir/flags.make
-CMakeFiles/222.dir/ft_arg_Xx.c.o: ../ft_arg_Xx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/222/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/222.dir/ft_arg_Xx.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/222.dir/ft_arg_Xx.c.o   -c /Users/sdoughnu/Desktop/222/ft_arg_Xx.c
+CMakeFiles/222.dir/ft_arg_xx.c.o: CMakeFiles/222.dir/flags.make
+CMakeFiles/222.dir/ft_arg_xx.c.o: ../ft_arg_xx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/222/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/222.dir/ft_arg_xx.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/222.dir/ft_arg_xx.c.o   -c /Users/sdoughnu/Desktop/222/ft_arg_xx.c
 
-CMakeFiles/222.dir/ft_arg_Xx.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/222.dir/ft_arg_Xx.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/222/ft_arg_Xx.c > CMakeFiles/222.dir/ft_arg_Xx.c.i
+CMakeFiles/222.dir/ft_arg_xx.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/222.dir/ft_arg_xx.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/222/ft_arg_xx.c > CMakeFiles/222.dir/ft_arg_xx.c.i
 
-CMakeFiles/222.dir/ft_arg_Xx.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/222.dir/ft_arg_Xx.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/222/ft_arg_Xx.c -o CMakeFiles/222.dir/ft_arg_Xx.c.s
+CMakeFiles/222.dir/ft_arg_xx.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/222.dir/ft_arg_xx.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/222/ft_arg_xx.c -o CMakeFiles/222.dir/ft_arg_xx.c.s
 
 CMakeFiles/222.dir/ft_itoa_u.c.o: CMakeFiles/222.dir/flags.make
 CMakeFiles/222.dir/ft_itoa_u.c.o: ../ft_itoa_u.c
@@ -343,18 +343,18 @@ CMakeFiles/222.dir/print_u.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/222.dir/print_u.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/222/print_u.c -o CMakeFiles/222.dir/print_u.c.s
 
-CMakeFiles/222.dir/print_Xx.c.o: CMakeFiles/222.dir/flags.make
-CMakeFiles/222.dir/print_Xx.c.o: ../print_Xx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/222/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/222.dir/print_Xx.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/222.dir/print_Xx.c.o   -c /Users/sdoughnu/Desktop/222/print_Xx.c
+CMakeFiles/222.dir/print_xx.c.o: CMakeFiles/222.dir/flags.make
+CMakeFiles/222.dir/print_xx.c.o: ../print_xx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sdoughnu/Desktop/222/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/222.dir/print_xx.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/222.dir/print_xx.c.o   -c /Users/sdoughnu/Desktop/222/print_xx.c
 
-CMakeFiles/222.dir/print_Xx.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/222.dir/print_Xx.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/222/print_Xx.c > CMakeFiles/222.dir/print_Xx.c.i
+CMakeFiles/222.dir/print_xx.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/222.dir/print_xx.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/sdoughnu/Desktop/222/print_xx.c > CMakeFiles/222.dir/print_xx.c.i
 
-CMakeFiles/222.dir/print_Xx.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/222.dir/print_Xx.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/222/print_Xx.c -o CMakeFiles/222.dir/print_Xx.c.s
+CMakeFiles/222.dir/print_xx.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/222.dir/print_xx.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/sdoughnu/Desktop/222/print_xx.c -o CMakeFiles/222.dir/print_xx.c.s
 
 CMakeFiles/222.dir/treatment.c.o: CMakeFiles/222.dir/flags.make
 CMakeFiles/222.dir/treatment.c.o: ../treatment.c
@@ -377,7 +377,7 @@ CMakeFiles/222.dir/treatment.c.s: cmake_force
 "CMakeFiles/222.dir/ft_arg_di.c.o" \
 "CMakeFiles/222.dir/ft_arg_f.c.o" \
 "CMakeFiles/222.dir/ft_arg_o.c.o" \
-"CMakeFiles/222.dir/ft_arg_Xx.c.o" \
+"CMakeFiles/222.dir/ft_arg_xx.c.o" \
 "CMakeFiles/222.dir/ft_itoa_u.c.o" \
 "CMakeFiles/222.dir/ft_printf.c.o" \
 "CMakeFiles/222.dir/ft_strdup.c.o" \
@@ -393,7 +393,7 @@ CMakeFiles/222.dir/treatment.c.s: cmake_force
 "CMakeFiles/222.dir/print_perc.c.o" \
 "CMakeFiles/222.dir/print_s.c.o" \
 "CMakeFiles/222.dir/print_u.c.o" \
-"CMakeFiles/222.dir/print_Xx.c.o" \
+"CMakeFiles/222.dir/print_xx.c.o" \
 "CMakeFiles/222.dir/treatment.c.o"
 
 # External object files for target 222
@@ -405,7 +405,7 @@ CMakeFiles/222.dir/treatment.c.s: cmake_force
 222: CMakeFiles/222.dir/ft_arg_di.c.o
 222: CMakeFiles/222.dir/ft_arg_f.c.o
 222: CMakeFiles/222.dir/ft_arg_o.c.o
-222: CMakeFiles/222.dir/ft_arg_Xx.c.o
+222: CMakeFiles/222.dir/ft_arg_xx.c.o
 222: CMakeFiles/222.dir/ft_itoa_u.c.o
 222: CMakeFiles/222.dir/ft_printf.c.o
 222: CMakeFiles/222.dir/ft_strdup.c.o
@@ -421,7 +421,7 @@ CMakeFiles/222.dir/treatment.c.s: cmake_force
 222: CMakeFiles/222.dir/print_perc.c.o
 222: CMakeFiles/222.dir/print_s.c.o
 222: CMakeFiles/222.dir/print_u.c.o
-222: CMakeFiles/222.dir/print_Xx.c.o
+222: CMakeFiles/222.dir/print_xx.c.o
 222: CMakeFiles/222.dir/treatment.c.o
 222: CMakeFiles/222.dir/build.make
 222: CMakeFiles/222.dir/link.txt

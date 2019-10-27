@@ -44,13 +44,16 @@ size_t			ft_spec_c(t_flags *yep)
 
 	res = 0;
 	i = 0;
+	if (yep->min == 1)
+		write(1, "\0", 1);
 	while (yep->s[i])
 	{
 		write(1, &(yep->s)[i], 1);
 		res++;
 		i++;
 	}
-	write(1, "\0", 1);
+	if (yep->min != 1)
+		write(1, "\0", 1);
 	res++;
 	return (res);
 }

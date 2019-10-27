@@ -91,9 +91,6 @@
 		<Unit filename="/Users/sdoughnu/Desktop/222/float.c">
 			<Option target="222"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/222/ft_arg_Xx.c">
-			<Option target="222"/>
-		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/222/ft_arg_di.c">
 			<Option target="222"/>
 		</Unit>
@@ -101,6 +98,9 @@
 			<Option target="222"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/222/ft_arg_o.c">
+			<Option target="222"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/222/ft_arg_xx.c">
 			<Option target="222"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/222/ft_itoa_u.c">
@@ -127,9 +127,6 @@
 		<Unit filename="/Users/sdoughnu/Desktop/222/parse.c">
 			<Option target="222"/>
 		</Unit>
-		<Unit filename="/Users/sdoughnu/Desktop/222/print_Xx.c">
-			<Option target="222"/>
-		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/222/print_c.c">
 			<Option target="222"/>
 		</Unit>
@@ -152,6 +149,9 @@
 			<Option target="222"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/222/print_u.c">
+			<Option target="222"/>
+		</Unit>
+		<Unit filename="/Users/sdoughnu/Desktop/222/print_xx.c">
 			<Option target="222"/>
 		</Unit>
 		<Unit filename="/Users/sdoughnu/Desktop/222/treatment.c">

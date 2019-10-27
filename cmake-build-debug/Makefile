@@ -204,33 +204,6 @@ float.c.s:
 	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/float.c.s
 .PHONY : float.c.s
 
-ft_arg_Xx.o: ft_arg_Xx.c.o
-
-.PHONY : ft_arg_Xx.o
-
-# target to build an object file
-ft_arg_Xx.c.o:
-	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/ft_arg_Xx.c.o
-.PHONY : ft_arg_Xx.c.o
-
-ft_arg_Xx.i: ft_arg_Xx.c.i
-
-.PHONY : ft_arg_Xx.i
-
-# target to preprocess a source file
-ft_arg_Xx.c.i:
-	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/ft_arg_Xx.c.i
-.PHONY : ft_arg_Xx.c.i
-
-ft_arg_Xx.s: ft_arg_Xx.c.s
-
-.PHONY : ft_arg_Xx.s
-
-# target to generate assembly for a file
-ft_arg_Xx.c.s:
-	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/ft_arg_Xx.c.s
-.PHONY : ft_arg_Xx.c.s
-
 ft_arg_di.o: ft_arg_di.c.o
 
 .PHONY : ft_arg_di.o
@@ -311,6 +284,33 @@ ft_arg_o.s: ft_arg_o.c.s
 ft_arg_o.c.s:
 	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/ft_arg_o.c.s
 .PHONY : ft_arg_o.c.s
+
+ft_arg_xx.o: ft_arg_xx.c.o
+
+.PHONY : ft_arg_xx.o
+
+# target to build an object file
+ft_arg_xx.c.o:
+	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/ft_arg_xx.c.o
+.PHONY : ft_arg_xx.c.o
+
+ft_arg_xx.i: ft_arg_xx.c.i
+
+.PHONY : ft_arg_xx.i
+
+# target to preprocess a source file
+ft_arg_xx.c.i:
+	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/ft_arg_xx.c.i
+.PHONY : ft_arg_xx.c.i
+
+ft_arg_xx.s: ft_arg_xx.c.s
+
+.PHONY : ft_arg_xx.s
+
+# target to generate assembly for a file
+ft_arg_xx.c.s:
+	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/ft_arg_xx.c.s
+.PHONY : ft_arg_xx.c.s
 
 ft_itoa_u.o: ft_itoa_u.c.o
 
@@ -500,33 +500,6 @@ parse.s: parse.c.s
 parse.c.s:
 	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/parse.c.s
 .PHONY : parse.c.s
-
-print_Xx.o: print_Xx.c.o
-
-.PHONY : print_Xx.o
-
-# target to build an object file
-print_Xx.c.o:
-	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/print_Xx.c.o
-.PHONY : print_Xx.c.o
-
-print_Xx.i: print_Xx.c.i
-
-.PHONY : print_Xx.i
-
-# target to preprocess a source file
-print_Xx.c.i:
-	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/print_Xx.c.i
-.PHONY : print_Xx.c.i
-
-print_Xx.s: print_Xx.c.s
-
-.PHONY : print_Xx.s
-
-# target to generate assembly for a file
-print_Xx.c.s:
-	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/print_Xx.c.s
-.PHONY : print_Xx.c.s
 
 print_c.o: print_c.c.o
 
@@ -744,6 +717,33 @@ print_u.c.s:
 	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/print_u.c.s
 .PHONY : print_u.c.s
 
+print_xx.o: print_xx.c.o
+
+.PHONY : print_xx.o
+
+# target to build an object file
+print_xx.c.o:
+	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/print_xx.c.o
+.PHONY : print_xx.c.o
+
+print_xx.i: print_xx.c.i
+
+.PHONY : print_xx.i
+
+# target to preprocess a source file
+print_xx.c.i:
+	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/print_xx.c.i
+.PHONY : print_xx.c.i
+
+print_xx.s: print_xx.c.s
+
+.PHONY : print_xx.s
+
+# target to generate assembly for a file
+print_xx.c.s:
+	$(MAKE) -f CMakeFiles/222.dir/build.make CMakeFiles/222.dir/print_xx.c.s
+.PHONY : print_xx.c.s
+
 treatment.o: treatment.c.o
 
 .PHONY : treatment.o
@@ -789,9 +789,6 @@ help:
 	@echo "... float.o"
 	@echo "... float.i"
 	@echo "... float.s"
-	@echo "... ft_arg_Xx.o"
-	@echo "... ft_arg_Xx.i"
-	@echo "... ft_arg_Xx.s"
 	@echo "... ft_arg_di.o"
 	@echo "... ft_arg_di.i"
 	@echo "... ft_arg_di.s"
@@ -801,6 +798,9 @@ help:
 	@echo "... ft_arg_o.o"
 	@echo "... ft_arg_o.i"
 	@echo "... ft_arg_o.s"
+	@echo "... ft_arg_xx.o"
+	@echo "... ft_arg_xx.i"
+	@echo "... ft_arg_xx.s"
 	@echo "... ft_itoa_u.o"
 	@echo "... ft_itoa_u.i"
 	@echo "... ft_itoa_u.s"
@@ -822,9 +822,6 @@ help:
 	@echo "... parse.o"
 	@echo "... parse.i"
 	@echo "... parse.s"
-	@echo "... print_Xx.o"
-	@echo "... print_Xx.i"
-	@echo "... print_Xx.s"
 	@echo "... print_c.o"
 	@echo "... print_c.i"
 	@echo "... print_c.s"
@@ -849,6 +846,9 @@ help:
 	@echo "... print_u.o"
 	@echo "... print_u.i"
 	@echo "... print_u.s"
+	@echo "... print_xx.o"
+	@echo "... print_xx.i"
+	@echo "... print_xx.s"
 	@echo "... treatment.o"
 	@echo "... treatment.i"
 	@echo "... treatment.s"
