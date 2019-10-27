@@ -6,7 +6,7 @@
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 18:05:34 by djoye             #+#    #+#             */
-/*   Updated: 2019/10/26 11:53:54 by djoye            ###   ########.fr       */
+/*   Updated: 2019/10/27 11:30:42 by djoye            ###   ########.fr       */
 /*   Updated: 2019/10/25 16:03:25 by djoye            ###   ########.fr       */
 /*   Updated: 2019/10/25 15:44:02 by djoye            ###   ########.fr       */
 /*                                                                            */
@@ -56,22 +56,19 @@ char					*ft_float(long double nb, int acc)
         return (ft_strdup("inf"));
     else if (nb == -1.0 / 0.0)
         return (ft_strdup("-inf"));
-   /*if (((((*(__int128_t*)&nb) >> 79) & 1) == 1) && nb == 0)
-        return ("-0"); */
-	sgn = (nb < 0) ? -1 : 1;
+	sgn = ((*(__int128_t*)&nb) >> 79) & 1;
 	nb = (nb < 0) ? -nb : nb;
 	ld = nb;
-    i = (sgn < 0) ? 1 : 0;
+    i = (sgn == 1) ? 1 : 0;
 	while (ld > 1 && ++i)
 		ld = ld / 10;
-
 	res = (char*)malloc(sizeof(char) * (i + acc + 2));
-    res[i + acc+1] = '\0';
+    res[i + acc + 1] = '\0';
 	integer = (unsigned long long int)nb;
 	integer += ((nb - integer) >= 0.5 && acc == 0) ? 1 : 0;
 	num = ft_itoa_base(integer, 10, 'A');
 	i = 0;
-	if (sgn < 0)
+	if (sgn == 1)
 	{
 		res[i] = '-';
 		i++;
@@ -89,7 +86,19 @@ char					*ft_float(long double nb, int acc)
 	res[++i] = '\0';
 	return (res);
 }
+/*
+int 	main()
+{
+	long double nb;
+	int			acc;
 
+	nb = (long double)0.0;
+	acc = 10;
+	printf("%s str\n", ft_float(nb, acc));
+	printf("%.*Lf\n", acc, nb);
+	return (0);
+}
+*/
 
 /*char					*ft_float(long double nb, int acc)
 {
