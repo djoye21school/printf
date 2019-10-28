@@ -6,7 +6,7 @@
 #    By: djoye <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/27 16:14:57 by djoye             #+#    #+#              #
-#    Updated: 2019/10/27 16:26:28 by djoye            ###   ########.fr        #
+#    Updated: 2019/10/28 18:31:13 by djoye            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJDIR = objs
 
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))
 OBJS = $(addprefix $(OBJDIR)/, $(OBJ))
-HEADER = -I includes
+
 
 CFLAGS = -c -Wall -Wextra -Werror
 
@@ -35,7 +35,7 @@ all: $(NAME)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 		@/bin/mkdir -p $(OBJDIR)
-			@gcc $(CFLAGS) $(HEADER) $< -o $@
+			@gcc $(CFLAGS) $< -o $@
 
 $(NAME): $(OBJS)
 		@ar rcs $@ $^
