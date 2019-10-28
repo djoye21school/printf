@@ -14,8 +14,8 @@
 
 static void		ft_width_c(t_flags *yep)
 {
-	int	len;
-	char *tmp;
+	int		len;
+	char	*tmp;
 
 	len = ft_strlen(yep->s);
 	if (yep->width > len)

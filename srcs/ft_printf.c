@@ -36,11 +36,8 @@ int		ft_parsestr(const char *format, va_list *ap)
 	str = go;
 	while (*go != '\0')
 	{
-		if (*go != '\0' && *go != '%')
-		{
-			go++;
+		if (*go != '\0' && *go != '%' && ++go)
 			size++;
-		}
 		else if (*go == '%')
 		{
 			if (*(go + 1) == '\0')

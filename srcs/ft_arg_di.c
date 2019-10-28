@@ -28,8 +28,8 @@ static int		ft_neg(t_flags *yep)
 
 static void		ft_prcn(t_flags *yep)
 {
-	int len;
-	char *tmp;
+	int		len;
+	char	*tmp;
 
 	len = ft_strlen(yep->s);
 	if (yep->prcn > len)
@@ -72,33 +72,28 @@ static void		ft_addflag(t_flags *yep, int sign)
 
 static void		ft_width_di(int sign, t_flags *yep)
 {
-	int len;
-	char *tmp;
+	int		len;
+	char	*tmp;
 
 	len = ft_strlen(yep->s);
-	if (yep->width > len)
+	while (yep->min == 1 && yep->width > len++ && (tmp = yep->s))
 	{
-		while (yep->min == 1 && yep->width > len++)
-		{
-			tmp = yep->s;
-			yep->s = ft_strjoin(tmp, " ");
-			free(tmp);
-		}
-		if (yep->zero == 1 && yep->min == 0 && (yep->plus == 1 || sign == 1
-					|| yep->space == 1) && yep->prcn < 0)
-			len++;
-		while (yep->zero == 1 && yep->prcn < 0 && len++ < yep->width )
-		{
-			tmp = yep->s;
-			yep->s = ft_strjoin("0", tmp);
-			free(tmp);
-		}
-		while (len++ < yep->width)
-		{
-			tmp = yep->s;
-			yep->s = ft_strjoin(" ", tmp);
-			free(tmp);
-		}
+		yep->s = ft_strjoin(tmp, " ");
+		free(tmp);
+	}
+	if (yep->zero == 1 && yep->min == 0 && (yep->plus == 1 || sign == 1
+	|| yep->space == 1) && yep->prcn < 0)
+		len++;
+	while (yep->zero == 1 && yep->prcn < 0 && len++ < yep->width)
+	{
+		tmp = yep->s;
+		yep->s = ft_strjoin("0", tmp);
+		free(tmp);
+	}
+	while (len++ < yep->width && (tmp = yep->s))
+	{
+		yep->s = ft_strjoin(" ", tmp);
+		free(tmp);
 	}
 }
 

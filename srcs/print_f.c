@@ -12,7 +12,6 @@
 
 #include "ft_printf.h"
 
-
 static int		ft_error(long double nb)
 {
 	if (nb != nb)
@@ -23,13 +22,13 @@ static int		ft_error(long double nb)
 		return (3);
 	return (0);
 }
+
 size_t			ft_f(t_flags *yep, va_list *ap)
 {
-	int	flag;
-	int ret;
-	long double ld;
+	int			flag;
+	int			ret;
+	long double	ld;
 
-	flag = 0;
 	yep->prcn == -1 ? yep->prcn = 6 : yep->prcn;
 	yep->prcn == -2 ? yep->prcn = 0 : yep->prcn;
 	if (yep->len == 5)
@@ -45,10 +44,8 @@ size_t			ft_f(t_flags *yep, va_list *ap)
 		yep->s = ft_strdup("inf");
 	else if (ret == 3)
 		yep->s = ft_strdup("-inf");
-	if (ret == 2 || ret == 3)
-		flag = 1;
-	else if (ret == 1)
-		flag = 2;
+	flag = (ret == 2 || ret == 3) ? 1 : 0;
+	flag = (ret == 1) ? 2 : flag;
 	if (flag == 0)
 		if (yep->hash == 1 && yep->prcn == 0)
 			yep->s = ft_strjoin(yep->s, ".");

@@ -26,8 +26,8 @@ static void		ft_hash_o(t_flags *yep, int num)
 
 static void		ft_width_o(t_flags *yep)
 {
-	int len;
-	char *tmp;
+	int		len;
+	char	*tmp;
 
 	len = ft_strlen(yep->s);
 	if (yep->width > len)
@@ -55,9 +55,9 @@ static void		ft_width_o(t_flags *yep)
 
 static void		ft_prcn_o(t_flags *yep)
 {
-	int	num;
-	int	len;
-	char *tmp;
+	int		num;
+	int		len;
+	char	*tmp;
 
 	num = 0;
 	if (*(yep->s) == '0' && (*(yep->s + 1)) == '\0')

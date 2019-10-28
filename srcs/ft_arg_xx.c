@@ -40,17 +40,29 @@ static void		ft_hash(t_flags *yep, int flag, int num, int updown)
 	}
 }
 
+static void		ft_wid_help(int *len, t_flags *yep)
+{
+	char *tmp;
+
+	while (*len < yep->width)
+	{
+		tmp = yep->s;
+		yep->s = ft_strjoin(" ", tmp);
+		(*len)++;
+		free(tmp);
+	}
+}
+
 static void		ft_width_x(t_flags *yep, int num, int updown)
 {
-	int len;
-	char *tmp;
+	int		len;
+	char	*tmp;
 
 	len = ft_strlen(yep->s);
 	if (yep->width > len)
 	{
-		while (yep->min == 1 && len++ < yep->width)
+		while (yep->min == 1 && len++ < yep->width && (tmp = yep->s))
 		{
-			tmp = yep->s;
 			yep->s = ft_strjoin(tmp, " ");
 			free(tmp);
 		}
@@ -63,21 +75,16 @@ static void		ft_width_x(t_flags *yep, int num, int updown)
 			yep->s = ft_strjoin("0", tmp);
 			free(tmp);
 		}
-		while (len++ < yep->width)
-		{
-			tmp = yep->s;
-			yep->s = ft_strjoin(" ", tmp);
-			free(tmp);
-		}
+		ft_wid_help(&len, yep);
 	}
 	ft_hash(yep, 1, num, updown);
 }
 
 static void		ft_prcn_x(t_flags *yep, int updown)
 {
-	int	num;
-	int	len;
-	char *tmp;
+	int		num;
+	int		len;
+	char	*tmp;
 
 	num = 0;
 	if (*(yep->s) == '0' && *(yep->s + 1) == '\0')

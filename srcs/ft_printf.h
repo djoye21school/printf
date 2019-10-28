@@ -20,15 +20,14 @@
 # include <string.h>
 # include <stddef.h>
 # include <stdint.h>
-# include <stdio.h>
 
-typedef struct	t_list
+typedef struct	s_list
 {
 	int			plus;
 	int			min;
 	int			space;
-	int 		hash;
-	int 		zero;
+	int			hash;
+	int			zero;
 	long int	width;
 	long int	prcn;
 	char		*type;
@@ -38,15 +37,14 @@ typedef struct	t_list
 
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strjoin(char const *s1, char const *s2);
-char 			*ft_strdup(const char *s1);
-char 			*ft_strnew(size_t size);
+char			*ft_strdup(const char *s1);
+char			*ft_strnew(size_t size);
 size_t			ft_strlen(char *str);
 size_t			ft_putstr(const char *s);
 
 char			*ft_itoa_base_u(unsigned long long dig, int base, char a);
-char 			*ft_itoa_base(long long dig, int base, char a);
-
-char 			*ft_float(long double nb, long acc);
+char			*ft_itoa_base(long long dig, int base, char a);
+char			*ft_float(long double nb, long acc);
 size_t			ft_arg_f(t_flags *yep, int flag);
 size_t			ft_f(t_flags *yep, va_list *ap);
 

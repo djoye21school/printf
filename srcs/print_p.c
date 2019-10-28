@@ -14,29 +14,26 @@
 
 static void		ft_width_p(t_flags *yep)
 {
-	int	len;
-	char *tmp;
+	int			len;
+	char		*tmp;
 
 	len = ft_strlen(yep->s);
 	if (yep->width > len)
 	{
-		while (yep->min != 0 && len++ < yep->width)
+		while (yep->min != 0 && len++ < yep->width && (tmp = yep->s))
 		{
-			tmp = yep->s;
 			yep->s = ft_strjoin(tmp, " ");
 			free(tmp);
 		}
 		if (yep->zero != 0 && yep->min == 0)
 			len += 2;
-		while (yep->zero != 0 && len++ < yep->width)
+		while (yep->zero != 0 && len++ < yep->width && (tmp = yep->s))
 		{
-			tmp = yep->s;
 			yep->s = ft_strjoin("0", tmp);
 			free(tmp);
 		}
-		while (len++ < yep->width)
+		while (len++ < yep->width && (tmp = yep->s))
 		{
-			tmp = yep->s;
 			yep->s = ft_strjoin(" ", tmp);
 			free(tmp);
 		}
@@ -45,8 +42,8 @@ static void		ft_width_p(t_flags *yep)
 
 static void		ft_prcn_p(t_flags *yep)
 {
-	int	len;
-	char *tmp;
+	int			len;
+	char		*tmp;
 
 	len = ft_strlen(yep->s);
 	if (yep->prcn > len)
