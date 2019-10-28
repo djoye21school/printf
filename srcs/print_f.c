@@ -16,11 +16,11 @@
 static int		ft_error(long double nb)
 {
 	if (nb != nb)
-		return (1); //nan
+		return (1);
 	else if (nb == 1.0 / 0.0)
-		return (2); //+inf
+		return (2);
 	else if (nb == -1.0 / 0.0)
-		return (3); //-inf
+		return (3);
 	return (0);
 }
 size_t			ft_f(t_flags *yep, va_list *ap)

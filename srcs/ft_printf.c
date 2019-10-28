@@ -65,20 +65,3 @@ int		ft_printf(const char *format, ...)
 	va_end(ap);
 	return (res);
 }
-
-/*int main()
-{
- //printf("\n%d\n", ft_printf("{%*c}", -5, 0));
-# define INFINITY  1.0 / 0.0
-# define NAN  0. / 0.0
- // printf("\n%d\n", ft_printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
-  //  printf("\n");
- //      printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
-	printf("\n%d\n", ft_printf("%.f|%.1f|%.2f|%.5f|%.12f", 0.000099, 0.000099, 0.000099, 0.000099, 0.000099));
-	printf("\n");
-	printf("\n%d\n", printf("%.f|%.1f|%.2f|%.5f|%.12f", 0.000099, 0.000099, 0.000099, 0.000099, 0.000099));
-printf("\n");
-	printf("\n%d\n", ft_printf("%f|%-f|%+f|% f|%#f|%0f", 42., 42., 42., 42., 42., 42.));
-printf("\n");
-	printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", 42., 42., 42., 42., 42., 42.));
-}*/
