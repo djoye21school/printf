@@ -78,11 +78,11 @@ char					*ft_float(long double nb, long acc)
 	res[0] = (sgn == 1 && ++i) ? '-' : '0';
 	while (*num != '\0')
 		res[i++] = *num++;
-	free(num - i - sgn);
-	res[i] = acc != 0 ? '.' : '\0';
+	free(num - (i - sgn));
+	res[i] = (acc != 0) ? '.' : '\0';
 	while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i)
-		if ((res[i] = ((int)nb % 10 + '0')))
-			nb = nb - (int)nb;
+		if ((res[i] = ((unsigned long long)nb % 10 + '0')))
+			nb = nb - (unsigned long long)nb;
 	res[++i] = '\0';
 	return (res);
 }

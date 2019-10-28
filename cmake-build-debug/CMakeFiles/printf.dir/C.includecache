@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sdoughnu/Desktop/printf/srcs/float.c
+ft_printf.h
+/Users/sdoughnu/Desktop/printf/srcs/ft_printf.h
+
+/Users/sdoughnu/Desktop/printf/srcs/ft_printf.h
+stdarg.h
+-
+unistd.h
+-
+stdlib.h
+-
+wchar.h
+-
+string.h
+-
+stddef.h
+-
+stdint.h
+-
+stdio.h
+-
+
