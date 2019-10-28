@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/28 17:15:36 by djoye             #+#    #+#             */
-/*   Updated: 2019/10/28 18:42:16 by djoye            ###   ########.fr       */
+/*   Created: 2019/10/28 19:05:44 by djoye             #+#    #+#             */
+/*   Updated: 2019/10/28 19:07:10 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,11 @@ char					*ft_float(long double nb, long acc)
 	res[0] = (sgn == 1 && ++i) ? '-' : '0';
 	while (*num != '\0')
 		res[i++] = *num++;
+	free(num - i - sgn);
 	res[i] = acc != 0 ? '.' : '\0';
 	while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i)
-	{
-		res[i] = ((int)nb % 10 + '0');
-		nb = nb - (int)nb;
-	}
+		if ((res[i] = ((int)nb % 10 + '0')))
+			nb = nb - (int)nb;
 	res[++i] = '\0';
 	return (res);
 }
