@@ -5,16 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: djoye <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 18:05:34 by djoye             #+#    #+#             */
-/*   Updated: 2019/10/27 11:30:42 by djoye            ###   ########.fr       */
-/*   Updated: 2019/10/25 16:03:25 by djoye            ###   ########.fr       */
-/*   Updated: 2019/10/25 15:44:02 by djoye            ###   ########.fr       */
+/*   Created: 2019/10/28 17:15:36 by djoye             #+#    #+#             */
+/*   Updated: 2019/10/28 17:18:49 by djoye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char 	*ft_itoa_base(long long dig, int base, char a)
+char					*ft_itoa_base(long long dig, int base, char a)
 {
 	char				*s;
 	int					i;
@@ -43,11 +41,11 @@ char 	*ft_itoa_base(long long dig, int base, char a)
 
 char					*ft_float(long double nb, long acc)
 {
-	char				*num = NULL;
+	char				*num;
 	long				i;
 	int					sgn;
 	long double			ld;
-	char				*res = NULL;
+	char				*res;
 
 	sgn = ((*(__int128_t*)&nb) >> 79) & 1;
 	nb = (nb < 0) ? -nb : nb;
