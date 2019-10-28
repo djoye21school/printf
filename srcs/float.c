@@ -39,6 +39,26 @@ char					*ft_itoa_base(long long dig, int base, char a)
 	return (s);
 }
 
+static void				ft_float_help(long double *nb, long *i,
+		long *acc, int *sgn)
+{
+	*nb = (*nb < 0) ? -(*nb) : *nb;
+	*i = 0;
+	while (*i < *acc)
+	{
+		(*nb) = (*nb) * 10;
+		(*i)++;
+	}
+	*nb = *nb + 0.5;
+	while (*i)
+	{
+		(*i)--;
+		*nb /= 10;
+	}
+	*i = (*acc > 0) ? 1 : 0;
+	*i += (*sgn == 1) ? 1 : 0;
+}
+
 char					*ft_float(long double nb, long acc)
 {
 	char				*num;
@@ -48,30 +68,21 @@ char					*ft_float(long double nb, long acc)
 	char				*res;
 
 	sgn = ((*(__int128_t*)&nb) >> 79) & 1;
-	nb = (nb < 0) ? -nb : nb;
-	i = 0;
-	while (i++ < acc)
-		nb *= 10;
-	nb = nb + 0.5;
-	while (--i)
-		nb /= 10;
-	i = (acc > 0) ? 1 : 0;
-	i += (sgn == 1) ? 1 : 0;
+	ft_float_help(&nb, &i, &acc, &sgn);
 	ld = nb;
 	while (ld > 1 && ++i)
 		ld = ld / 10;
 	res = (char*)malloc(sizeof(char) * (i + acc + 2));
 	num = ft_itoa_base((unsigned long long int)nb, 10, 'A');
 	i = 0;
-	if (sgn == 1 && ++i)
-		res[0] = '-';
+	res[0] = (sgn == 1 && ++i) ? '-' : '0';
 	while (*num != '\0')
 		res[i++] = *num++;
 	res[i] = acc != 0 ? '.' : '\0';
 	while (acc-- > 0 && (nb = nb * 10) >= 0 && ++i)
 	{
-		res[i] = ((unsigned long long)nb % 10 + '0');
-		nb = nb - (unsigned long long)nb;
+		res[i] = ((int)nb % 10 + '0');
+		nb = nb - (int)nb;
 	}
 	res[++i] = '\0';
 	return (res);
