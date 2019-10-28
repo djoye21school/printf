@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 
 
-int 		ft_error(long double nb)
+static int		ft_error(long double nb)
 {
 	if (nb != nb)
 		return (1); //nan
@@ -23,7 +23,7 @@ int 		ft_error(long double nb)
 		return (3); //-inf
 	return (0);
 }
-size_t		ft_f(t_flags *yep, va_list *ap)
+size_t			ft_f(t_flags *yep, va_list *ap)
 {
 	int	flag;
 	int ret;
