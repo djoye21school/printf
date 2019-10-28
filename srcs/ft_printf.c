@@ -74,11 +74,11 @@ int		ft_printf(const char *format, ...)
  // printf("\n%d\n", ft_printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
   //  printf("\n");
  //      printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY));
-	printf("\n%d\n", ft_printf("%+-100x %012x %x", 15282928, 15282928, 15282928));
+	printf("\n%d\n", ft_printf("%.f|%.1f|%.2f|%.5f|%.12f", 0.000099, 0.000099, 0.000099, 0.000099, 0.000099));
 	printf("\n");
-	printf("\n%d\n", printf("%+-100x %012x %x", 15282928, 15282928, 15282928));
-//	printf("\n");
-	//printf("\n%d\n", ft_printf("%.1f|%.2f|%.f|%.12f", 999.90, 999.995, 999.99999, 999.99999));
-//	printf("\n");
-	//printf("\n%d\n", printf("%.1f|%.2f|%.f|%.12f", 999.90, 999.995, 999.99999, 999.99999));
+	printf("\n%d\n", printf("%.f|%.1f|%.2f|%.5f|%.12f", 0.000099, 0.000099, 0.000099, 0.000099, 0.000099));
+printf("\n");
+	printf("\n%d\n", ft_printf("%f|%-f|%+f|% f|%#f|%0f", 42., 42., 42., 42., 42., 42.));
+printf("\n");
+	printf("\n%d\n", printf("%f|%-f|%+f|% f|%#f|%0f", 42., 42., 42., 42., 42., 42.));
 }*/
