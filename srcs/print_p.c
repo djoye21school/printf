@@ -66,13 +66,16 @@ size_t			ft_p(t_flags *yep, void *tmp)
 {
 	long long	buf;
 	size_t		res;
+	char		*tmpp;
 
 	buf = (unsigned long long)tmp;
 	yep->s = ft_itoa_base(buf, 16, 'a');
 	ft_prcn_p(yep);
 	if (yep->zero != 0 && yep->min == 0)
 		ft_width_p(yep);
-	yep->s = ft_strjoin("0x", yep->s);
+	tmpp = yep->s;
+	yep->s = ft_strjoin("0x", tmpp);
+	free(tmpp);
 	ft_width_p(yep);
 	res = ft_putstr(yep->s);
 	return (res);
